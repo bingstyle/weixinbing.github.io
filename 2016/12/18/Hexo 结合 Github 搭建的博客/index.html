@@ -104,7 +104,7 @@ npm install hexo-cli -g
 安装Hexo打开终端，执行命令：
 npm install hexo-cli -g
 如果报错，加上sudo。hexo常用命令：12345hexo g   #完整命令为hexo generate,用于生成静态文件hexo s   #完整命">
-<meta property="og:updated_time" content="2016-12-18T16:37:57.000Z">
+<meta property="og:updated_time" content="2016-12-19T14:50:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 结合 Github 搭建的博客">
 <meta name="twitter:description" content="配置环境
@@ -418,7 +418,7 @@ npm install hexo-cli -g
 </ul>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>打开终端，执行命令：</p>
 <pre><code>npm install hexo-cli -g
-</code></pre><p>如果报错，加上sudo。<br>hexo常用命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo g   #完整命令为hexo generate,用于生成静态文件</div><div class="line">hexo s   #完整命令为hexo server,用于启动服务器，主要用来本地预览</div><div class="line">hexo d   #完整命令为hexo deploy,用于将本地文件发布到github上</div><div class="line">hexo n   #完整命令为hexo new,用于新建一篇文章</div><div class="line">hexo clean   #清除生成的文件</div></pre></td></tr></table></figure></p>
+</code></pre><p>如果报错，加上sudo。<br>hexo常用命令：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo g   <span class="comment">#完整命令为hexo generate,用于生成静态文件</span></div><div class="line">hexo s   <span class="comment">#完整命令为hexo server,用于启动服务器，主要用来本地预览</span></div><div class="line">hexo d   <span class="comment">#完整命令为hexo deploy,用于将本地文件发布到github上</span></div><div class="line">hexo n   <span class="comment">#完整命令为hexo new,用于新建一篇文章</span></div><div class="line">hexo clean   <span class="comment">#清除生成的文件</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h2 id="初始化博客文件夹"><a href="#初始化博客文件夹" class="headerlink" title="初始化博客文件夹"></a>初始化博客文件夹</h2><pre><code>hexo init [文件夹名字] 
 cd [文件夹名字] 
@@ -427,8 +427,8 @@ npm install
 <pre><code>hexo s
 </code></pre><p>如果遇到 hexo s 无效或者错误，可能是因为没有安装hexo server，执行下面命令，然后再试：</p>
 <pre><code>npm install hexo-server --save
-</code></pre><h2 id="编辑hexo的配置文件"><a href="#编辑hexo的配置文件" class="headerlink" title="编辑hexo的配置文件"></a>编辑hexo的配置文件</h2><p>不要被文件内容吓到了，只需要修改以下地方：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: xxx</div><div class="line">subtitle: xxx</div><div class="line">description: xxx</div><div class="line">author: xxx</div><div class="line">language: zh-Hans</div><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: github仓库的克隆地址</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+</code></pre><h2 id="编辑hexo的配置文件"><a href="#编辑hexo的配置文件" class="headerlink" title="编辑hexo的配置文件"></a>编辑hexo的配置文件</h2><p>不要被文件内容吓到了，只需要修改以下地方：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Site</span></div><div class="line"><span class="symbol">title:</span> xxx</div><div class="line"><span class="symbol">subtitle:</span> xxx</div><div class="line"><span class="symbol">description:</span> xxx</div><div class="line"><span class="symbol">author:</span> xxx</div><div class="line"><span class="symbol">language:</span> zh-Hans</div><div class="line"><span class="symbol">timezone:</span> Asia/Shanghai</div></pre></td></tr></table></figure></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line"><span class="symbol">deploy:</span></div><div class="line">  <span class="symbol">type:</span> git</div><div class="line">  <span class="symbol">repo:</span> github仓库的克隆地址</div><div class="line">  <span class="symbol">branch:</span> master</div></pre></td></tr></table></figure>
 <h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>通常情况下是先生成网站，然后部署。可以将两个步骤放到一起：</p>
 <pre><code>hexo d -g
 </code></pre><p>现在你就可以打开网站看到效果了。<br>如果提示：</p>
