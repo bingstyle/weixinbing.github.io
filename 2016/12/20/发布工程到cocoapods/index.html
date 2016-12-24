@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,31 +86,16 @@
 
 
 
-<meta name="description" content="在github建立仓库,并clone到本地github不是唯一的平台,其他平台都可以,前提是项目是开源的.
-创建.podspec文件打开终端,进入仓库,执行如下命令:
-
-pod spec create XXX
-
-编辑.podspec文件使用vim或Xcode打开.podspec文件,编辑如下:123456789101112131415Pod::Spec.new do |s|s.name = &quot;XX">
+<meta name="description" content="让自己的框架支持cocoapods">
 <meta property="og:type" content="article">
 <meta property="og:title" content="发布框架到cocoapods">
 <meta property="og:url" content="http://bingol.com/2016/12/20/发布工程到cocoapods/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
-<meta property="og:description" content="在github建立仓库,并clone到本地github不是唯一的平台,其他平台都可以,前提是项目是开源的.
-创建.podspec文件打开终端,进入仓库,执行如下命令:
-
-pod spec create XXX
-
-编辑.podspec文件使用vim或Xcode打开.podspec文件,编辑如下:123456789101112131415Pod::Spec.new do |s|s.name = &quot;XX">
-<meta property="og:updated_time" content="2016-12-20T17:00:41.000Z">
+<meta property="og:description" content="让自己的框架支持cocoapods">
+<meta property="og:updated_time" content="2016-12-24T11:32:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="发布框架到cocoapods">
-<meta name="twitter:description" content="在github建立仓库,并clone到本地github不是唯一的平台,其他平台都可以,前提是项目是开源的.
-创建.podspec文件打开终端,进入仓库,执行如下命令:
-
-pod spec create XXX
-
-编辑.podspec文件使用vim或Xcode打开.podspec文件,编辑如下:123456789101112131415Pod::Spec.new do |s|s.name = &quot;XX">
+<meta name="twitter:description" content="让自己的框架支持cocoapods">
 
 
 
@@ -118,7 +103,7 @@ pod spec create XXX
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -207,16 +192,6 @@ pod spec create XXX
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -227,22 +202,22 @@ pod spec create XXX
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -396,13 +371,13 @@ pod spec create XXX
       
 
       
-        <h3 id="在github建立仓库-并clone到本地"><a href="#在github建立仓库-并clone到本地" class="headerlink" title="在github建立仓库,并clone到本地"></a>在github建立仓库,并clone到本地</h3><p>github不是唯一的平台,其他平台都可以,前提是项目是开源的.</p>
+        <p>让自己的框架支持cocoapods<br><a id="more"></a></p>
+<h3 id="在github建立仓库-并clone到本地"><a href="#在github建立仓库-并clone到本地" class="headerlink" title="在github建立仓库,并clone到本地"></a>在github建立仓库,并clone到本地</h3><p>github不是唯一的平台,其他平台都可以,前提是项目是开源的.</p>
 <h3 id="创建-podspec文件"><a href="#创建-podspec文件" class="headerlink" title="创建.podspec文件"></a>创建.podspec文件</h3><p>打开终端,进入仓库,执行如下命令:</p>
 <blockquote>
 <p>pod spec create XXX</p>
 </blockquote>
 <h3 id="编辑-podspec文件"><a href="#编辑-podspec文件" class="headerlink" title="编辑.podspec文件"></a>编辑.podspec文件</h3><p>使用vim或Xcode打开.podspec文件,编辑如下:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.<span class="keyword">new</span> <span class="keyword">do</span> |s|</div><div class="line">s.name = <span class="string">"XXX"</span></div><div class="line">s.<span class="keyword">version</span> = <span class="string">"1.0.3"</span></div><div class="line">s.ios.deployment_target = <span class="string">'8.0'</span></div><div class="line">s.summary = <span class="string">"some utilities"</span></div><div class="line">s.homepage = <span class="string">"https://github.com/weixinbing/XXX"</span></div><div class="line">s.license = &#123; :<span class="built_in">type</span> =&gt; <span class="string">"MIT"</span>, :<span class="keyword">file</span> =&gt; <span class="string">"LICENSE"</span> &#125;</div><div class="line">s.author = &#123; <span class="string">"weixb"</span> =&gt; <span class="string">"183292352@qq.com"</span> &#125;</div><div class="line">s.social_media_url = <span class="string">"http://weibo.com/u/5348162268"</span></div><div class="line">s.<span class="keyword">source</span> = &#123; :git =&gt; <span class="string">"https://github.com/weixinbing/XXX.git"</span>, :<span class="keyword">tag</span> =&gt; s.<span class="keyword">version</span> &#125;</div><div class="line">s.source_files = <span class="string">"XXX"</span></div><div class="line">s.requires_arc = true</div><div class="line">s.dependency <span class="string">"YTKNetwork"</span>, <span class="string">"~&gt; 2.0.3"</span></div><div class="line">s.dependency <span class="string">'Bugly'</span>, <span class="string">'~&gt; 2.4.2'</span></div><div class="line">end</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <blockquote>
 <p>s.name：名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错<br>s.version：版本号<br>s.ios.deployment_target:支持的pod最低版本<br>s.summary: 简介<br>s.homepage:项目主页地址<br>s.license:许可证<br>s.author:作者<br>s.social_media_url:社交网址<br>s.source:项目的地址<br>s.source_files:需要包含的源文件<br>s.resources: 资源文件<br>s.requires_arc: 是否支持ARC<br>s.dependency：依赖库(可以多写)</p>
 </blockquote>
@@ -686,7 +661,7 @@ pod spec create XXX
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -752,13 +727,6 @@ pod spec create XXX
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>

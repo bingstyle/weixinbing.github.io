@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -102,7 +102,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -193,16 +193,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -213,22 +203,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -386,21 +376,7 @@
 
       
         
-          <h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p>进程(process):</p>
-<ul>
-<li>正在运行中的程序(可执行文件)称为进程</li>
-<li>拥有独立的虚拟内存空间和系统资源，包括端口权限等</li>
-<li>当一个进程的主线程退出时，这个进程就结束了</li>
-</ul>
-<p>线程(thread): </p>
-<ul>
-<li>线程是进程中一个独立的代码执行路径(控制单元)</li>
-<li>一个进程中至少包含一条线程，即主线程</li>
-<li>可以将耗时的执行路径(如：网络请求)放在其他线程中执行</li>
-</ul>
-<blockquote>
-<p>在 iOS 中，线程的底层实现是基于 <code>POSIX threads API</code> 的，也就是我们常说的 pthreads</p>
-</blockquote>
+          <p>多线程和GCD<br>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/22/iOS并发编程(Concurrent Programming)上/#more" rel="contents">
@@ -546,12 +522,7 @@
 
       
         
-          <h3 id="在github建立仓库-并clone到本地"><a href="#在github建立仓库-并clone到本地" class="headerlink" title="在github建立仓库,并clone到本地"></a>在github建立仓库,并clone到本地</h3><p>github不是唯一的平台,其他平台都可以,前提是项目是开源的.</p>
-<h3 id="创建-podspec文件"><a href="#创建-podspec文件" class="headerlink" title="创建.podspec文件"></a>创建.podspec文件</h3><p>打开终端,进入仓库,执行如下命令:</p>
-<blockquote>
-<p>pod spec create XXX</p>
-</blockquote>
-<h3 id="编辑-podspec文件"><a href="#编辑-podspec文件" class="headerlink" title="编辑.podspec文件"></a>编辑.podspec文件</h3><p>使用vim或Xcode打开.podspec文件,编辑如下:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.<span class="keyword">new</span> <span class="keyword">do</span> |s|</div><div class="line">s.name = <span class="string">"XXX"</span></div><div class="line">s.<span class="keyword">version</span> = <span class="string">"1.0.3"</span></div><div class="line">s.ios.deployment_target = <span class="string">'8.0'</span></div><div class="line">s.summary = <span class="string">"some utilities"</span></div><div class="line">s.homepage = <span class="string">"https://github.com/weixinbing/XXX"</span></div><div class="line">s.license = &#123; :<span class="built_in">type</span> =&gt; <span class="string">"MIT"</span>, :<span class="keyword">file</span> =&gt; <span class="string">"LICENSE"</span> &#125;</div><div class="line">s.author = &#123; <span class="string">"weixb"</span> =&gt; <span class="string">"183292352@qq.com"</span> &#125;</div><div class="line">s.social_media_url = <span class="string">"http://weibo.com/u/5348162268"</span></div><div class="line">s.<span class="keyword">source</span> = &#123; :git =&gt; <span class="string">"https://github.com/weixinbing/XXX.git"</span>, :<span class="keyword">tag</span> =&gt; s.<span class="keyword">version</span> &#125;</div><div class="line">s.source_files = <span class="string">"XXX"</span></div><div class="line">s.requires_arc = true</div><div class="line">s.dependency <span class="string">"YTKNetwork"</span>, <span class="string">"~&gt; 2.0.3"</span></div><div class="line">s.dependency <span class="string">'Bugly'</span>, <span class="string">'~&gt; 2.4.2'</span></div><div class="line">end</div></pre></td></tr></table></figure></p>
+          <p>让自己的框架支持cocoapods<br>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/20/发布工程到cocoapods/#more" rel="contents">
@@ -697,13 +668,7 @@
 
       
         
-          <hr>
-<h3 id="使用区别"><a href="#使用区别" class="headerlink" title="使用区别"></a>使用区别</h3><blockquote>
-<p>JSONModel要求所有模型类必须继承自JSONModel基类<br>YYModel和MJExtension不需要你的模型类继承任何特殊基类，毫无污染，毫无侵入性</p>
-</blockquote>
-<h3 id="量级上"><a href="#量级上" class="headerlink" title="量级上"></a>量级上</h3><blockquote>
-<p>YYModel和MJExtension都是超轻量级框架<br>YYModel是一个更轻量级高性能 iOS/OSX 模型转换框架,模型转换性能接近手写解析代码,比MJExtension和JSONModel性能更高.</p>
-</blockquote>
+          <p>JSON模型<br>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/20/YYModel,MJExtension,JSONModel对比/#more" rel="contents">
@@ -773,7 +738,7 @@
               
                 
                 <a class="post-title-link" href="/2016/12/19/OC预处理命令/" itemprop="url">
-                  OC预处理命令
+                  OC预处理指令
                 </a>
               
             
@@ -849,8 +814,7 @@
 
       
         
-          <hr>
-<p>预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。<br>指令用途：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#空指令，无任何效果</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>包含一个源代码文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>定义宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">undef</span>取消已定义的宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">if</span> 如果给定条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span>如果宏已经定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span>如果宏没有定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">elif</span>如果前面的#<span class="meta-keyword">if</span>给定条件不为真，当前条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span>结束一个#<span class="meta-keyword">if</span>……#<span class="meta-keyword">else</span>条件编译块</span></div><div class="line"><span class="meta">#<span class="meta-keyword">error</span>停止编译并显示错误信息</span></div></pre></td></tr></table></figure></p>
+          <p>深入了解预处理指令</p>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/19/OC预处理命令/#more" rel="contents">
@@ -953,8 +917,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
                   </a>
                 </span>
 
@@ -996,15 +960,7 @@
 
       
         
-          <hr>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
-<li>安装Node.js <a href="https://nodejs.org/en/">官网https://nodejs.org/en/</a></li>
-<li>安装Git（Xcode自带有Git）</li>
-<li>注册GitHub账号（用于博客的远程仓库）</li>
-</ul>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>打开终端，执行命令：</p>
-<pre><code>npm install hexo-cli -g
-</code></pre><p>如果报错，加上sudo。<br>hexo常用命令：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo g   <span class="comment">#完整命令为hexo generate,用于生成静态文件</span></div><div class="line">hexo s   <span class="comment">#完整命令为hexo server,用于启动服务器，主要用来本地预览</span></div><div class="line">hexo d   <span class="comment">#完整命令为hexo deploy,用于将本地文件发布到github上</span></div><div class="line">hexo n   <span class="comment">#完整命令为hexo new,用于新建一篇文章</span></div><div class="line">hexo clean   <span class="comment">#清除生成的文件</span></div></pre></td></tr></table></figure></p>
+          <p>博客是怎样搭建的<br>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/18/Hexo 结合 Github 搭建的博客/#more" rel="contents">
@@ -1173,7 +1129,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -1239,13 +1195,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
 

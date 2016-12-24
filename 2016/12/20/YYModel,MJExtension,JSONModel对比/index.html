@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,28 +86,16 @@
 
 
 
-<meta name="description" content="使用区别
-JSONModel要求所有模型类必须继承自JSONModel基类YYModel和MJExtension不需要你的模型类继承任何特殊基类，毫无污染，毫无侵入性
-
-量级上
-YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性能 iOS/OSX 模型转换框架,模型转换性能接近手写解析代码,比MJExtension和JSONModel性能更高.">
+<meta name="description" content="JSON模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="YYModel,MJExtension,JSONModel对比">
 <meta property="og:url" content="http://bingol.com/2016/12/20/YYModel,MJExtension,JSONModel对比/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
-<meta property="og:description" content="使用区别
-JSONModel要求所有模型类必须继承自JSONModel基类YYModel和MJExtension不需要你的模型类继承任何特殊基类，毫无污染，毫无侵入性
-
-量级上
-YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性能 iOS/OSX 模型转换框架,模型转换性能接近手写解析代码,比MJExtension和JSONModel性能更高.">
-<meta property="og:updated_time" content="2016-12-19T16:06:24.000Z">
+<meta property="og:description" content="JSON模型">
+<meta property="og:updated_time" content="2016-12-24T11:30:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="YYModel,MJExtension,JSONModel对比">
-<meta name="twitter:description" content="使用区别
-JSONModel要求所有模型类必须继承自JSONModel基类YYModel和MJExtension不需要你的模型类继承任何特殊基类，毫无污染，毫无侵入性
-
-量级上
-YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性能 iOS/OSX 模型转换框架,模型转换性能接近手写解析代码,比MJExtension和JSONModel性能更高.">
+<meta name="twitter:description" content="JSON模型">
 
 
 
@@ -115,7 +103,7 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -204,16 +192,6 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -224,22 +202,22 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -393,14 +371,13 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
       
 
       
-        <hr>
+        <p>JSON模型<br><a id="more"></a></p>
 <h3 id="使用区别"><a href="#使用区别" class="headerlink" title="使用区别"></a>使用区别</h3><blockquote>
 <p>JSONModel要求所有模型类必须继承自JSONModel基类<br>YYModel和MJExtension不需要你的模型类继承任何特殊基类，毫无污染，毫无侵入性</p>
 </blockquote>
 <h3 id="量级上"><a href="#量级上" class="headerlink" title="量级上"></a>量级上</h3><blockquote>
 <p>YYModel和MJExtension都是超轻量级框架<br>YYModel是一个更轻量级高性能 iOS/OSX 模型转换框架,模型转换性能接近手写解析代码,比MJExtension和JSONModel性能更高.</p>
 </blockquote>
-<a id="more"></a>
 <h3 id="字典和模型之间互相转换"><a href="#字典和模型之间互相转换" class="headerlink" title="字典和模型之间互相转换"></a>字典和模型之间互相转换</h3><blockquote>
 <p>MJExtension支持:<br>Plist –&gt; Model Array<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">模型数组 = [模型类名 objectArrayWithFilename:<span class="string">@"文件名.plist"</span>];</div></pre></td></tr></table></figure></p>
 <p>JSON Array –&gt; Model Array<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSArray</span> *modelArray = [模型类名 objectArrayWithKeyValuesArray:字段数组];</div></pre></td></tr></table></figure></p>
@@ -460,8 +437,8 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/19/OC预处理命令/" rel="next" title="OC预处理命令">
-                <i class="fa fa-chevron-left"></i> OC预处理命令
+              <a href="/2016/12/19/OC预处理命令/" rel="next" title="OC预处理指令">
+                <i class="fa fa-chevron-left"></i> OC预处理指令
               </a>
             
           </div>
@@ -675,7 +652,7 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -741,13 +718,6 @@ YYModel和MJExtension都是超轻量级框架YYModel是一个更轻量级高性�
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>

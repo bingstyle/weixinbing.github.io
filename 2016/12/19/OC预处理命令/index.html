@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。指令用途：12345678910#空指令，无任何效果#include包含一个源代码文件#define定义宏#undef取消已定义的宏#if 如果给定条件为真，则编译下面代码#if">
+<meta name="description" content="深入了解预处理指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OC预处理命令">
+<meta property="og:title" content="OC预处理指令">
 <meta property="og:url" content="http://bingol.com/2016/12/19/OC预处理命令/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
-<meta property="og:description" content="预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。指令用途：12345678910#空指令，无任何效果#include包含一个源代码文件#define定义宏#undef取消已定义的宏#if 如果给定条件为真，则编译下面代码#if">
-<meta property="og:updated_time" content="2016-12-19T16:07:08.000Z">
+<meta property="og:description" content="深入了解预处理指令">
+<meta property="og:updated_time" content="2016-12-24T11:34:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OC预处理命令">
-<meta name="twitter:description" content="预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。指令用途：12345678910#空指令，无任何效果#include包含一个源代码文件#define定义宏#undef取消已定义的宏#if 如果给定条件为真，则编译下面代码#if">
+<meta name="twitter:title" content="OC预处理指令">
+<meta name="twitter:description" content="深入了解预处理指令">
 
 
 
@@ -103,7 +103,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -129,7 +129,7 @@
 
 
 
-  <title> OC预处理命令 | Bingol's Blog </title>
+  <title> OC预处理指令 | Bingol's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -192,16 +192,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -212,22 +202,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -307,7 +297,7 @@
             
             
               
-                OC预处理命令
+                OC预处理指令
               
             
           </h1>
@@ -381,9 +371,9 @@
       
 
       
-        <hr>
-<p>预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。<br>指令用途：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#空指令，无任何效果</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>包含一个源代码文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>定义宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">undef</span>取消已定义的宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">if</span> 如果给定条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span>如果宏已经定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span>如果宏没有定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">elif</span>如果前面的#<span class="meta-keyword">if</span>给定条件不为真，当前条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span>结束一个#<span class="meta-keyword">if</span>……#<span class="meta-keyword">else</span>条件编译块</span></div><div class="line"><span class="meta">#<span class="meta-keyword">error</span>停止编译并显示错误信息</span></div></pre></td></tr></table></figure></p>
+        <p>深入了解预处理指令</p>
 <a id="more"></a>
+<p>预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。<br>指令用途：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#空指令，无任何效果</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>包含一个源代码文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>定义宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">undef</span>取消已定义的宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">if</span> 如果给定条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span>如果宏已经定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span>如果宏没有定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">elif</span>如果前面的#<span class="meta-keyword">if</span>给定条件不为真，当前条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span>结束一个#<span class="meta-keyword">if</span>……#<span class="meta-keyword">else</span>条件编译块</span></div><div class="line"><span class="meta">#<span class="meta-keyword">error</span>停止编译并显示错误信息</span></div></pre></td></tr></table></figure></p>
 <h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><p><code>#include</code>预处理指令的作用是在指令处展开被包含的文件。包含可以是多重的，也就是说一个被包含的文件中还可以包含其他文件。标准C编译器至少支持八重嵌套包含。</p>
 <h2 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h2><p>宏定义了一个代表特定内容的标识符。预处理过程会把源代码中出现的宏标识符替换成宏定义时的值。宏最常见的用法是定义代表某个值的全局符号。宏的第二种用法是定义带参数的宏，这样的宏可以象函数一样被调用，但它是在调用语句处展开宏，并用调用时的实际参数来代替定义中的形式参数。</p>
 <p><code>#运算符</code><br>出现在宏定义中的#运算符把跟在其后的参数转换成一个字符串。有时把这种用法的#称为字符串化运算符。例如：<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#definePASTE(n)<span class="meta-string">"adhfkj"</span>#n</span></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">printf(<span class="string">"%s "</span>,PASTE(<span class="number">15</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -465,7 +455,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2016/12/19/OC预处理命令/"
-     data-title="OC预处理命令"
+     data-title="OC预处理指令"
      data-content=""
      data-url="http://bingol.com/2016/12/19/OC预处理命令/">
   <div class="ds-share-inline">
@@ -498,7 +488,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/12/19/OC预处理命令/"
-           data-title="OC预处理命令" data-url="http://bingol.com/2016/12/19/OC预处理命令/">
+           data-title="OC预处理指令" data-url="http://bingol.com/2016/12/19/OC预处理命令/">
       </div>
     
   </div>
@@ -652,7 +642,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -718,13 +708,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>

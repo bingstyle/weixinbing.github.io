@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,56 +86,17 @@
 
 
 
-<meta name="description" content="术语进程(process):
-
-正在运行中的程序(可执行文件)称为进程
-拥有独立的虚拟内存空间和系统资源，包括端口权限等
-当一个进程的主线程退出时，这个进程就结束了
-
-线程(thread): 
-
-线程是进程中一个独立的代码执行路径(控制单元)
-一个进程中至少包含一条线程，即主线程
-可以将耗时的执行路径(如：网络请求)放在其他线程中执行
-
-
-在 iOS 中，线程的底层实现是基于 POSIX thre">
+<meta name="description" content="多线程和GCD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS并发编程(Concurrent Programming)上">
 <meta property="og:url" content="http://bingol.com/2016/12/22/iOS并发编程(Concurrent Programming)上/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
-<meta property="og:description" content="术语进程(process):
-
-正在运行中的程序(可执行文件)称为进程
-拥有独立的虚拟内存空间和系统资源，包括端口权限等
-当一个进程的主线程退出时，这个进程就结束了
-
-线程(thread): 
-
-线程是进程中一个独立的代码执行路径(控制单元)
-一个进程中至少包含一条线程，即主线程
-可以将耗时的执行路径(如：网络请求)放在其他线程中执行
-
-
-在 iOS 中，线程的底层实现是基于 POSIX thre">
+<meta property="og:description" content="多线程和GCD">
 <meta property="og:image" content="http://oihqdel9t.bkt.clouddn.com/2016/12/Blog/gcd-queues.png">
-<meta property="og:updated_time" content="2016-12-22T13:18:20.000Z">
+<meta property="og:updated_time" content="2016-12-24T11:29:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS并发编程(Concurrent Programming)上">
-<meta name="twitter:description" content="术语进程(process):
-
-正在运行中的程序(可执行文件)称为进程
-拥有独立的虚拟内存空间和系统资源，包括端口权限等
-当一个进程的主线程退出时，这个进程就结束了
-
-线程(thread): 
-
-线程是进程中一个独立的代码执行路径(控制单元)
-一个进程中至少包含一条线程，即主线程
-可以将耗时的执行路径(如：网络请求)放在其他线程中执行
-
-
-在 iOS 中，线程的底层实现是基于 POSIX thre">
+<meta name="twitter:description" content="多线程和GCD">
 <meta name="twitter:image" content="http://oihqdel9t.bkt.clouddn.com/2016/12/Blog/gcd-queues.png">
 
 
@@ -144,7 +105,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -233,16 +194,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -253,22 +204,22 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
           </a>
         </li>
       
@@ -422,7 +373,8 @@
       
 
       
-        <h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p>进程(process):</p>
+        <p>多线程和GCD<br><a id="more"></a></p>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p>进程(process):</p>
 <ul>
 <li>正在运行中的程序(可执行文件)称为进程</li>
 <li>拥有独立的虚拟内存空间和系统资源，包括端口权限等</li>
@@ -431,13 +383,12 @@
 <p>线程(thread): </p>
 <ul>
 <li>线程是进程中一个独立的代码执行路径(控制单元)</li>
-<li>一个进程中至少包含一条线程，即主线程</li>
+<li>一个进程中至少包含一条线程，即主线程（又叫UI线程）</li>
 <li>可以将耗时的执行路径(如：网络请求)放在其他线程中执行</li>
 </ul>
 <blockquote>
 <p>在 iOS 中，线程的底层实现是基于 <code>POSIX threads API</code> 的，也就是我们常说的 pthreads</p>
 </blockquote>
-<a id="more"></a>
 <p>任务(task):</p>
 <ul>
 <li>需要执行的工作，是一个抽象的概念</li>
@@ -526,8 +477,8 @@
 <blockquote>
 <p>无论什么队列和什么任务，线程的创建和回收不需要程序员参与。<br>线程的创建回收工作是由队列负责的<br>“并发”编程，为了让程序员从负责的线程控制中解脱出来！只需要面对队列和任务！</p>
 </blockquote>
-<h4 id="GCD串行队列"><a href="#GCD串行队列" class="headerlink" title="GCD串行队列"></a>GCD串行队列</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.s"</span>, DISPATCH_QUEUE_SERIAL);</div><div class="line"><span class="comment">//同步操作不会新建线程, 任务顺序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"><span class="comment">//异步操作会新建线程, 任务顺序执行(非常有用)</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h4 id="GCD并行队列"><a href="#GCD并行队列" class="headerlink" title="GCD并行队列"></a>GCD并行队列</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.c"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"><span class="comment">//同步操作不会新建线程, 任务顺序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"><span class="comment">//异步操作会新建多个线程, 任务无序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h4 id="GCD串行队列"><a href="#GCD串行队列" class="headerlink" title="GCD串行队列"></a>GCD串行队列</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.s"</span>, DISPATCH_QUEUE_SERIAL);</div><div class="line"><span class="comment">//同步操作不会新建线程, 任务顺序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div><div class="line"><span class="comment">//异步操作会新建线程, 任务顺序执行(非常有用)</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="GCD并行队列"><a href="#GCD并行队列" class="headerlink" title="GCD并行队列"></a>GCD并行队列</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.c"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"><span class="comment">//同步操作不会新建线程, 任务顺序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div><div class="line"><span class="comment">//异步操作会新建多个线程, 任务无序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="GCD全局队列"><a href="#GCD全局队列" class="headerlink" title="GCD全局队列"></a>GCD全局队列</h4><p>全局队列与并行队列的区别:</p>
 <ul>
 <li>不需要创建，直接GET就能用</li>
@@ -537,15 +488,40 @@
 <blockquote>
 <p><code>强烈建议，在绝大多数情况下使用默认的优先级队列就可以了。</code><br>如果执行的任务需要访问一些共享的资源，那么在不同优先级的队列中调度这些任务很快就会造成不可预期的行为。这样可能会引起程序的完全挂起，造成<code>优先级反转</code>，因为低优先级的任务阻塞了高优先级任务，使它不能被执行。</p>
 </blockquote>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q =dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line"><span class="comment">//同步操作不会新建线程, 任务顺序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"><span class="comment">//异步操作会新建多个线程, 任务无序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h4 id="GCD主队列"><a href="#GCD主队列" class="headerlink" title="GCD主队列"></a>GCD主队列</h4><p>在iOS开发中，所有UI的更新工作，都必须在主线程上执行！<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_main_queue();</div><div class="line"><span class="comment">//同步操作会造成死锁,永远不会执行</span></div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"come here baby!"</span>);</div><div class="line">    &#125;);</div><div class="line"><span class="comment">// 异步操作，在主线程上运行，同时是保持队形的</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line">        <span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"%@ - %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<h3 id="GCD不同队列种嵌套dispatch-sync的结果"><a href="#GCD不同队列种嵌套dispatch-sync的结果" class="headerlink" title="GCD不同队列种嵌套dispatch_sync的结果"></a>GCD不同队列种嵌套dispatch_sync的结果</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 全局队列，都在主线程上执行，不会死锁</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line"><span class="comment">// 并行队列，都在主线程上执行，不会死锁</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.c"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"><span class="comment">// 串行队列，会死锁，但是会执行嵌套同步操作之前的代码</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.s"</span>, DISPATCH_QUEUE_SERIAL);</div><div class="line"><span class="comment">// 直接死锁</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_main_queue();</div><div class="line"></div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"同步任务 %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">    <span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"同步任务 %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q =dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line"><span class="comment">//同步操作不会新建线程, 任务顺序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div><div class="line"><span class="comment">//异步操作会新建多个线程, 任务无序执行</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="GCD主队列"><a href="#GCD主队列" class="headerlink" title="GCD主队列"></a>GCD主队列</h4><p>在iOS开发中，所有UI的更新工作，都必须在主线程上执行！<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_main_queue();</div><div class="line"><span class="comment">//同步操作会造成死锁,永远不会执行</span></div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"come here baby!"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 异步操作，在主线程上运行，同时是保持队形的</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</div><div class="line"><span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@ - %d"</span>, [<span class="built_in">NSThread</span> currentThread], i);</div><div class="line">&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="GCD不同队列种嵌套dispatch-sync的结果"><a href="#GCD不同队列种嵌套dispatch-sync的结果" class="headerlink" title="GCD不同队列种嵌套dispatch_sync的结果"></a>GCD不同队列种嵌套dispatch_sync的结果</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 全局队列，都在主线程上执行，不会死锁</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</div><div class="line"><span class="comment">// 并行队列，都在主线程上执行，不会死锁</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.c"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"><span class="comment">// 串行队列，会死锁，但是会执行嵌套同步操作之前的代码</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.s"</span>, DISPATCH_QUEUE_SERIAL);</div><div class="line"><span class="comment">// 直接死锁</span></div><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_main_queue();</div><div class="line"></div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"同步任务 %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line"><span class="built_in">dispatch_sync</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"同步任务 %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>dispatch_sync的应用场景:</p>
 <ul>
 <li>阻塞并行队列的执行，要求某一操作执行后再进行后续操作，如用户登录</li>
 <li>确保块代码之外的局部变量确实被修改</li>
 </ul>
 <h3 id="GCD死锁"><a href="#GCD死锁" class="headerlink" title="GCD死锁"></a>GCD死锁</h3><p>这里有篇博客已经介绍得非常详细了,图文并茂, 浅显易懂<br><a href="http://www.saitjr.com/ios/ios-gcd-deadlock.html" target="_blank" rel="external">某妹纸博客</a></p>
+<h3 id="GCD队列组（Group-queue）"><a href="#GCD队列组（Group-queue）" class="headerlink" title="GCD队列组（Group queue）"></a>GCD队列组（Group queue）</h3><ul>
+<li>Group queue 可以通过调用dispatch_group_create()来获取，通过dispatch_group_notify,可以直接监听组里所有线程完成情况。</li>
+<li>当遇到需要执行多个线程并发执行，然后等多个线程都结束之后，再汇总执行结果时可以用group queue</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_get_global_queue(<span class="number">0</span>, <span class="number">0</span>);</div><div class="line"><span class="built_in">dispatch_queue_t</span> mainQueue = dispatch_get_main_queue();</div><div class="line">dispatch_group_t groupQueue = dispatch_group_create();</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"current task"</span>);</div><div class="line">dispatch_group_async(groupQueue, q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"并行任务1"</span>);</div><div class="line">&#125;);</div><div class="line">dispatch_group_async(groupQueue, q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"并行任务2"</span>);</div><div class="line">&#125;);</div><div class="line">dispatch_group_notify(groupQueue, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"groupQueue中的任务 都执行完成,回到主线程更新UI"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"next task"</span>);</div></pre></td></tr></table></figure>
+<h3 id="GCD常用系统方法"><a href="#GCD常用系统方法" class="headerlink" title="GCD常用系统方法"></a>GCD常用系统方法</h3><h4 id="dispatch-once"><a href="#dispatch-once" class="headerlink" title="dispatch_once"></a>dispatch_once</h4><ul>
+<li>保证在app运行期间，block中的代码只执行一次</li>
+<li>经典使用场景－－－单例</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+ (<span class="keyword">instancetype</span>)manager &#123;</div><div class="line"><span class="keyword">static</span> <span class="keyword">id</span> instance = <span class="literal">nil</span>;</div><div class="line"><span class="comment">// 使用GCD</span></div><div class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</div><div class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</div><div class="line"><span class="comment">// 保证代码执行一次</span></div><div class="line">instance = [[[<span class="keyword">self</span> <span class="keyword">class</span>] alloc]init];</div><div class="line">&#125;);</div><div class="line"><span class="keyword">return</span> instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="dispatch-after"><a href="#dispatch-after" class="headerlink" title="dispatch_after"></a>dispatch_after</h4><ul>
+<li>延时添加到队列<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">dispatch_time_t delayTime3 = dispatch_time(DISPATCH_TIME_NOW, <span class="number">3</span>*<span class="built_in">NSEC_PER_SEC</span>);</div><div class="line">dispatch_time_t delayTime2 = dispatch_time(DISPATCH_TIME_NOW, <span class="number">2</span>*<span class="built_in">NSEC_PER_SEC</span>);</div><div class="line"><span class="built_in">dispatch_queue_t</span> mainQueue = dispatch_get_main_queue();</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"current task"</span>);</div><div class="line">dispatch_after(delayTime3, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3秒之后添加到队列"</span>);</div><div class="line">&#125;);</div><div class="line">dispatch_after(delayTime2, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2秒之后添加到队列"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"next task"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="dispatch-apply"><a href="#dispatch-apply" class="headerlink" title="dispatch_apply"></a>dispatch_apply</h4><ul>
+<li>在给定的队列上多次执行某一任务</li>
+<li>是同步执行的函数, 在主线程直接调用会阻塞主线程去执行block中的任务</li>
+<li>一般把dispatch_apply放在异步队列中调用，然后执行完成后通知主线程</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> globalQueue = dispatch_get_global_queue(<span class="number">0</span>, <span class="number">0</span>);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"current task"</span>);</div><div class="line"><span class="built_in">dispatch_async</span>(globalQueue, ^&#123;</div><div class="line"><span class="built_in">dispatch_queue_t</span> applyQueue = dispatch_get_global_queue(<span class="number">0</span>, <span class="number">0</span>);</div><div class="line"><span class="comment">// 3表示重复次数</span></div><div class="line">dispatch_apply(<span class="number">3</span>, applyQueue, ^(size_t index) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"current index %@"</span>,@(index));</div><div class="line">sleep(<span class="number">1</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"dispatch_apply 执行完成"</span>);</div><div class="line"><span class="built_in">dispatch_queue_t</span> mainQueue = dispatch_get_main_queue();</div><div class="line"><span class="built_in">dispatch_async</span>(mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"回到主线程更新UI"</span>);</div><div class="line">&#125;);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"next task"</span>);</div></pre></td></tr></table></figure>
+<h4 id="dispatch-barrier-async"><a href="#dispatch-barrier-async" class="headerlink" title="dispatch_barrier_async"></a>dispatch_barrier_async</h4><ul>
+<li>栅栏的作用</li>
+<li>功能：在并行队列中，等待在dispatch_barrier_async之前加入队列的任务全部执行完成之后，再执行dispatch_barrier_async中的任务，再去执行在dispatch_barrier_async之后加入到队列中的任务。</li>
+</ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> q = dispatch_queue_create(<span class="string">"com.name.c"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"><span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"dispatch 1"</span>);</div><div class="line">&#125;);</div><div class="line">dispatch_barrier_async(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"dispatch barrier"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">dispatch_async</span>(q, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"dispatch 2"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -755,7 +731,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#术语"><span class="nav-number">1.</span> <span class="nav-text">术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程优势、弊端和误区"><span class="nav-number">2.</span> <span class="nav-text">多线程优势、弊端和误区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS的三种多线程技术"><span class="nav-number">3.</span> <span class="nav-text">iOS的三种多线程技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSThread"><span class="nav-number">3.1.</span> <span class="nav-text">NSThread</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD"><span class="nav-number">3.2.</span> <span class="nav-text">GCD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Operation-Queues"><span class="nav-number">3.3.</span> <span class="nav-text">Operation Queues</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grand-Central-Dispatch（GCD）"><span class="nav-number">4.</span> <span class="nav-text">Grand Central Dispatch（GCD）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD队列-dispatch-queue-t"><span class="nav-number">4.1.</span> <span class="nav-text">GCD队列(dispatch_queue_t)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD串行队列"><span class="nav-number">4.1.1.</span> <span class="nav-text">GCD串行队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD并行队列"><span class="nav-number">4.1.2.</span> <span class="nav-text">GCD并行队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD全局队列"><span class="nav-number">4.1.3.</span> <span class="nav-text">GCD全局队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD主队列"><span class="nav-number">4.1.4.</span> <span class="nav-text">GCD主队列</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD不同队列种嵌套dispatch-sync的结果"><span class="nav-number">4.2.</span> <span class="nav-text">GCD不同队列种嵌套dispatch_sync的结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD死锁"><span class="nav-number">4.3.</span> <span class="nav-text">GCD死锁</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#术语"><span class="nav-number">1.</span> <span class="nav-text">术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程优势、弊端和误区"><span class="nav-number">2.</span> <span class="nav-text">多线程优势、弊端和误区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS的三种多线程技术"><span class="nav-number">3.</span> <span class="nav-text">iOS的三种多线程技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSThread"><span class="nav-number">3.1.</span> <span class="nav-text">NSThread</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD"><span class="nav-number">3.2.</span> <span class="nav-text">GCD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Operation-Queues"><span class="nav-number">3.3.</span> <span class="nav-text">Operation Queues</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Grand-Central-Dispatch（GCD）"><span class="nav-number">4.</span> <span class="nav-text">Grand Central Dispatch（GCD）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD队列-dispatch-queue-t"><span class="nav-number">4.1.</span> <span class="nav-text">GCD队列(dispatch_queue_t)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD串行队列"><span class="nav-number">4.1.1.</span> <span class="nav-text">GCD串行队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD并行队列"><span class="nav-number">4.1.2.</span> <span class="nav-text">GCD并行队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD全局队列"><span class="nav-number">4.1.3.</span> <span class="nav-text">GCD全局队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD主队列"><span class="nav-number">4.1.4.</span> <span class="nav-text">GCD主队列</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD不同队列种嵌套dispatch-sync的结果"><span class="nav-number">4.2.</span> <span class="nav-text">GCD不同队列种嵌套dispatch_sync的结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD死锁"><span class="nav-number">4.3.</span> <span class="nav-text">GCD死锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD队列组（Group-queue）"><span class="nav-number">4.4.</span> <span class="nav-text">GCD队列组（Group queue）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GCD常用系统方法"><span class="nav-number">4.5.</span> <span class="nav-text">GCD常用系统方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#dispatch-once"><span class="nav-number">4.5.1.</span> <span class="nav-text">dispatch_once</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dispatch-after"><span class="nav-number">4.5.2.</span> <span class="nav-text">dispatch_after</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dispatch-apply"><span class="nav-number">4.5.3.</span> <span class="nav-text">dispatch_apply</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dispatch-barrier-async"><span class="nav-number">4.5.4.</span> <span class="nav-text">dispatch_barrier_async</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -791,7 +767,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -857,13 +833,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
