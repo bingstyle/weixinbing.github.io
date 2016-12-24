@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bingol.com/"/>
-  <updated>2016-12-24T11:29:31.000Z</updated>
+  <updated>2016-12-24T12:10:22.000Z</updated>
   <id>http://bingol.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://bingol.com/2016/12/22/iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/"/>
     <id>http://bingol.com/2016/12/22/iOS并发编程(Concurrent Programming)上/</id>
     <published>2016-12-22T12:43:06.000Z</published>
-    <updated>2016-12-24T11:29:31.000Z</updated>
+    <updated>2016-12-24T12:10:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>多线程和GCD<br><a id="more"></a></p>
 <h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><p>进程(process):</p>
@@ -157,9 +157,9 @@
 </ul>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">+ (<span class="keyword">instancetype</span>)manager &#123;</div><div class="line"><span class="keyword">static</span> <span class="keyword">id</span> instance = <span class="literal">nil</span>;</div><div class="line"><span class="comment">// 使用GCD</span></div><div class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</div><div class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</div><div class="line"><span class="comment">// 保证代码执行一次</span></div><div class="line">instance = [[[<span class="keyword">self</span> <span class="keyword">class</span>] alloc]init];</div><div class="line">&#125;);</div><div class="line"><span class="keyword">return</span> instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="dispatch-after"><a href="#dispatch-after" class="headerlink" title="dispatch_after"></a>dispatch_after</h4><ul>
-<li>延时添加到队列<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">dispatch_time_t delayTime3 = dispatch_time(DISPATCH_TIME_NOW, <span class="number">3</span>*<span class="built_in">NSEC_PER_SEC</span>);</div><div class="line">dispatch_time_t delayTime2 = dispatch_time(DISPATCH_TIME_NOW, <span class="number">2</span>*<span class="built_in">NSEC_PER_SEC</span>);</div><div class="line"><span class="built_in">dispatch_queue_t</span> mainQueue = dispatch_get_main_queue();</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"current task"</span>);</div><div class="line">dispatch_after(delayTime3, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3秒之后添加到队列"</span>);</div><div class="line">&#125;);</div><div class="line">dispatch_after(delayTime2, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2秒之后添加到队列"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"next task"</span>);</div></pre></td></tr></table></figure>
-</li>
+<li>延时添加到队列</li>
 </ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">dispatch_time_t delayTime3 = dispatch_time(DISPATCH_TIME_NOW, <span class="number">3</span>*<span class="built_in">NSEC_PER_SEC</span>);</div><div class="line">dispatch_time_t delayTime2 = dispatch_time(DISPATCH_TIME_NOW, <span class="number">2</span>*<span class="built_in">NSEC_PER_SEC</span>);</div><div class="line"><span class="built_in">dispatch_queue_t</span> mainQueue = dispatch_get_main_queue();</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"current task"</span>);</div><div class="line">dispatch_after(delayTime3, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3秒之后添加到队列"</span>);</div><div class="line">&#125;);</div><div class="line">dispatch_after(delayTime2, mainQueue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2秒之后添加到队列"</span>);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"next task"</span>);</div></pre></td></tr></table></figure>
 <h4 id="dispatch-apply"><a href="#dispatch-apply" class="headerlink" title="dispatch_apply"></a>dispatch_apply</h4><ul>
 <li>在给定的队列上多次执行某一任务</li>
 <li>是同步执行的函数, 在主线程直接调用会阻塞主线程去执行block中的任务</li>
