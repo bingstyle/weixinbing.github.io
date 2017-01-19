@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bingol.com/"/>
-  <updated>2017-01-19T14:16:33.000Z</updated>
+  <updated>2017-01-19T14:20:47.000Z</updated>
   <id>http://bingol.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Xcode8新特性之Thread Sanitizer</title>
-    <link href="http://bingol.com/2017/01/19/Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
-    <id>http://bingol.com/2017/01/19/Xcode8新特性之Thread Sanitizer/</id>
-    <published>2017-01-19T14:02:30.000Z</published>
-    <updated>2017-01-19T14:16:33.000Z</updated>
+    <link href="http://bingol.com/2016/12/31/Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
+    <id>http://bingol.com/2016/12/31/Xcode8新特性之Thread Sanitizer/</id>
+    <published>2016-12-30T16:00:00.000Z</published>
+    <updated>2017-01-19T14:20:47.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Thread-Sanitizer的使用"><a href="#Thread-Sanitizer的使用" class="headerlink" title="Thread Sanitizer的使用"></a>Thread Sanitizer的使用</h3><p>打开Xcode 8新增的多线程问题调试工具Thread Sanitizer<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png" alt="Xcode Thread Sanitizer"></p>
 <p>运行下图中代码，检测data race<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/count%20data%20race.png" alt="count data race"><br>很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。</p>
