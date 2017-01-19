@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bingol.com/"/>
-  <updated>2017-01-19T14:20:47.000Z</updated>
+  <updated>2017-01-19T14:35:38.000Z</updated>
   <id>http://bingol.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://bingol.com/2016/12/31/Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
     <id>http://bingol.com/2016/12/31/Xcode8新特性之Thread Sanitizer/</id>
     <published>2016-12-30T16:00:00.000Z</published>
-    <updated>2017-01-19T14:20:47.000Z</updated>
+    <updated>2017-01-19T14:35:38.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Thread-Sanitizer的使用"><a href="#Thread-Sanitizer的使用" class="headerlink" title="Thread Sanitizer的使用"></a>Thread Sanitizer的使用</h3><p>打开Xcode 8新增的多线程问题调试工具Thread Sanitizer<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png" alt="Xcode Thread Sanitizer"></p>
+    <content type="html"><![CDATA[<p>多线程问题调试工具<br><a id="more"></a></p>
+<h3 id="Thread-Sanitizer的使用"><a href="#Thread-Sanitizer的使用" class="headerlink" title="Thread Sanitizer的使用"></a>Thread Sanitizer的使用</h3><p>打开Xcode 8新增的多线程问题调试工具Thread Sanitizer<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png" alt="Xcode Thread Sanitizer"></p>
 <p>运行下图中代码，检测data race<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/count%20data%20race.png" alt="count data race"><br>很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。</p>
 <blockquote>
 <p>最后计算的结果有很大概率小于20000，原因是count ++为非原子操作。这也是data race的场景，这种race没有crash也没有memory corruption，因此有些人把这种race称作benign race(良性的race)。不过上面提到的WWDC视频中，苹果的工程师说到：<br><code>There is No Such Thing as a “Benign” Race</code><br>意思是，只要发生data race，就没有良性一说了，因为虽然程序没有crash，但count最后的值还是出错了，这种 错误必然会导致逻辑上的错误，如果这个count值代表的是你银行卡余额，你应该会更加同意苹果工程师的观点。</p>
@@ -38,7 +39,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Thread-Sanitizer的使用&quot;&gt;&lt;a href=&quot;#Thread-Sanitizer的使用&quot; class=&quot;headerlink&quot; title=&quot;Thread Sanitizer的使用&quot;&gt;&lt;/a&gt;Thread Sanitizer的使用&lt;/h3&gt;&lt;p&gt;打开
+      &lt;p&gt;多线程问题调试工具&lt;br&gt;
     
     </summary>
     
@@ -219,6 +220,46 @@
       <category term="多线程" scheme="http://bingol.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
       <category term="并发编程" scheme="http://bingol.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xcode8如何使用插件</title>
+    <link href="http://bingol.com/2016/12/21/Xcode8.1%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
+    <id>http://bingol.com/2016/12/21/Xcode8.1如何使用插件/</id>
+    <published>2016-12-21T14:29:49.000Z</published>
+    <updated>2017-01-19T14:34:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Xcode8安装插件<br><a id="more"></a></p>
+<p>1.安装苹果官方Xcode8<br>2.在Finder应用程序中将Xcode8复制一份(打包上架使用)<br>3.打开<code>钥匙串访问</code><img src="http://oihqdel9t.bkt.clouddn.com/2016/12/Blog/create%20certificate.png" alt="Alt text"><br>4.填写如图<img src="http://oihqdel9t.bkt.clouddn.com/2016/12/Blog/create%20certificate.png" alt="Alt text"></p>
+<blockquote>
+<p>第一行名称填写XcodeSigner<br>第二行不变<br>第三行选代码签名</p>
+</blockquote>
+<p>5.终端运行(要等10多分钟,固态硬盘会快一些)<br><code>sudo codesign -f -s XcodeSigner /Applications/Xcode.app</code></p>
+<p>6.这时你可以安装Alcatraz了<a href="https://github.com/alcatraz/Alcatraz" target="_blank" rel="external">github地址</a></p>
+<blockquote>
+<p>本人使用如下的终端命令来安装Alcatraz:<br><code>curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh</code><br>如果你不想使用Alcatraz了,可以使用如下命令来删除:<br><code>rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin</code><br>删除所有通过Alcatraz安装的安装包<br><code>rm -rf ~/Library/Application\ Support/Alcatraz/</code></p>
+</blockquote>
+<p>7.Xcode 插件升级失效解决办法</p>
+<blockquote>
+<p>使用以下终端命令<br>获取DVTPlugInCompatibilityUUID字段<br><code>defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID</code><br>将XXXX替换成刚刚获取的DVTPlugInCompatibilityUUID<br><code>find ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins -name Info.plist -maxdepth 3 | xargs -I{} defaults write {} DVTPlugInCompatibilityUUIDs -array-add XXXX</code></p>
+</blockquote>
+<p>8.打开一个Xcode project, 选择load bundle,再次打开工程,已经可以愉快的使用插件了.</p>
+<p>参考文章:<a href="http://www.cocoachina.com/bbs/read.php?tid=1705417" target="_blank" rel="external">http://www.cocoachina.com/bbs/read.php?tid=1705417</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Xcode8安装插件&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Xcode" scheme="http://bingol.com/categories/Xcode/"/>
+    
+    
+      <category term="插件" scheme="http://bingol.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="plugs" scheme="http://bingol.com/tags/plugs/"/>
     
   </entry>
   

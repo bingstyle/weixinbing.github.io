@@ -86,27 +86,18 @@
 
 
 
-<meta name="description" content="Thread Sanitizer的使用打开Xcode 8新增的多线程问题调试工具Thread Sanitizer
-运行下图中代码，检测data race很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。
-
-最后计算的结果有很大概率小于2">
+<meta name="description" content="多线程问题调试工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xcode8新特性之Thread Sanitizer">
 <meta property="og:url" content="http://bingol.com/2016/12/31/Xcode8新特性之Thread Sanitizer/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
-<meta property="og:description" content="Thread Sanitizer的使用打开Xcode 8新增的多线程问题调试工具Thread Sanitizer
-运行下图中代码，检测data race很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。
-
-最后计算的结果有很大概率小于2">
+<meta property="og:description" content="多线程问题调试工具">
 <meta property="og:image" content="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png">
 <meta property="og:image" content="http://oihqdel9t.bkt.clouddn.com/2012/12/count%20data%20race.png">
-<meta property="og:updated_time" content="2017-01-19T14:20:47.000Z">
+<meta property="og:updated_time" content="2017-01-19T14:35:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode8新特性之Thread Sanitizer">
-<meta name="twitter:description" content="Thread Sanitizer的使用打开Xcode 8新增的多线程问题调试工具Thread Sanitizer
-运行下图中代码，检测data race很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。
-
-最后计算的结果有很大概率小于2">
+<meta name="twitter:description" content="多线程问题调试工具">
 <meta name="twitter:image" content="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png">
 
 
@@ -383,7 +374,8 @@
       
 
       
-        <h3 id="Thread-Sanitizer的使用"><a href="#Thread-Sanitizer的使用" class="headerlink" title="Thread Sanitizer的使用"></a>Thread Sanitizer的使用</h3><p>打开Xcode 8新增的多线程问题调试工具Thread Sanitizer<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png" alt="Xcode Thread Sanitizer"></p>
+        <p>多线程问题调试工具<br><a id="more"></a></p>
+<h3 id="Thread-Sanitizer的使用"><a href="#Thread-Sanitizer的使用" class="headerlink" title="Thread Sanitizer的使用"></a>Thread Sanitizer的使用</h3><p>打开Xcode 8新增的多线程问题调试工具Thread Sanitizer<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/Xcode%20Thread%20Sanitizer.png" alt="Xcode Thread Sanitizer"></p>
 <p>运行下图中代码，检测data race<br><img src="http://oihqdel9t.bkt.clouddn.com/2012/12/count%20data%20race.png" alt="count data race"><br>很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。</p>
 <blockquote>
 <p>最后计算的结果有很大概率小于20000，原因是count ++为非原子操作。这也是data race的场景，这种race没有crash也没有memory corruption，因此有些人把这种race称作benign race(良性的race)。不过上面提到的WWDC视频中，苹果的工程师说到：<br><code>There is No Such Thing as a “Benign” Race</code><br>意思是，只要发生data race，就没有良性一说了，因为虽然程序没有crash，但count最后的值还是出错了，这种 错误必然会导致逻辑上的错误，如果这个count值代表的是你银行卡余额，你应该会更加同意苹果工程师的观点。</p>
@@ -529,7 +521,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -546,7 +538,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
