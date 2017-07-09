@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[View层代码结构规范]]></title>
+      <url>%2F2017%2F07%2F10%2FView%E5%B1%82%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83%2F</url>
+      <content type="text"><![CDATA[针对View层的架构设计，还是要做好三点： 代码规范 架构模式 工具集 View层的工具集主要还是集中在如何对View进行布局，以及一些特定的View，比如带搜索提示的搜索框这种。各自实现或者使用CocoaPods里现成的都不是很难。 关于View的代码规范目的: 提高业务方View层的可读性可维护性 防止业务代码对架构产生腐蚀 保持架构发展的方向不轻易被不合理的意见所左右 确保传承 1234567891011121314151617181920212223#pragma mark - Init/* init, dealloc */#pragma mark - Life cycle- (void)viewDidLoad &#123; [super viewDidLoad]; &#125;#pragma mark - Delegate#pragma mark - Event response/* 所有button、gestureRecognizer的响应事件都放在这个区域里面 */#pragma mark - Private methods/* 关于private methods，正常情况下ViewController里面不应该写, 要么把它写成一个category，要么把他做成一个模块，哪怕这个模块只有一个函数也行。*/#pragma mark - Getters and setters 在viewDidload里面只做addSubview的事情在viewDidAppear里面做Notification的监听之类的事情在updateViewConstraints里面做add constraints的事情属性的初始化，则交给getter去做每一个delegate都把对应的protocol名字带上所有button、gestureRecognizer的响应事件都放在Event response这个区域里面 关于View的布局苹果文档中指出，updateViewConstraints是用来做add constraints的地方。建议使用Masonry，代码的可读性就能好很多。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Mac工具箱]]></title>
       <url>%2F2017%2F05%2F13%2FMac%E5%B7%A5%E5%85%B7%E7%AE%B1%2F</url>
       <content type="text"><![CDATA[AlfredAlfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。Sketch 3一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫无关系的图片处理功能，从而降低了工作环境中的噪音。另外，通过强大的插件功能，我能根据需要进行安装使用，这大大提高了我的工作效率。 PaintCode你可以使用PaintCode方便地进行图形设计，你也可以将SVG或PSD文件导入到PaintCode中，然后它就能帮助你将你的设计转换成Objective-C,Swift或C#代码。 Sip for Mac and iPhoneSip是一个非常出色的iOS app，它能帮助你从照片中创建色板。并且你可以在你的Mac或手机上随时随地使用它捕捉那些美丽的色彩。 Sublime Text 3这是我开发前端代码时 使用的IDE。我非常喜欢它的那些使代码异常清晰的主题，以及功能丰富的插件。有了它开发HTML、CSS、JavaScript变成了一件非常愉悦的事情。 DashDash对开发人员非常有帮助，我能够在离线的状态下查看如Angular，Swift，CSS等的技术文档。这使得我在网络条件不好的情况下也能工作，并且极大提升我的工作效率。 CCheatSheetCheatSheet是我非常喜欢的一个小工具，任何流行的软件都会有一堆的快捷键设置，通过这个工具，你只需要长按?键，这个软件的所有快捷键就会显示在你的面前，你完全不用逐一去背，只要反复查看几次，你自然就能熟练运用那些快捷键了。 Fantastical我使用Fantastical来快速地记录我的todo事项，并设定提醒。我只记录那些比较重要的事项，而不会每天把所有很细小的行动项都记录下来，因为那样反而会让我有一种压迫感而分心。我更喜欢在自然舒缓的环境中工作。 LiceCap这使一个很小的免费软件，你可以在屏幕上设定一个区域，然后就可以用LiceCap来快速地录制GIF动画了。直接、高效是我对它的评价。]]></content>
