@@ -611,13 +611,13 @@
   </entry>
   
   <entry>
-    <title>Hexo 结合 Github 搭建的博客</title>
+    <title>快速搭建个人博客</title>
     <link href="http://bingol.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://bingol.com/2016/12/18/Hexo 结合 Github 搭建的博客/</id>
     <published>2016-12-18T11:00:27.000Z</published>
-    <updated>2016-12-24T11:28:24.000Z</updated>
+    <updated>2017-07-10T16:11:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p>博客是怎样搭建的<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>Hexo 结合 Github 搭建博客<br><a id="more"></a></p>
 <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
 <li>安装Node.js <a href="https://nodejs.org/en/" target="_blank" rel="external">官网https://nodejs.org/en/</a></li>
 <li>安装Git（Xcode自带有Git）</li>
@@ -652,16 +652,12 @@ npm install
     
     <summary type="html">
     
-      &lt;p&gt;博客是怎样搭建的&lt;br&gt;
+      &lt;p&gt;Hexo 结合 Github 搭建博客&lt;br&gt;
     
     </summary>
     
       <category term="教程" scheme="http://bingol.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    
-      <category term="Hexo" scheme="http://bingol.com/tags/Hexo/"/>
-    
-      <category term="NexT" scheme="http://bingol.com/tags/NexT/"/>
     
   </entry>
   
