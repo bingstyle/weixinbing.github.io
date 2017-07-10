@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bingol.com/"/>
-  <updated>2017-07-09T23:59:23.000Z</updated>
+  <updated>2017-07-10T00:01:32.000Z</updated>
   <id>http://bingol.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>View层代码结构规范</title>
+    <link href="http://bingol.com/2017/07/10/%E5%85%B3%E4%BA%8EView%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    <id>http://bingol.com/2017/07/10/关于View的代码规范/</id>
+    <published>2017-07-10T00:01:32.000Z</published>
+    <updated>2017-07-10T00:01:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>针对View层的架构设计，还是要做好三点：</p>
+<ul>
+<li>代码规范</li>
+<li>架构模式</li>
+<li>工具集</li>
+</ul>
+<a id="more"></a>
+<blockquote>
+<p>View层的工具集主要还是集中在如何对View进行布局，以及一些特定的View，比如带搜索提示的搜索框这种。各自实现或者使用CocoaPods里现成的都不是很难。</p>
+</blockquote>
+<h4 id="关于View的代码规范"><a href="#关于View的代码规范" class="headerlink" title="关于View的代码规范"></a>关于View的代码规范</h4><p>目的:</p>
+<ol>
+<li>提高业务方View层的可读性可维护性</li>
+<li>防止业务代码对架构产生腐蚀</li>
+<li>保持架构发展的方向不轻易被不合理的意见所左右</li>
+<li>确保传承</li>
+</ol>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - Init</span></div><div class="line"><span class="comment">/* init, dealloc */</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - Life cycle</span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - Delegate</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - Event response</span></div><div class="line"><span class="comment">/* 所有button、gestureRecognizer的响应事件都放在这个区域里面 */</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - Private methods</span></div><div class="line"><span class="comment">/* 关于private methods，正常情况下ViewController里面不应该写,</span></div><div class="line"> 要么把它写成一个category，要么把他做成一个模块，哪怕这个模块只有一个函数也行。*/</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - Getters and setters</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>在viewDidload里面只做addSubview的事情<br>在viewDidAppear里面做Notification的监听之类的事情<br>在updateViewConstraints里面做add constraints的事情<br>属性的初始化，则交给getter去做<br>每一个delegate都把对应的protocol名字带上<br>所有button、gestureRecognizer的响应事件都放在Event response这个区域里面</p>
+</blockquote>
+<h4 id="关于View的布局"><a href="#关于View的布局" class="headerlink" title="关于View的布局"></a>关于View的布局</h4><p><code>苹果文档中指出，updateViewConstraints是用来做add constraints的地方。</code><br>建议使用Masonry，代码的可读性就能好很多。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;针对View层的架构设计，还是要做好三点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码规范&lt;/li&gt;
+&lt;li&gt;架构模式&lt;/li&gt;
+&lt;li&gt;工具集&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://bingol.com/categories/iOS/"/>
+    
+    
+      <category term="代码规范" scheme="http://bingol.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
   
   <entry>
     <title>View层代码结构规范</title>
