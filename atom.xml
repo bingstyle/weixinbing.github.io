@@ -4,9 +4,9 @@
   <subtitle>Do one thing at a time, and do well.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://bingol.com/"/>
+  <link href="http://www.weixinbing.com/"/>
   <updated>2017-07-10T00:05:40.000Z</updated>
-  <id>http://bingol.com/</id>
+  <id>http://www.weixinbing.com/</id>
   
   <author>
     <name>weixb</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>View层代码结构规范</title>
-    <link href="http://bingol.com/2017/07/10/View%E5%B1%82%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83/"/>
-    <id>http://bingol.com/2017/07/10/View层代码结构规范/</id>
+    <link href="http://www.weixinbing.com/2017/07/10/View%E5%B1%82%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.weixinbing.com/2017/07/10/View层代码结构规范/</id>
     <published>2017-07-10T00:05:39.000Z</published>
     <updated>2017-07-10T00:05:40.000Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://bingol.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
     
     
-      <category term="代码规范" scheme="http://bingol.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+      <category term="代码规范" scheme="http://www.weixinbing.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
   <entry>
     <title>Mac工具箱</title>
-    <link href="http://bingol.com/2017/05/13/Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
-    <id>http://bingol.com/2017/05/13/Mac工具箱/</id>
+    <link href="http://www.weixinbing.com/2017/05/13/Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    <id>http://www.weixinbing.com/2017/05/13/Mac工具箱/</id>
     <published>2017-05-13T14:53:43.000Z</published>
     <updated>2017-05-13T15:07:42.000Z</updated>
     
@@ -89,17 +89,17 @@
     
     </summary>
     
-      <category term="MAC" scheme="http://bingol.com/categories/MAC/"/>
+      <category term="MAC" scheme="http://www.weixinbing.com/categories/MAC/"/>
     
     
-      <category term="工具" scheme="http://bingol.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://www.weixinbing.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>Git命令大全</title>
-    <link href="http://bingol.com/2017/01/19/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93/"/>
-    <id>http://bingol.com/2017/01/19/创建仓库/</id>
+    <link href="http://www.weixinbing.com/2017/01/19/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93/"/>
+    <id>http://www.weixinbing.com/2017/01/19/创建仓库/</id>
     <published>2017-01-19T14:56:20.000Z</published>
     <updated>2017-01-19T14:59:54.000Z</updated>
     
@@ -188,17 +188,17 @@
     
     </summary>
     
-      <category term="Git" scheme="http://bingol.com/categories/Git/"/>
+      <category term="Git" scheme="http://www.weixinbing.com/categories/Git/"/>
     
     
-      <category term="Git" scheme="http://bingol.com/tags/Git/"/>
+      <category term="Git" scheme="http://www.weixinbing.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Xcode8新特性之Thread Sanitizer</title>
-    <link href="http://bingol.com/2016/12/31/Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
-    <id>http://bingol.com/2016/12/31/Xcode8新特性之Thread Sanitizer/</id>
+    <link href="http://www.weixinbing.com/2016/12/31/Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
+    <id>http://www.weixinbing.com/2016/12/31/Xcode8新特性之Thread Sanitizer/</id>
     <published>2016-12-30T16:00:00.000Z</published>
     <updated>2017-01-19T14:35:38.000Z</updated>
     
@@ -223,17 +223,17 @@
     
     </summary>
     
-      <category term="Xcode" scheme="http://bingol.com/categories/Xcode/"/>
+      <category term="Xcode" scheme="http://www.weixinbing.com/categories/Xcode/"/>
     
     
-      <category term="Xcode" scheme="http://bingol.com/tags/Xcode/"/>
+      <category term="Xcode" scheme="http://www.weixinbing.com/tags/Xcode/"/>
     
   </entry>
   
   <entry>
     <title>iOS并发编程(Concurrent Programming)上</title>
-    <link href="http://bingol.com/2016/12/22/iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/"/>
-    <id>http://bingol.com/2016/12/22/iOS并发编程(Concurrent Programming)上/</id>
+    <link href="http://www.weixinbing.com/2016/12/22/iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/"/>
+    <id>http://www.weixinbing.com/2016/12/22/iOS并发编程(Concurrent Programming)上/</id>
     <published>2016-12-22T12:43:06.000Z</published>
     <updated>2016-12-24T12:10:22.000Z</updated>
     
@@ -394,19 +394,19 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://bingol.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
     
     
-      <category term="多线程" scheme="http://bingol.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="http://www.weixinbing.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="并发编程" scheme="http://bingol.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+      <category term="并发编程" scheme="http://www.weixinbing.com/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Xcode8如何使用插件</title>
-    <link href="http://bingol.com/2016/12/21/Xcode8.1%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
-    <id>http://bingol.com/2016/12/21/Xcode8.1如何使用插件/</id>
+    <link href="http://www.weixinbing.com/2016/12/21/Xcode8.1%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
+    <id>http://www.weixinbing.com/2016/12/21/Xcode8.1如何使用插件/</id>
     <published>2016-12-21T14:29:49.000Z</published>
     <updated>2017-01-19T14:34:06.000Z</updated>
     
@@ -434,19 +434,19 @@
     
     </summary>
     
-      <category term="Xcode" scheme="http://bingol.com/categories/Xcode/"/>
+      <category term="Xcode" scheme="http://www.weixinbing.com/categories/Xcode/"/>
     
     
-      <category term="插件" scheme="http://bingol.com/tags/%E6%8F%92%E4%BB%B6/"/>
+      <category term="插件" scheme="http://www.weixinbing.com/tags/%E6%8F%92%E4%BB%B6/"/>
     
-      <category term="plugs" scheme="http://bingol.com/tags/plugs/"/>
+      <category term="plugs" scheme="http://www.weixinbing.com/tags/plugs/"/>
     
   </entry>
   
   <entry>
     <title>发布框架到cocoapods</title>
-    <link href="http://bingol.com/2016/12/20/%E5%8F%91%E5%B8%83%E5%B7%A5%E7%A8%8B%E5%88%B0cocoapods/"/>
-    <id>http://bingol.com/2016/12/20/发布工程到cocoapods/</id>
+    <link href="http://www.weixinbing.com/2016/12/20/%E5%8F%91%E5%B8%83%E5%B7%A5%E7%A8%8B%E5%88%B0cocoapods/"/>
+    <id>http://www.weixinbing.com/2016/12/20/发布工程到cocoapods/</id>
     <published>2016-12-20T02:02:34.000Z</published>
     <updated>2016-12-24T11:32:48.000Z</updated>
     
@@ -501,17 +501,17 @@
     
     </summary>
     
-      <category term="cocoapods" scheme="http://bingol.com/categories/cocoapods/"/>
+      <category term="cocoapods" scheme="http://www.weixinbing.com/categories/cocoapods/"/>
     
     
-      <category term="cocoapods" scheme="http://bingol.com/tags/cocoapods/"/>
+      <category term="cocoapods" scheme="http://www.weixinbing.com/tags/cocoapods/"/>
     
   </entry>
   
   <entry>
     <title>YYModel,MJExtension,JSONModel对比</title>
-    <link href="http://bingol.com/2016/12/20/YYModel,MJExtension,JSONModel%E5%AF%B9%E6%AF%94/"/>
-    <id>http://bingol.com/2016/12/20/YYModel,MJExtension,JSONModel对比/</id>
+    <link href="http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel%E5%AF%B9%E6%AF%94/"/>
+    <id>http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel对比/</id>
     <published>2016-12-19T16:02:25.000Z</published>
     <updated>2016-12-24T11:30:13.000Z</updated>
     
@@ -553,21 +553,21 @@
     
     </summary>
     
-      <category term="iOS" scheme="http://bingol.com/categories/iOS/"/>
+      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
     
     
-      <category term="JSON" scheme="http://bingol.com/tags/JSON/"/>
+      <category term="JSON" scheme="http://www.weixinbing.com/tags/JSON/"/>
     
-      <category term="MODEL" scheme="http://bingol.com/tags/MODEL/"/>
+      <category term="MODEL" scheme="http://www.weixinbing.com/tags/MODEL/"/>
     
-      <category term="模型框架" scheme="http://bingol.com/tags/%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/"/>
+      <category term="模型框架" scheme="http://www.weixinbing.com/tags/%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
   <entry>
     <title>OC预处理指令</title>
-    <link href="http://bingol.com/2016/12/19/OC%E9%A2%84%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/"/>
-    <id>http://bingol.com/2016/12/19/OC预处理命令/</id>
+    <link href="http://www.weixinbing.com/2016/12/19/OC%E9%A2%84%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.weixinbing.com/2016/12/19/OC预处理命令/</id>
     <published>2016-12-18T16:42:26.000Z</published>
     <updated>2016-12-24T11:34:07.000Z</updated>
     
@@ -603,17 +603,17 @@
     
     </summary>
     
-      <category term="Objective-C" scheme="http://bingol.com/categories/Objective-C/"/>
+      <category term="Objective-C" scheme="http://www.weixinbing.com/categories/Objective-C/"/>
     
     
-      <category term="预处理" scheme="http://bingol.com/tags/%E9%A2%84%E5%A4%84%E7%90%86/"/>
+      <category term="预处理" scheme="http://www.weixinbing.com/tags/%E9%A2%84%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>快速搭建个人博客</title>
-    <link href="http://bingol.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://bingol.com/2016/12/18/Hexo 结合 Github 搭建的博客/</id>
+    <link href="http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://www.weixinbing.com/2016/12/18/Hexo 结合 Github 搭建的博客/</id>
     <published>2016-12-18T11:00:27.000Z</published>
     <updated>2017-07-10T16:11:57.000Z</updated>
     
@@ -656,7 +656,7 @@ npm install
     
     </summary>
     
-      <category term="教程" scheme="http://bingol.com/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="http://www.weixinbing.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
   </entry>
