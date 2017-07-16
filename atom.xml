@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.weixinbing.com/"/>
-  <updated>2017-07-10T00:05:40.000Z</updated>
+  <updated>2017-07-16T14:38:39.000Z</updated>
   <id>http://www.weixinbing.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS中的关键字const／static／extern</title>
+    <link href="http://www.weixinbing.com/2017/07/16/iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/"/>
+    <id>http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/</id>
+    <published>2017-07-16T14:36:36.000Z</published>
+    <updated>2017-07-16T14:38:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="const"><a href="#const" class="headerlink" title="const:"></a>const:</h3><p>const只修饰其右边的变量，被修饰的变量是只读的；<br>const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p</div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p	</div><div class="line"><span class="comment">// *p只读, p变量(这2种没有区别)</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p	</div><div class="line"><span class="comment">// *p变量, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p	  </div><div class="line"><span class="comment">// *p只读, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> * <span class="keyword">const</span> p   </div><div class="line"><span class="comment">// *p只读, p只读</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<blockquote>
+<p>const常量误区：<br>   <code>const int n = 5; int a[n];</code><br>   上述代码中变量n被修饰为只读变量，可惜再怎么修饰也不是“常量”，而数组定义时长度必须是“常量”，因此报错。</p>
+<p>const int MAX_LENGTH = 100; //这不是“常量”，而是一个只读变量。</p>
+</blockquote>
+<h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><h5 id="1-修饰局部变量"><a href="#1-修饰局部变量" class="headerlink" title="1. 修饰局部变量"></a>1. 修饰局部变量</h5><p>保证局部变量永远只初始化一次，在程序的运行过程中永远只有一份内存， 生命周期类似全局变量了，但是作用域不变。</p>
+<h5 id="2-修饰全局变量"><a href="#2-修饰全局变量" class="headerlink" title="2. 修饰全局变量"></a>2. 修饰全局变量</h5><p>使全局变量的作用域仅限于当前文件内部，不能通过extern来引用</p>
+<h5 id="3-修饰函数"><a href="#3-修饰函数" class="headerlink" title="3. 修饰函数"></a>3. 修饰函数</h5><p>被修饰的函数被称为静态函数，使得外部文件无法访问这个函数，OC语言中很少使用。</p>
+<h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p>它的作用是声明外部全局变量</p>
+<p>苹果推荐extern声明全局变量（不建议使用define），优势是保持常量绝对不会被修改，并且还带有初始化的类型信息。<br>通常在.h中声明，在.m中实现<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// .h声明</span></div><div class="line"><span class="keyword">extern</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> NAME;</div><div class="line"></div><div class="line"><span class="comment">// .m实现</span></div><div class="line"><span class="built_in">NSString</span> * <span class="keyword">const</span> NAME = <span class="string">@"XXX"</span>;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>const是用来定义一个常量。而static在C语言中（OC中延用）表明此变量只在该变量的输出文件中可用(.m文件)，如果你不加“static”符号，那么编译器就会对该变量创建一个“外部符号”，后果是什么呢？</p>
+<p>你可以尝试在不同文件中加入以下代码：<br><code>NSString  * const kUserName = @&quot;StrongX&quot;;</code><br>可能尽管文件之间并没有相互引用，不存在属性名重复的问题（因为这并不是一个属性，这是一个外部符号）,但是编译器还是报错了:<br><code>duplicate symbol XXX in: ....
+clang: error: linker command failed with exit code 1 (use -v to see invocation)</code></p>
+<p>它会告诉你在两个目标文件(.o文件是.m文件编译后的输出文件)有一个重复的符号。(OC中没有类似C++中的名字空间的概念)<br>所以当你在你自己的.m文件中需要声明一个只有你自己可见的局部变量(k开头)的变量的时候<br><code>一定要同时使用“static”和“const”两个关键字。</code></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;const&quot;&gt;&lt;a href=&quot;#const&quot; class=&quot;headerlink&quot; title=&quot;const:&quot;&gt;&lt;/a&gt;const:&lt;/h3&gt;&lt;p&gt;const只修饰其右边的变量，被修饰的变量是只读的；&lt;br&gt;const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。&lt;br&gt;&lt;figure class=&quot;highlight objectivec&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; *p&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; *p	&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// *p只读, p变量(这2种没有区别)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; * &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; p	&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// *p变量, p只读&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; * &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; p	  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// *p只读, p只读&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; * &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; p   &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// *p只读, p只读&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Git" scheme="http://www.weixinbing.com/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://www.weixinbing.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>View层代码结构规范</title>
@@ -513,7 +552,7 @@
     <link href="http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel%E5%AF%B9%E6%AF%94/"/>
     <id>http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel对比/</id>
     <published>2016-12-19T16:02:25.000Z</published>
-    <updated>2016-12-24T11:30:13.000Z</updated>
+    <updated>2017-07-16T14:41:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>JSON模型<br><a id="more"></a></p>
 <h3 id="使用区别"><a href="#使用区别" class="headerlink" title="使用区别"></a>使用区别</h3><blockquote>

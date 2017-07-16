@@ -73,7 +73,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="cocoapods," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -91,16 +91,16 @@
 
 
 
-<meta name="description" content="让自己的框架支持cocoapods">
+<meta name="description" content="const:const只修饰其右边的变量，被修饰的变量是只读的；const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。123456789101112const int *pint const *p	// *p只读, p变量(这2种没有区别)int * const p	// *p变量, p只读const int * const p	  // *p只读, p只读int con">
 <meta property="og:type" content="article">
-<meta property="og:title" content="发布框架到cocoapods">
-<meta property="og:url" content="http://www.weixinbing.com/2016/12/20/发布工程到cocoapods/index.html">
+<meta property="og:title" content="iOS中的关键字const／static／extern">
+<meta property="og:url" content="http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
-<meta property="og:description" content="让自己的框架支持cocoapods">
-<meta property="og:updated_time" content="2016-12-24T11:32:48.000Z">
+<meta property="og:description" content="const:const只修饰其右边的变量，被修饰的变量是只读的；const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。123456789101112const int *pint const *p	// *p只读, p变量(这2种没有区别)int * const p	// *p变量, p只读const int * const p	  // *p只读, p只读int con">
+<meta property="og:updated_time" content="2017-07-16T14:38:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="发布框架到cocoapods">
-<meta name="twitter:description" content="让自己的框架支持cocoapods">
+<meta name="twitter:title" content="iOS中的关键字const／static／extern">
+<meta name="twitter:description" content="const:const只修饰其右边的变量，被修饰的变量是只读的；const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。123456789101112const int *pint const *p	// *p只读, p变量(这2种没有区别)int * const p	// *p变量, p只读const int * const p	  // *p只读, p只读int con">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://www.weixinbing.com/2016/12/20/发布工程到cocoapods/"/>
+  <link rel="canonical" href="http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/"/>
 
 
 
 
 
-  <title> 发布框架到cocoapods | Bingol's Blog </title>
+  <title> iOS中的关键字const／static／extern | Bingol's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -307,7 +307,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2016/12/20/发布工程到cocoapods/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -328,7 +328,7 @@
             
             
               
-                发布框架到cocoapods
+                iOS中的关键字const／static／extern
               
             
           </h1>
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-20T10:02:34+08:00">
-                2016-12-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T22:36:36+08:00">
+                2017-07-16
               </time>
             
 
@@ -366,8 +366,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/cocoapods/" itemprop="url" rel="index">
-                    <span itemprop="name">cocoapods</span>
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
                   </a>
                 </span>
 
@@ -385,8 +385,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2016/12/20/发布工程到cocoapods/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2016/12/20/发布工程到cocoapods/" itemprop="commentsCount"></span>
+                <a href="/2017/07/16/iOS中的关键字const／static／extern/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/16/iOS中的关键字const／static／extern/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -412,49 +412,23 @@
       
 
       
-        <p>让自己的框架支持cocoapods<br><a id="more"></a></p>
-<h3 id="在github建立仓库-并clone到本地"><a href="#在github建立仓库-并clone到本地" class="headerlink" title="在github建立仓库,并clone到本地"></a>在github建立仓库,并clone到本地</h3><p>github不是唯一的平台,其他平台都可以,前提是项目是开源的.</p>
-<h3 id="创建-podspec文件"><a href="#创建-podspec文件" class="headerlink" title="创建.podspec文件"></a>创建.podspec文件</h3><p>打开终端,进入仓库,执行如下命令:</p>
+        <h3 id="const"><a href="#const" class="headerlink" title="const:"></a>const:</h3><p>const只修饰其右边的变量，被修饰的变量是只读的；<br>const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p</div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p	</div><div class="line"><span class="comment">// *p只读, p变量(这2种没有区别)</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p	</div><div class="line"><span class="comment">// *p变量, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p	  </div><div class="line"><span class="comment">// *p只读, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> * <span class="keyword">const</span> p   </div><div class="line"><span class="comment">// *p只读, p只读</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <blockquote>
-<p>pod spec create XXX</p>
+<p>const常量误区：<br>   <code>const int n = 5; int a[n];</code><br>   上述代码中变量n被修饰为只读变量，可惜再怎么修饰也不是“常量”，而数组定义时长度必须是“常量”，因此报错。</p>
+<p>const int MAX_LENGTH = 100; //这不是“常量”，而是一个只读变量。</p>
 </blockquote>
-<h3 id="编辑-podspec文件"><a href="#编辑-podspec文件" class="headerlink" title="编辑.podspec文件"></a>编辑.podspec文件</h3><p>使用vim或Xcode打开.podspec文件,编辑如下:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.<span class="keyword">new</span> <span class="keyword">do</span> |s|</div><div class="line">s.name = <span class="string">"XXX"</span></div><div class="line">s.<span class="keyword">version</span> = <span class="string">"1.0.3"</span></div><div class="line">s.ios.deployment_target = <span class="string">'8.0'</span></div><div class="line">s.summary = <span class="string">"some utilities"</span></div><div class="line">s.homepage = <span class="string">"https://github.com/weixinbing/XXX"</span></div><div class="line">s.license = &#123; :<span class="built_in">type</span> =&gt; <span class="string">"MIT"</span>, :<span class="keyword">file</span> =&gt; <span class="string">"LICENSE"</span> &#125;</div><div class="line">s.author = &#123; <span class="string">"weixb"</span> =&gt; <span class="string">"183292352@qq.com"</span> &#125;</div><div class="line">s.social_media_url = <span class="string">"http://weibo.com/u/5348162268"</span></div><div class="line">s.<span class="keyword">source</span> = &#123; :git =&gt; <span class="string">"https://github.com/weixinbing/XXX.git"</span>, :<span class="keyword">tag</span> =&gt; s.<span class="keyword">version</span> &#125;</div><div class="line">s.source_files = <span class="string">"XXX"</span></div><div class="line">s.requires_arc = true</div><div class="line">s.dependency <span class="string">"YTKNetwork"</span>, <span class="string">"~&gt; 2.0.3"</span></div><div class="line">s.dependency <span class="string">'Bugly'</span>, <span class="string">'~&gt; 2.4.2'</span></div><div class="line">end</div></pre></td></tr></table></figure></p>
+<h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><h5 id="1-修饰局部变量"><a href="#1-修饰局部变量" class="headerlink" title="1. 修饰局部变量"></a>1. 修饰局部变量</h5><p>保证局部变量永远只初始化一次，在程序的运行过程中永远只有一份内存， 生命周期类似全局变量了，但是作用域不变。</p>
+<h5 id="2-修饰全局变量"><a href="#2-修饰全局变量" class="headerlink" title="2. 修饰全局变量"></a>2. 修饰全局变量</h5><p>使全局变量的作用域仅限于当前文件内部，不能通过extern来引用</p>
+<h5 id="3-修饰函数"><a href="#3-修饰函数" class="headerlink" title="3. 修饰函数"></a>3. 修饰函数</h5><p>被修饰的函数被称为静态函数，使得外部文件无法访问这个函数，OC语言中很少使用。</p>
+<h3 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h3><p>它的作用是声明外部全局变量</p>
+<p>苹果推荐extern声明全局变量（不建议使用define），优势是保持常量绝对不会被修改，并且还带有初始化的类型信息。<br>通常在.h中声明，在.m中实现<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// .h声明</span></div><div class="line"><span class="keyword">extern</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> NAME;</div><div class="line"></div><div class="line"><span class="comment">// .m实现</span></div><div class="line"><span class="built_in">NSString</span> * <span class="keyword">const</span> NAME = <span class="string">@"XXX"</span>;</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>s.name：名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错<br>s.version：版本号<br>s.ios.deployment_target:支持的pod最低版本<br>s.summary: 简介<br>s.homepage:项目主页地址<br>s.license:许可证<br>s.author:作者<br>s.social_media_url:社交网址<br>s.source:项目的地址<br>s.source_files:需要包含的源文件<br>s.resources: 资源文件<br>s.requires_arc: 是否支持ARC<br>s.dependency：依赖库(可以多写)</p>
+<p>const是用来定义一个常量。而static在C语言中（OC中延用）表明此变量只在该变量的输出文件中可用(.m文件)，如果你不加“static”符号，那么编译器就会对该变量创建一个“外部符号”，后果是什么呢？</p>
+<p>你可以尝试在不同文件中加入以下代码：<br><code>NSString  * const kUserName = @&quot;StrongX&quot;;</code><br>可能尽管文件之间并没有相互引用，不存在属性名重复的问题（因为这并不是一个属性，这是一个外部符号）,但是编译器还是报错了:<br><code>duplicate symbol XXX in: ....
+clang: error: linker command failed with exit code 1 (use -v to see invocation)</code></p>
+<p>它会告诉你在两个目标文件(.o文件是.m文件编译后的输出文件)有一个重复的符号。(OC中没有类似C++中的名字空间的概念)<br>所以当你在你自己的.m文件中需要声明一个只有你自己可见的局部变量(k开头)的变量的时候<br><code>一定要同时使用“static”和“const”两个关键字。</code></p>
 </blockquote>
-<p>source_files:写法及含义:</p>
-<blockquote>
-<p>“”XXX”和“XXX/<em>” 表示匹配所有文件(不包含文件夹)<br>“XXX/</em>.{h,m}” 表示匹配所有以.h和.m结尾的文件(不包含文件夹)<br>“XXX/**” 表示匹配所有子目录(不包含文件夹)</p>
-</blockquote>
-<h3 id="验证本地仓库-podspec文件"><a href="#验证本地仓库-podspec文件" class="headerlink" title="验证本地仓库.podspec文件"></a>验证本地仓库.podspec文件</h3><blockquote>
-<p>pod lib lint XXX.podspec</p>
-</blockquote>
-<h3 id="上传本地仓库到Git"><a href="#上传本地仓库到Git" class="headerlink" title="上传本地仓库到Git"></a>上传本地仓库到Git</h3><h3 id="给仓库打上tag"><a href="#给仓库打上tag" class="headerlink" title="给仓库打上tag"></a>给仓库打上tag</h3><blockquote>
-<p>git tag ‘1.0.0’ //第一步<br>git push origin –tags //推送到远程仓库</p>
-</blockquote>
-<h3 id="验证远程仓库-podspec文件"><a href="#验证远程仓库-podspec文件" class="headerlink" title="验证远程仓库.podspec文件"></a>验证远程仓库.podspec文件</h3><blockquote>
-<p>pod spec lint XXX.podspec</p>
-</blockquote>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>发布前先验证是否已注册trunk：</p>
-<blockquote>
-<p>pod trunk me</p>
-</blockquote>
-<p>没有注册则使用命令：</p>
-<blockquote>
-<p>pod trunk register Email “Name” –verbose<br>注册完成之后会给你的邮箱发个邮件,进入邮箱邮件里面有个链接,需要点击确认一下</p>
-</blockquote>
-<p>已注册则执行发布命令：</p>
-<blockquote>
-<p>pod trunk push XXX.podspec</p>
-</blockquote>
-<p>发布成功就可以使用pod导入你的框架了。</p>
-<h3 id="错误搜集"><a href="#错误搜集" class="headerlink" title="错误搜集"></a>错误搜集</h3><p>遇到错误CocoaPods was not able to update the <code>master</code> repo. If this is an unexpected issue and persists you can inspect it running <code>pod repo update --verbose</code><br>执行命令<code>pod repo update</code>即可</p>
-<p>发布成功,执行<code>pod search XXX</code>搜索</p>
-<p>遇到错误Unable to find a pod with name, author, summary, or descriptionmatching “XXX”的解决方法:</p>
-<blockquote>
-<p>方法1:使用终端命令<br><code>rm ~/Library/Caches/CocoaPods/search_index.json</code>  删除cocoapods本地缓存,再使用<code>pod search XXX</code>搜索.<br>方法2:使用终端命令<code>pod setup</code> 更新cocoapods的repo,再重复方法1.</p>
-</blockquote>
-<p>依赖错误, 可以使用 –use-libraries 来让验证通过.<br>警告错误, 可以使用 –allow-warnings 来让验证通过.</p>
 
       
     </div>
@@ -484,7 +458,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/cocoapods/" rel="tag"># cocoapods</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -497,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/20/YYModel,MJExtension,JSONModel对比/" rel="next" title="YYModel,MJExtension,JSONModel对比">
-                <i class="fa fa-chevron-left"></i> YYModel,MJExtension,JSONModel对比
+              <a href="/2017/07/10/View层代码结构规范/" rel="next" title="View层代码结构规范">
+                <i class="fa fa-chevron-left"></i> View层代码结构规范
               </a>
             
           </div>
@@ -506,10 +480,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/21/Xcode8.1如何使用插件/" rel="prev" title="Xcode8如何使用插件">
-                Xcode8如何使用插件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -667,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在github建立仓库-并clone到本地"><span class="nav-number">1.</span> <span class="nav-text">在github建立仓库,并clone到本地</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-podspec文件"><span class="nav-number">2.</span> <span class="nav-text">创建.podspec文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑-podspec文件"><span class="nav-number">3.</span> <span class="nav-text">编辑.podspec文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证本地仓库-podspec文件"><span class="nav-number">4.</span> <span class="nav-text">验证本地仓库.podspec文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传本地仓库到Git"><span class="nav-number">5.</span> <span class="nav-text">上传本地仓库到Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给仓库打上tag"><span class="nav-number">6.</span> <span class="nav-text">给仓库打上tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证远程仓库-podspec文件"><span class="nav-number">7.</span> <span class="nav-text">验证远程仓库.podspec文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布"><span class="nav-number">8.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误搜集"><span class="nav-number">9.</span> <span class="nav-text">错误搜集</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static"><span class="nav-number">2.</span> <span class="nav-text">static</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-修饰局部变量"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. 修饰局部变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-修饰全局变量"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. 修饰全局变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-修饰函数"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. 修饰函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extern"><span class="nav-number">3.</span> <span class="nav-text">extern</span></a></li></ol></div>
             
 
           </div>

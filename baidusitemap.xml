@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2017-07-16T14:41:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>YYModel,MJExtension,JSONModel对比</title>
+        <pubTime>2016-12-19T16:02:25.000Z</pubTime>
+        
+        <tag>JSON</tag>
+         
+        <tag>MODEL</tag>
+         
+        <tag>模型框架</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2017/07/16/iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/</loc>
+    <lastmod>2017-07-16T14:38:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS中的关键字const／static／extern</title>
+        <pubTime>2017-07-16T14:36:36.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://www.weixinbing.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-07-10T16:11:57.000Z</lastmod>
     <data>
@@ -180,30 +224,6 @@
            
              
               <breadCrumb title="cocoapods" url="http://www.weixinbing.com/categories/cocoapods/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel%E5%AF%B9%E6%AF%94/</loc>
-    <lastmod>2016-12-24T11:30:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>YYModel,MJExtension,JSONModel对比</title>
-        <pubTime>2016-12-19T16:02:25.000Z</pubTime>
-        
-        <tag>JSON</tag>
-         
-        <tag>MODEL</tag>
-         
-        <tag>模型框架</tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
           
         </display>
     </data>
