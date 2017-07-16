@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.weixinbing.com/"/>
-  <updated>2017-07-16T14:38:39.000Z</updated>
+  <updated>2017-07-16T14:42:59.000Z</updated>
   <id>http://www.weixinbing.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.weixinbing.com/2017/07/16/iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/"/>
     <id>http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/</id>
     <published>2017-07-16T14:36:36.000Z</published>
-    <updated>2017-07-16T14:38:39.000Z</updated>
+    <updated>2017-07-16T14:42:59.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="const"><a href="#const" class="headerlink" title="const:"></a>const:</h3><p>const只修饰其右边的变量，被修饰的变量是只读的；<br>const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p</div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p	</div><div class="line"><span class="comment">// *p只读, p变量(这2种没有区别)</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p	</div><div class="line"><span class="comment">// *p变量, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p	  </div><div class="line"><span class="comment">// *p只读, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> * <span class="keyword">const</span> p   </div><div class="line"><span class="comment">// *p只读, p只读</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
@@ -47,10 +47,10 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
     
     </summary>
     
-      <category term="Git" scheme="http://www.weixinbing.com/categories/Git/"/>
+      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
     
     
-      <category term="Git" scheme="http://www.weixinbing.com/tags/Git/"/>
+      <category term="关键字" scheme="http://www.weixinbing.com/tags/%E5%85%B3%E9%94%AE%E5%AD%97/"/>
     
   </entry>
   
