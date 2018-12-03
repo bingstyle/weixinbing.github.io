@@ -59,13 +59,6 @@
 
     
     <entry>
-      <title><![CDATA[iOS中的关键字const／static／extern]]></title>
-      <url>%2F2017%2F07%2F16%2F14%20iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern%2F</url>
-      <content type="text"><![CDATA[const:const只修饰其右边的变量，被修饰的变量是只读的；const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。123456789101112const int *pint const *p // *p只读, p变量(这2种没有区别)int * const p // *p变量, p只读const int * const p // *p只读, p只读int const * const p // *p只读, p只读 const常量误区： const int n = 5; int a[n]; 上述代码中变量n被修饰为只读变量，可惜再怎么修饰也不是“常量”，而数组定义时长度必须是“常量”，因此报错。 const int MAX_LENGTH = 100; //这不是“常量”，而是一个只读变量。 static1. 修饰局部变量保证局部变量永远只初始化一次，在程序的运行过程中永远只有一份内存， 生命周期类似全局变量了，但是作用域不变。 2. 修饰全局变量使全局变量的作用域仅限于当前文件内部，不能通过extern来引用 3. 修饰函数被修饰的函数被称为静态函数，使得外部文件无法访问这个函数，OC语言中很少使用。 extern它的作用是声明外部全局变量 苹果推荐extern声明全局变量（不建议使用define），优势是保持常量绝对不会被修改，并且还带有初始化的类型信息。通常在.h中声明，在.m中实现12345// .h声明extern NSString * const NAME;// .m实现NSString * const NAME = @"XXX"; const是用来定义一个常量。而static在C语言中（OC中延用）表明此变量只在该变量的输出文件中可用(.m文件)，如果你不加“static”符号，那么编译器就会对该变量创建一个“外部符号”，后果是什么呢？ 你可以尝试在不同文件中加入以下代码：NSString * const kUserName = @&quot;StrongX&quot;;可能尽管文件之间并没有相互引用，不存在属性名重复的问题（因为这并不是一个属性，这是一个外部符号）,但是编译器还是报错了:duplicate symbol XXX in: .... clang: error: linker command failed with exit code 1 (use -v to see invocation) 它会告诉你在两个目标文件(.o文件是.m文件编译后的输出文件)有一个重复的符号。(OC中没有类似C++中的名字空间的概念)所以当你在你自己的.m文件中需要声明一个只有你自己可见的局部变量(k开头)的变量的时候一定要同时使用“static”和“const”两个关键字。]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[设计模式-单例]]></title>
       <url>%2F2017%2F07%2F15%2F13%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%2F</url>
       <content type="text"><![CDATA[Objective-C 1234567891011121314151617181920212223242526272829303132/** * 分析代码: 利用了static关键字,这样以来该变量就会一直存储在静态区的,和系统同生共死. 利用gcd保证 instance = [[self alloc] init];这句代码只会执行一次,也就说明该对象一旦创建出来,就不会被重新创建 */static id instance; // 单例（全局变量）/** 单例方法 */+ (instancetype)shared&lt;#Class#&gt; &#123; // 使用GCD确保只进行一次 static dispatch_once_t onceToken; dispatch_once(&amp;onceToken, ^&#123; instance = [[self alloc] init]; &#125;); return instance;&#125;/** alloc 会调用allocWithZone方法 */+ (instancetype)allocWithZone:(struct _NSZone *)zone &#123; // 使用GCD确保只进行一次 static dispatch_once_t onceToken; dispatch_once(&amp;onceToken, ^&#123; instance = [super allocWithZone:zone]; &#125;); return instance;&#125;/** copy在底层 会调用copyWithZone方法 */- (id)copyWithZone:(struct _NSZone *)zone &#123; return instance;&#125;]]></content>
@@ -118,6 +111,13 @@
       <title><![CDATA[Xcode8新特性之Thread Sanitizer]]></title>
       <url>%2F2016%2F12%2F31%2F07%20Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer%2F</url>
       <content type="text"><![CDATA[多线程问题调试工具 Thread Sanitizer的使用打开Xcode 8新增的多线程问题调试工具Thread Sanitizer 运行下图中代码，检测data race很直观，Xcode直接提示你发生了data race的变量及其代码位置，同时还清晰的展示了函数当前的各线程调用栈，十分清晰，接下来你要做的就是增加同步操作，比如加锁，从而消除data race，再运行测试是否生效。 最后计算的结果有很大概率小于20000，原因是count ++为非原子操作。这也是data race的场景，这种race没有crash也没有memory corruption，因此有些人把这种race称作benign race(良性的race)。不过上面提到的WWDC视频中，苹果的工程师说到：There is No Such Thing as a “Benign” Race意思是，只要发生data race，就没有良性一说了，因为虽然程序没有crash，但count最后的值还是出错了，这种 错误必然会导致逻辑上的错误，如果这个count值代表的是你银行卡余额，你应该会更加同意苹果工程师的观点。 data race定义： 当至少有两个线程同时访问同一个变量，而且至少其中有一个是写操作时，就发生了data race Thread Sanitizer的工作原理 在WWDC的视频中也介绍过了，大家可以仔细看下视频，大致原理是记录每个线程访问变量的信息来做分析，值得一提的是，现阶段的Thread Sanitizer最多只同时记录4个线程的访问信息，在复杂的场景下，可能出现偶尔检测不出data race的场景，所以需要长时间经常性的运行来尽可能多的发现data race，这也是为什么苹果建议默认开启Thread Sanitizer，而且Thread Sanitizer造成的额外性能损耗非常之小。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[iOS中的关键字const／static／extern]]></title>
+      <url>%2F2016%2F12%2F26%2F06.0%20iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern%2F</url>
+      <content type="text"><![CDATA[const:const只修饰其右边的变量，被修饰的变量是只读的；const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。123456789101112const int *pint const *p // *p只读, p变量(这2种没有区别)int * const p // *p变量, p只读const int * const p // *p只读, p只读int const * const p // *p只读, p只读 const常量误区： const int n = 5; int a[n]; 上述代码中变量n被修饰为只读变量，可惜再怎么修饰也不是“常量”，而数组定义时长度必须是“常量”，因此报错。 const int MAX_LENGTH = 100; //这不是“常量”，而是一个只读变量。 static1. 修饰局部变量保证局部变量永远只初始化一次，在程序的运行过程中永远只有一份内存， 生命周期类似全局变量了，但是作用域不变。 2. 修饰全局变量使全局变量的作用域仅限于当前文件内部，不能通过extern来引用 3. 修饰函数被修饰的函数被称为静态函数，使得外部文件无法访问这个函数，OC语言中很少使用。 extern它的作用是声明外部全局变量 苹果推荐extern声明全局变量（不建议使用define），优势是保持常量绝对不会被修改，并且还带有初始化的类型信息。通常在.h中声明，在.m中实现12345// .h声明extern NSString * const NAME;// .m实现NSString * const NAME = @"XXX"; const是用来定义一个常量。而static在C语言中（OC中延用）表明此变量只在该变量的输出文件中可用(.m文件)，如果你不加“static”符号，那么编译器就会对该变量创建一个“外部符号”，后果是什么呢？ 你可以尝试在不同文件中加入以下代码：NSString * const kUserName = @&quot;StrongX&quot;;可能尽管文件之间并没有相互引用，不存在属性名重复的问题（因为这并不是一个属性，这是一个外部符号）,但是编译器还是报错了:duplicate symbol XXX in: .... clang: error: linker command failed with exit code 1 (use -v to see invocation) 它会告诉你在两个目标文件(.o文件是.m文件编译后的输出文件)有一个重复的符号。(OC中没有类似C++中的名字空间的概念)所以当你在你自己的.m文件中需要声明一个只有你自己可见的局部变量(k开头)的变量的时候一定要同时使用“static”和“const”两个关键字。]]></content>
     </entry>
 
     
