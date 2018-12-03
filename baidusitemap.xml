@@ -4,8 +4,122 @@
 
     
   <url>
+    <loc>http://www.weixinbing.com/2017/06/29/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%8E%9F%E5%88%99%EF%BC%88SOLID%EF%BC%89/</loc>
+    <lastmod>2018-12-03T10:49:36.332Z</lastmod>
+    <data>
+        <display>
+        <title>面向对象原则（SOLID）</title>
+        <pubTime>2017-06-28T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="架构" url="http://www.weixinbing.com/categories/%E6%9E%B6%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2017/06/30/%E5%86%99%E4%B8%80%E4%B8%AAiOS%E5%BA%94%E7%94%A8%E4%B9%8B%E5%89%8D%E5%BF%85%E9%A1%BB%E5%81%9A%E7%9A%84%E4%BA%8B/</loc>
+    <lastmod>2018-12-03T10:47:37.568Z</lastmod>
+    <data>
+        <display>
+        <title>写一个iOS应用之前必须做的事</title>
+        <pubTime>2017-06-29T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="架构" url="http://www.weixinbing.com/categories/%E6%9E%B6%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2018/06/18/iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/</loc>
+    <lastmod>2018-12-03T10:45:54.241Z</lastmod>
+    <data>
+        <display>
+        <title>iOS端mPaaS框架</title>
+        <pubTime>2018-06-17T16:00:00.000Z</pubTime>
+        
+        <tag>mPaas</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2018/10/23/%5B%E8%AF%91%5D%20%E5%AE%98%E6%96%B9%20Swift%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2018-12-03T10:42:26.667Z</lastmod>
+    <data>
+        <display>
+        <title>官方 Swift API 设计指南（译）</title>
+        <pubTime>2018-10-22T16:00:00.000Z</pubTime>
+        
+        <tag>Swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="Swift" url="http://www.weixinbing.com/categories/Swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2017/07/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B/</loc>
+    <lastmod>2018-12-03T10:26:23.362Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式-单例</title>
+        <pubTime>2017-07-14T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="设计模式" url="http://www.weixinbing.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2017/09/09/ipa%E9%87%8D%E7%AD%BE%E5%90%8D%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2018-12-03T10:21:45.714Z</lastmod>
+    <data>
+        <display>
+        <title>ipa重签名的三种方法</title>
+        <pubTime>2017-09-08T16:00:00.000Z</pubTime>
+        
+        <tag>ipa</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.weixinbing.com/2017/07/20/iOS%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B9%8BFastlane/</loc>
-    <lastmod>2018-12-03T08:46:29.985Z</lastmod>
+    <lastmod>2018-12-03T10:06:36.732Z</lastmod>
     <data>
         <display>
         <title>iOS自动化部署和发布之Fastlane</title>
@@ -25,7 +139,7 @@
     
   <url>
     <loc>http://www.weixinbing.com/2017/09/02/zsh%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2018-12-03T08:46:09.128Z</lastmod>
+    <lastmod>2018-12-03T10:06:31.625Z</lastmod>
     <data>
         <display>
         <title>zsh安装和配置</title>
@@ -37,6 +151,26 @@
            
              
               <breadCrumb title="Mac" url="http://www.weixinbing.com/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2017/01/19/Git%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2018-12-03T09:57:21.843Z</lastmod>
+    <data>
+        <display>
+        <title>Git命令大全</title>
+        <pubTime>2017-01-19T14:56:20.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://www.weixinbing.com/categories/Git/"/>
           
         </display>
     </data>
@@ -160,26 +294,6 @@
            
              
               <breadCrumb title="MAC" url="http://www.weixinbing.com/categories/MAC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.weixinbing.com/2017/01/19/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93/</loc>
-    <lastmod>2017-01-19T14:59:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git命令大全</title>
-        <pubTime>2017-01-19T14:56:20.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Git" url="http://www.weixinbing.com/categories/Git/"/>
           
         </display>
     </data>
