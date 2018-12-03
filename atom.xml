@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.weixinbing.com/"/>
-  <updated>2018-12-03T10:42:26.667Z</updated>
+  <updated>2018-12-03T13:02:51.356Z</updated>
   <id>http://www.weixinbing.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>官方 Swift API 设计指南（译）</title>
-    <link href="http://www.weixinbing.com/2018/10/23/%5B%E8%AF%91%5D%20%E5%AE%98%E6%96%B9%20Swift%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/"/>
-    <id>http://www.weixinbing.com/2018/10/23/[译] 官方 Swift API 设计指南/</id>
-    <published>2018-10-22T16:00:00.000Z</published>
-    <updated>2018-12-03T10:42:26.667Z</updated>
+    <link href="http://www.weixinbing.com/2018/10/10/%5B%E8%AF%91%5D%20%E5%AE%98%E6%96%B9%20Swift%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/"/>
+    <id>http://www.weixinbing.com/2018/10/10/[译] 官方 Swift API 设计指南/</id>
+    <published>2018-10-09T16:00:00.000Z</published>
+    <updated>2018-12-03T13:02:51.356Z</updated>
     
     <content type="html"><![CDATA[<p>原文：<a href="https://swift.org/documentation/api-design-guidelines/" target="_blank" rel="external">Swift API Design Guidelines</a></p>
 <p>其他：<a href="https://google.github.io/swift/" target="_blank" rel="external">Google Swift Style Guide</a> （<a href="https://www.yuque.com/kiwi/ios/style-guide" target="_blank" rel="external">中文版</a>）</p>
@@ -293,11 +293,69 @@
   </entry>
   
   <entry>
+    <title>iOS端mPaaS框架</title>
+    <link href="http://www.weixinbing.com/2018/06/18/iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/"/>
+    <id>http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/</id>
+    <published>2018-06-17T16:00:00.000Z</published>
+    <updated>2018-12-03T10:45:54.241Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置开发环境流程："><a href="#配置开发环境流程：" class="headerlink" title="配置开发环境流程："></a>配置开发环境流程：</h2><p>按照官方文档配置流程，本人最开始使用的.org的ruby源，导致后面安装开发者工具报错，更新为.com后环境配置一路顺畅。流程如下：</p>
+<h4 id="检查-RubyGems-源"><a href="#检查-RubyGems-源" class="headerlink" title="检查 RubyGems 源"></a>检查 RubyGems 源</h4><a id="more"></a>
+<blockquote>
+<p>公告！因域名备案问题，.org域名无法继续提供RubyGems镜像服务，我们提供.com代替.org的域名，其它一切不变</p>
+<p>$ gem sources –add <a href="https://gems.ruby-china.com/" target="_blank" rel="external">https://gems.ruby-china.com/</a> –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a></p>
+<p><strong>$</strong> gem sources -l</p>
+<p>#确保只有 <a href="http://gems.ruby-china.com/" target="_blank" rel="external">gems.ruby-china.com</a></p>
+</blockquote>
+<h3 id="升级-RubyGems"><a href="#升级-RubyGems" class="headerlink" title="升级 RubyGems"></a>升级 RubyGems</h3><blockquote>
+<p><strong>$</strong> sudo gem update –system</p>
+</blockquote>
+<h3 id="安装-Ruby2-2-4"><a href="#安装-Ruby2-2-4" class="headerlink" title="安装 Ruby2.2.4"></a>安装 Ruby2.2.4</h3><p>使用rvm工具管理ruby版本，如果安装了多个版本，设置Ruby 2.2.4 为默认版本</p>
+<blockquote>
+<p><strong>$</strong> rvm use 2.2.4 –default</p>
+</blockquote>
+<h3 id="安装开发者工具"><a href="#安装开发者工具" class="headerlink" title="安装开发者工具"></a>安装开发者工具</h3><blockquote>
+<p>完全退出 Xcode，在终端运行下列安装命令：</p>
+<p><strong>$</strong> sh &lt;(curl -s <a href="http://mpaas-ios.oss-cn-hangzhou.aliyuncs.com/mPaaS-Install-Tool/installmPaaS.sh" target="_blank" rel="external">http://mpaas-ios.oss-cn-hangzhou.aliyuncs.com/mPaaS-Install-Tool/installmPaaS.sh</a> )</p>
+<p>对于 Xcode 8 之后的版本，安装 mPaaS 插件时需要 unsign Xcode。按照提示输入 <code>U</code>。脚本会自动完成安装。</p>
+<p>去除Xcode签名</p>
+<p><strong>$</strong> mpaas unsign</p>
+<p>恢复Xcode签名</p>
+<p><strong>$</strong> mpaas restore</p>
+<p>更新所有 Xcode 插件的 UUID</p>
+<p><strong>$</strong> mpaas update_plugins</p>
+</blockquote>
+<h3 id="安装命令行工具（可选）"><a href="#安装命令行工具（可选）" class="headerlink" title="安装命令行工具（可选）"></a>安装命令行工具（可选）</h3><blockquote>
+<p>更新到最新版的开发者工具</p>
+<p><strong>$</strong> mpkitupdate</p>
+<p>打印出本地的 SDK 里模块的信息</p>
+<p><strong>$</strong> mpaas sdk</p>
+<p>更新本地SDK</p>
+<p><strong>$</strong> mpaas sdk update</p>
+</blockquote>
+<h2 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h2><h3 id="基于-mPaaS-框架开发"><a href="#基于-mPaaS-框架开发" class="headerlink" title="基于 mPaaS 框架开发"></a>基于 mPaaS 框架开发</h3><p>按照官方文档流程接入正常</p>
+<h3 id="基于系统框架开发"><a href="#基于系统框架开发" class="headerlink" title="基于系统框架开发"></a>基于系统框架开发</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;配置开发环境流程：&quot;&gt;&lt;a href=&quot;#配置开发环境流程：&quot; class=&quot;headerlink&quot; title=&quot;配置开发环境流程：&quot;&gt;&lt;/a&gt;配置开发环境流程：&lt;/h2&gt;&lt;p&gt;按照官方文档配置流程，本人最开始使用的.org的ruby源，导致后面安装开发者工具报错，更新为.com后环境配置一路顺畅。流程如下：&lt;/p&gt;
+&lt;h4 id=&quot;检查-RubyGems-源&quot;&gt;&lt;a href=&quot;#检查-RubyGems-源&quot; class=&quot;headerlink&quot; title=&quot;检查 RubyGems 源&quot;&gt;&lt;/a&gt;检查 RubyGems 源&lt;/h4&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
+    
+    
+      <category term="mPaas" scheme="http://www.weixinbing.com/tags/mPaas/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mail邮箱管理</title>
-    <link href="http://www.weixinbing.com/2018/09/21/Mail%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/"/>
-    <id>http://www.weixinbing.com/2018/09/21/Mail邮箱管理/</id>
-    <published>2018-09-21T14:36:36.000Z</published>
-    <updated>2018-12-03T11:12:45.950Z</updated>
+    <link href="http://www.weixinbing.com/2018/03/21/Mail%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/"/>
+    <id>http://www.weixinbing.com/2018/03/21/Mail邮箱管理/</id>
+    <published>2018-03-21T14:36:36.000Z</published>
+    <updated>2018-12-03T13:01:40.379Z</updated>
     
     <content type="html"><![CDATA[<h2 id="添加账号"><a href="#添加账号" class="headerlink" title="添加账号"></a>添加账号</h2><h4 id="QQ邮箱"><a href="#QQ邮箱" class="headerlink" title="QQ邮箱"></a>QQ邮箱</h4><p>登录QQ邮箱网页版，点击设置-&gt;账号-&gt;POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
 <p>开启IMAP/SMTP服务</p>
@@ -417,10 +475,10 @@
   
   <entry>
     <title>Mac代理设置-Proxifier</title>
-    <link href="http://www.weixinbing.com/2018/09/21/Mac%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-Proxifier/"/>
-    <id>http://www.weixinbing.com/2018/09/21/Mac代理设置-Proxifier/</id>
-    <published>2018-09-21T13:36:36.000Z</published>
-    <updated>2018-12-03T11:12:50.557Z</updated>
+    <link href="http://www.weixinbing.com/2018/03/21/Mac%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-Proxifier/"/>
+    <id>http://www.weixinbing.com/2018/03/21/Mac代理设置-Proxifier/</id>
+    <published>2018-03-21T13:36:36.000Z</published>
+    <updated>2018-12-03T13:01:34.159Z</updated>
     
     <content type="html"><![CDATA[<p>Proxifier<a href="https://www.proxifier.com/" target="_blank" rel="external">下载</a></p>
 <h4 id="设置代理服务器"><a href="#设置代理服务器" class="headerlink" title="设置代理服务器"></a>设置代理服务器</h4><a id="more"></a>
@@ -451,10 +509,10 @@
   
   <entry>
     <title>科学上网</title>
-    <link href="http://www.weixinbing.com/2018/09/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    <id>http://www.weixinbing.com/2018/09/20/科学上网/</id>
-    <published>2018-09-19T16:00:00.000Z</published>
-    <updated>2018-12-03T11:13:38.978Z</updated>
+    <link href="http://www.weixinbing.com/2018/03/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>http://www.weixinbing.com/2018/03/20/科学上网/</id>
+    <published>2018-03-19T16:00:00.000Z</published>
+    <updated>2018-12-03T13:01:27.232Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-安装shadowsocks"><a href="#1-安装shadowsocks" class="headerlink" title="1. 安装shadowsocks"></a>1. 安装shadowsocks</h4><p>shadowsocks<a href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients" target="_blank" rel="external">下载链接</a></p>
 <p>Shadowsocks Windows <a href="https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">使用说明</a></p>
@@ -484,64 +542,6 @@
     
     
       <category term="翻墙" scheme="http://www.weixinbing.com/tags/%E7%BF%BB%E5%A2%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS端mPaaS框架</title>
-    <link href="http://www.weixinbing.com/2018/06/18/iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/"/>
-    <id>http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/</id>
-    <published>2018-06-17T16:00:00.000Z</published>
-    <updated>2018-12-03T10:45:54.241Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="配置开发环境流程："><a href="#配置开发环境流程：" class="headerlink" title="配置开发环境流程："></a>配置开发环境流程：</h2><p>按照官方文档配置流程，本人最开始使用的.org的ruby源，导致后面安装开发者工具报错，更新为.com后环境配置一路顺畅。流程如下：</p>
-<h4 id="检查-RubyGems-源"><a href="#检查-RubyGems-源" class="headerlink" title="检查 RubyGems 源"></a>检查 RubyGems 源</h4><a id="more"></a>
-<blockquote>
-<p>公告！因域名备案问题，.org域名无法继续提供RubyGems镜像服务，我们提供.com代替.org的域名，其它一切不变</p>
-<p>$ gem sources –add <a href="https://gems.ruby-china.com/" target="_blank" rel="external">https://gems.ruby-china.com/</a> –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a></p>
-<p><strong>$</strong> gem sources -l</p>
-<p>#确保只有 <a href="http://gems.ruby-china.com/" target="_blank" rel="external">gems.ruby-china.com</a></p>
-</blockquote>
-<h3 id="升级-RubyGems"><a href="#升级-RubyGems" class="headerlink" title="升级 RubyGems"></a>升级 RubyGems</h3><blockquote>
-<p><strong>$</strong> sudo gem update –system</p>
-</blockquote>
-<h3 id="安装-Ruby2-2-4"><a href="#安装-Ruby2-2-4" class="headerlink" title="安装 Ruby2.2.4"></a>安装 Ruby2.2.4</h3><p>使用rvm工具管理ruby版本，如果安装了多个版本，设置Ruby 2.2.4 为默认版本</p>
-<blockquote>
-<p><strong>$</strong> rvm use 2.2.4 –default</p>
-</blockquote>
-<h3 id="安装开发者工具"><a href="#安装开发者工具" class="headerlink" title="安装开发者工具"></a>安装开发者工具</h3><blockquote>
-<p>完全退出 Xcode，在终端运行下列安装命令：</p>
-<p><strong>$</strong> sh &lt;(curl -s <a href="http://mpaas-ios.oss-cn-hangzhou.aliyuncs.com/mPaaS-Install-Tool/installmPaaS.sh" target="_blank" rel="external">http://mpaas-ios.oss-cn-hangzhou.aliyuncs.com/mPaaS-Install-Tool/installmPaaS.sh</a> )</p>
-<p>对于 Xcode 8 之后的版本，安装 mPaaS 插件时需要 unsign Xcode。按照提示输入 <code>U</code>。脚本会自动完成安装。</p>
-<p>去除Xcode签名</p>
-<p><strong>$</strong> mpaas unsign</p>
-<p>恢复Xcode签名</p>
-<p><strong>$</strong> mpaas restore</p>
-<p>更新所有 Xcode 插件的 UUID</p>
-<p><strong>$</strong> mpaas update_plugins</p>
-</blockquote>
-<h3 id="安装命令行工具（可选）"><a href="#安装命令行工具（可选）" class="headerlink" title="安装命令行工具（可选）"></a>安装命令行工具（可选）</h3><blockquote>
-<p>更新到最新版的开发者工具</p>
-<p><strong>$</strong> mpkitupdate</p>
-<p>打印出本地的 SDK 里模块的信息</p>
-<p><strong>$</strong> mpaas sdk</p>
-<p>更新本地SDK</p>
-<p><strong>$</strong> mpaas sdk update</p>
-</blockquote>
-<h2 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h2><h3 id="基于-mPaaS-框架开发"><a href="#基于-mPaaS-框架开发" class="headerlink" title="基于 mPaaS 框架开发"></a>基于 mPaaS 框架开发</h3><p>按照官方文档流程接入正常</p>
-<h3 id="基于系统框架开发"><a href="#基于系统框架开发" class="headerlink" title="基于系统框架开发"></a>基于系统框架开发</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;配置开发环境流程：&quot;&gt;&lt;a href=&quot;#配置开发环境流程：&quot; class=&quot;headerlink&quot; title=&quot;配置开发环境流程：&quot;&gt;&lt;/a&gt;配置开发环境流程：&lt;/h2&gt;&lt;p&gt;按照官方文档配置流程，本人最开始使用的.org的ruby源，导致后面安装开发者工具报错，更新为.com后环境配置一路顺畅。流程如下：&lt;/p&gt;
-&lt;h4 id=&quot;检查-RubyGems-源&quot;&gt;&lt;a href=&quot;#检查-RubyGems-源&quot; class=&quot;headerlink&quot; title=&quot;检查 RubyGems 源&quot;&gt;&lt;/a&gt;检查 RubyGems 源&lt;/h4&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
-    
-    
-      <category term="mPaas" scheme="http://www.weixinbing.com/tags/mPaas/"/>
     
   </entry>
   
