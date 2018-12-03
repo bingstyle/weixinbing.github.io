@@ -654,7 +654,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
     <link href="http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.weixinbing.com/2016/12/18/Hexo 结合 Github 搭建的博客/</id>
     <published>2016-12-18T11:00:27.000Z</published>
-    <updated>2018-12-03T04:00:42.239Z</updated>
+    <updated>2018-12-03T04:14:10.261Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo 结合 Github 搭建博客<br><a id="more"></a></p>
 <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
@@ -698,7 +698,7 @@ npm install
 <th>记录值</th>
 <th>MX优先级</th>
 <th>TTL</th>
-<th>状态    </th>
+<th>状态</th>
 </tr>
 </thead>
 <tbody>
@@ -722,6 +722,7 @@ npm install
 </tr>
 </tbody>
 </table>
+<p>然后打开你的github博客项目，点击settings，拉到下面Custom domain处，填上你自己的域名，保存</p>
 ]]></content>
     
     <summary type="html">
