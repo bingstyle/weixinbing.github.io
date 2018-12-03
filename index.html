@@ -308,7 +308,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/10/10/[译] 官方 Swift API 设计指南/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/10/10/22 [译] 官方 Swift API 设计指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -330,7 +330,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/10/10/[译] 官方 Swift API 设计指南/" itemprop="url">
+                <a class="post-title-link" href="/2018/10/10/22 [译] 官方 Swift API 设计指南/" itemprop="url">
                   官方 Swift API 设计指南（译）
                 </a>
               
@@ -389,8 +389,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/10/10/[译] 官方 Swift API 设计指南/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2018/10/10/[译] 官方 Swift API 设计指南/" class="cy_cmt_count" data-xid="2018/10/10/[译] 官方 Swift API 设计指南/" itemprop="commentsCount" ></span>
+                <a href="/2018/10/10/22 [译] 官方 Swift API 设计指南/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2018/10/10/22 [译] 官方 Swift API 设计指南/" class="cy_cmt_count" data-xid="2018/10/10/22 [译] 官方 Swift API 设计指南/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -421,7 +421,7 @@
 <p>其他：<a href="https://google.github.io/swift/">Google Swift Style Guide</a> （<a href="https://www.yuque.com/kiwi/ios/style-guide">中文版</a>）</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/10/[译] 官方 Swift API 设计指南/#more" rel="contents">
+            <a class="btn" href="/2018/10/10/22 [译] 官方 Swift API 设计指南/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -467,7 +467,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/07/10/iOS项目的目录结构/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/06/18/21 iOS端mPaaS调研文档/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -489,181 +489,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/07/10/iOS项目的目录结构/" itemprop="url">
-                  iOS项目的目录结构
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-10T00:00:00+08:00">
-                2018-07-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/架构/" itemprop="url" rel="index">
-                    <span itemprop="name">架构</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/2018/07/10/iOS项目的目录结构/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2018/07/10/iOS项目的目录结构/" class="cy_cmt_count" data-xid="2018/07/10/iOS项目的目录结构/" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。</p>
-<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543329783206-02a6fd7c-879c-4b42-8a71-318337591c59.png" alt="img"></p>
-<h3 id="AppDelegate"><a href="#AppDelegate" class="headerlink" title="AppDelegate"></a>AppDelegate</h3><p>目录下放AppDelegate.h(.m)文件，是整个应用的入口文件，所以单独拿出来</p>
-<h3 id="Sections"><a href="#Sections" class="headerlink" title="Sections"></a>Sections</h3><p>目录下放app的具体模块，如登录、设置等</p>
-<h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>目录下放会被重用的Views、Macro和Categories等</p>
-<p>Macro目录下放了整个应用会用到的宏定义</p>
-<ul>
-<li>AppMacro.h  </li>
-<li>UtilsMacro.h </li>
-<li>VendorMacro.h </li>
-<li>NotificationMacro.h</li>
-</ul>
-<blockquote>
-<p>AppMacro.h 里放app相关的宏定义</p>
-<p>UtilsMacro.h 里放一些方便使用的宏定义</p>
-<p>VendorMacro.h 里放一些第三方常量</p>
-<p>NotificationMacro.h 里放通知相关的宏定义</p>
-</blockquote>
-<p>Helpers目录放一些助手类，文件名与功能挂钩</p>
-<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>目录放app会用到的一些资源，主要是图片</p>
-<h3 id="Vendors"><a href="#Vendors" class="headerlink" title="Vendors"></a>Vendors</h3><p>目录放第三方的类库/SDK</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="weixb">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bing's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/06/18/iOS端mPaaS调研文档/" itemprop="url">
+                <a class="post-title-link" href="/2018/06/18/21 iOS端mPaaS调研文档/" itemprop="url">
                   iOS端mPaaS框架
                 </a>
               
@@ -722,8 +548,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/06/18/iOS端mPaaS调研文档/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/" class="cy_cmt_count" data-xid="2018/06/18/iOS端mPaaS调研文档/" itemprop="commentsCount" ></span>
+                <a href="/2018/06/18/21 iOS端mPaaS调研文档/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2018/06/18/21 iOS端mPaaS调研文档/" class="cy_cmt_count" data-xid="2018/06/18/21 iOS端mPaaS调研文档/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -754,7 +580,7 @@
 <h4 id="检查-RubyGems-源"><a href="#检查-RubyGems-源" class="headerlink" title="检查 RubyGems 源"></a>检查 RubyGems 源</h4>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/06/18/iOS端mPaaS调研文档/#more" rel="contents">
+            <a class="btn" href="/2018/06/18/21 iOS端mPaaS调研文档/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -800,7 +626,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/03/21/Mail邮箱管理/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/03/21/20 Mail邮箱管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -822,7 +648,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/21/Mail邮箱管理/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/21/20 Mail邮箱管理/" itemprop="url">
                   Mail邮箱管理
                 </a>
               
@@ -881,8 +707,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/03/21/Mail邮箱管理/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2018/03/21/Mail邮箱管理/" class="cy_cmt_count" data-xid="2018/03/21/Mail邮箱管理/" itemprop="commentsCount" ></span>
+                <a href="/2018/03/21/20 Mail邮箱管理/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2018/03/21/20 Mail邮箱管理/" class="cy_cmt_count" data-xid="2018/03/21/20 Mail邮箱管理/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -935,7 +761,7 @@
 </table>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/Mail邮箱管理/#more" rel="contents">
+            <a class="btn" href="/2018/03/21/20 Mail邮箱管理/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -981,7 +807,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/03/21/Mac代理设置-Proxifier/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/03/21/19 Mac代理设置-Proxifier/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -1003,7 +829,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/21/Mac代理设置-Proxifier/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/21/19 Mac代理设置-Proxifier/" itemprop="url">
                   Mac代理设置-Proxifier
                 </a>
               
@@ -1062,8 +888,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/03/21/Mac代理设置-Proxifier/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2018/03/21/Mac代理设置-Proxifier/" class="cy_cmt_count" data-xid="2018/03/21/Mac代理设置-Proxifier/" itemprop="commentsCount" ></span>
+                <a href="/2018/03/21/19 Mac代理设置-Proxifier/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2018/03/21/19 Mac代理设置-Proxifier/" class="cy_cmt_count" data-xid="2018/03/21/19 Mac代理设置-Proxifier/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -1094,7 +920,7 @@
 <h4 id="设置代理服务器"><a href="#设置代理服务器" class="headerlink" title="设置代理服务器"></a>设置代理服务器</h4>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/Mac代理设置-Proxifier/#more" rel="contents">
+            <a class="btn" href="/2018/03/21/19 Mac代理设置-Proxifier/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1140,7 +966,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/03/20/科学上网/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2018/03/20/18 科学上网/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -1162,7 +988,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/20/科学上网/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/20/18 科学上网/" itemprop="url">
                   科学上网
                 </a>
               
@@ -1221,8 +1047,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/03/20/科学上网/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2018/03/20/科学上网/" class="cy_cmt_count" data-xid="2018/03/20/科学上网/" itemprop="commentsCount" ></span>
+                <a href="/2018/03/20/18 科学上网/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2018/03/20/18 科学上网/" class="cy_cmt_count" data-xid="2018/03/20/18 科学上网/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -1253,7 +1079,7 @@
 <p>Shadowsocks Windows <a href="https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">使用说明</a></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/03/20/科学上网/#more" rel="contents">
+            <a class="btn" href="/2018/03/20/18 科学上网/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1299,7 +1125,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/09/09/ipa重签名的三种方法/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/09/09/17 ipa重签名的三种方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -1321,7 +1147,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/09/09/ipa重签名的三种方法/" itemprop="url">
+                <a class="post-title-link" href="/2017/09/09/17 ipa重签名的三种方法/" itemprop="url">
                   ipa重签名的三种方法
                 </a>
               
@@ -1380,8 +1206,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/09/09/ipa重签名的三种方法/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2017/09/09/ipa重签名的三种方法/" class="cy_cmt_count" data-xid="2017/09/09/ipa重签名的三种方法/" itemprop="commentsCount" ></span>
+                <a href="/2017/09/09/17 ipa重签名的三种方法/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2017/09/09/17 ipa重签名的三种方法/" class="cy_cmt_count" data-xid="2017/09/09/17 ipa重签名的三种方法/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -1414,7 +1240,7 @@
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/09/ipa重签名的三种方法/#more" rel="contents">
+            <a class="btn" href="/2017/09/09/17 ipa重签名的三种方法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1460,7 +1286,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/09/02/zsh安装和配置/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/09/02/16 zsh安装和配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -1482,7 +1308,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/09/02/zsh安装和配置/" itemprop="url">
+                <a class="post-title-link" href="/2017/09/02/16 zsh安装和配置/" itemprop="url">
                   zsh安装和配置
                 </a>
               
@@ -1541,8 +1367,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/09/02/zsh安装和配置/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2017/09/02/zsh安装和配置/" class="cy_cmt_count" data-xid="2017/09/02/zsh安装和配置/" itemprop="commentsCount" ></span>
+                <a href="/2017/09/02/16 zsh安装和配置/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2017/09/02/16 zsh安装和配置/" class="cy_cmt_count" data-xid="2017/09/02/16 zsh安装和配置/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -1572,7 +1398,7 @@
           <p><a href="http://ohmyz.sh/">zsh官网</a></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/02/zsh安装和配置/#more" rel="contents">
+            <a class="btn" href="/2017/09/02/16 zsh安装和配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1618,7 +1444,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/07/20/iOS自动化部署和发布之Fastlane/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/07/20/15 iOS自动化部署和发布之Fastlane/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -1640,7 +1466,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/07/20/iOS自动化部署和发布之Fastlane/" itemprop="url">
+                <a class="post-title-link" href="/2017/07/20/15 iOS自动化部署和发布之Fastlane/" itemprop="url">
                   iOS自动化部署和发布之Fastlane
                 </a>
               
@@ -1699,8 +1525,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/07/20/iOS自动化部署和发布之Fastlane/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2017/07/20/iOS自动化部署和发布之Fastlane/" class="cy_cmt_count" data-xid="2017/07/20/iOS自动化部署和发布之Fastlane/" itemprop="commentsCount" ></span>
+                <a href="/2017/07/20/15 iOS自动化部署和发布之Fastlane/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2017/07/20/15 iOS自动化部署和发布之Fastlane/" class="cy_cmt_count" data-xid="2017/07/20/15 iOS自动化部署和发布之Fastlane/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -1730,7 +1556,7 @@
           <p>Fastlane<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/20/iOS自动化部署和发布之Fastlane/#more" rel="contents">
+            <a class="btn" href="/2017/07/20/15 iOS自动化部署和发布之Fastlane/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1776,7 +1602,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/07/16/14 iOS中的关键字const／static／extern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="weixb">
@@ -1798,7 +1624,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/07/16/iOS中的关键字const／static／extern/" itemprop="url">
+                <a class="post-title-link" href="/2017/07/16/14 iOS中的关键字const／static／extern/" itemprop="url">
                   iOS中的关键字const／static／extern
                 </a>
               
@@ -1857,8 +1683,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2017/07/16/iOS中的关键字const／static／extern/#SOHUCS" itemprop="discussionUrl">
-                  <span id="url::http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/" class="cy_cmt_count" data-xid="2017/07/16/iOS中的关键字const／static／extern/" itemprop="commentsCount" ></span>
+                <a href="/2017/07/16/14 iOS中的关键字const／static／extern/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2017/07/16/14 iOS中的关键字const／static／extern/" class="cy_cmt_count" data-xid="2017/07/16/14 iOS中的关键字const／static／extern/" itemprop="commentsCount" ></span>
                 </a>
               
             
@@ -1888,7 +1714,165 @@
           <h4 id="const"><a href="#const" class="headerlink" title="const:"></a>const:</h4><p>const只修饰其右边的变量，被修饰的变量是只读的；<br>const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p</div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p	</div><div class="line"><span class="comment">// *p只读, p变量(这2种没有区别)</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p	</div><div class="line"><span class="comment">// *p变量, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p	  </div><div class="line"><span class="comment">// *p只读, p只读</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span> * <span class="keyword">const</span> p   </div><div class="line"><span class="comment">// *p只读, p只读</span></div></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/07/16/iOS中的关键字const／static／extern/#more" rel="contents">
+            <a class="btn" href="/2017/07/16/14 iOS中的关键字const／static／extern/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/07/15/13 设计模式-单例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="weixb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bing's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/07/15/13 设计模式-单例/" itemprop="url">
+                  设计模式-单例
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T00:00:00+08:00">
+                2017-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/07/15/13 设计模式-单例/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://www.weixinbing.com/2017/07/15/13 设计模式-单例/" class="cy_cmt_count" data-xid="2017/07/15/13 设计模式-单例/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Objective-C"><a href="#Objective-C" class="headerlink" title="Objective-C"></a>Objective-C</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/15/13 设计模式-单例/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>

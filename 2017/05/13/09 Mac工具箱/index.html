@@ -1,0 +1,989 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="Mwr9YQJTv5q4xyZlWGuozGh5Eh1I4Z_S6nAMGyz3nyA" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="工具," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Bing's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Alfred
+Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。
+
+Sketch 3
+一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac工具箱">
+<meta property="og:url" content="http://www.weixinbing.com/2017/05/13/09 Mac工具箱/index.html">
+<meta property="og:site_name" content="Bing's Blog">
+<meta property="og:description" content="Alfred
+Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。
+
+Sketch 3
+一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/jpeg/161106/1543842381420-6a493f4f-0830-4d37-b7d8-77a2be7167f2.jpeg">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842398395-35fa37cf-30a3-4e91-a462-796fd5dad727.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842707584-dceaad38-083b-4b46-9a5f-998f1c7cba2c.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842489312-45d8bd2d-52f2-4a77-a63d-73d11198b8af.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842520433-be314df7-cc20-4ce5-8f63-61721f4383cf.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842531930-f9af8996-2133-4c21-b1f8-3d55f0b755b5.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842565237-89280688-e4dc-4bbf-be65-a93ab7e656c5.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842577102-06efdc75-1e9f-4f97-a671-48707f6159fe.png">
+<meta property="og:image" content="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842592256-07f72556-4025-4a08-8540-7a8e7f49a65e.png">
+<meta property="og:updated_time" content="2018-12-03T13:14:44.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac工具箱">
+<meta name="twitter:description" content="Alfred
+Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。
+
+Sketch 3
+一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫">
+<meta name="twitter:image" content="https://cdn-pri.nlark.com/yuque/0/2018/jpeg/161106/1543842381420-6a493f4f-0830-4d37-b7d8-77a2be7167f2.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.weixinbing.com/2017/05/13/09 Mac工具箱/"/>
+
+
+
+
+
+  <title> Mac工具箱 | Bing's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Bing's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Do one thing at a time, and do well.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.weixinbing.com/2017/05/13/09 Mac工具箱/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="weixb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bing's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Mac工具箱
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T22:53:43+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MAC/" itemprop="url" rel="index">
+                    <span itemprop="name">MAC</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/05/13/09 Mac工具箱/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/05/13/09 Mac工具箱/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://www.alfredapp.com/" target="_blank" rel="external"><br>Alfred</a></p>
+<p>Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/jpeg/161106/1543842381420-6a493f4f-0830-4d37-b7d8-77a2be7167f2.jpeg" alt="img"></p>
+<p><a href="https://www.sketchapp.com/" target="_blank" rel="external">Sketch 3</a></p>
+<p>一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫无关系的图片处理功能，从而降低了工作环境中的噪音。另外，通过强大的插件功能，我能根据需要进行安装使用，这大大提高了我的工作效率。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842398395-35fa37cf-30a3-4e91-a462-796fd5dad727.png" alt="img"></p>
+<p><a href="https://www.paintcodeapp.com/" target="_blank" rel="external">PaintCode</a></p>
+<p>你可以使用PaintCode方便地进行图形设计，你也可以将SVG或PSD文件导入到PaintCode中，然后它就能帮助你将你的设计转换成Objective-C,Swift或C#代码。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842707584-dceaad38-083b-4b46-9a5f-998f1c7cba2c.png" alt="img"></p>
+<p><a href="http://sipapp.io/" target="_blank" rel="external">Sip for Mac and iPhone</a></p>
+<p>Sip是一个非常出色的iOS app，它能帮助你从照片中创建色板。并且你可以在你的Mac或手机上随时随地使用它捕捉那些美丽的色彩。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842489312-45d8bd2d-52f2-4a77-a63d-73d11198b8af.png" alt="img"></p>
+<p><a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text 3</a></p>
+<p>这是我开发前端代码时 使用的IDE。我非常喜欢它的那些使代码异常清晰的主题，以及功能丰富的插件。有了它开发HTML、CSS、JavaScript变成了一件非常愉悦的事情。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842520433-be314df7-cc20-4ce5-8f63-61721f4383cf.png" alt="img"></p>
+<p><a href="https://kapeli.com/dash" target="_blank" rel="external">Dash</a></p>
+<p>Dash对开发人员非常有帮助，我能够在离线的状态下查看如Angular，Swift，CSS等的技术文档。这使得我在网络条件不好的情况下也能工作，并且极大提升我的工作效率。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842531930-f9af8996-2133-4c21-b1f8-3d55f0b755b5.png" alt="img"></p>
+<p><a href="https://www.cheatsheetapp.com/CheatSheet/" target="_blank" rel="external">CheatSheet</a></p>
+<p>CheatSheet是我非常喜欢的一个小工具，任何流行的软件都会有一堆的快捷键设置，通过这个工具，你只需要长按?键，这个软件的所有快捷键就会显示在你的面前，你完全不用逐一去背，只要反复查看几次，你自然就能熟练运用那些快捷键了。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842565237-89280688-e4dc-4bbf-be65-a93ab7e656c5.png" alt="img"></p>
+<p><a href="https://flexibits.com/fantastical" target="_blank" rel="external">Fantastical</a></p>
+<p>我使用Fantastical来快速地记录我的todo事项，并设定提醒。我只记录那些比较重要的事项，而不会每天把所有很细小的行动项都记录下来，因为那样反而会让我有一种压迫感而分心。我更喜欢在自然舒缓的环境中工作。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842577102-06efdc75-1e9f-4f97-a671-48707f6159fe.png" alt="img"></p>
+<p><a href="http://www.cockos.com/licecap/" target="_blank" rel="external">LiceCap</a></p>
+<p>这使一个很小的免费软件，你可以在屏幕上设定一个区域，然后就可以用LiceCap来快速地录制GIF动画了。直接、高效是我对它的评价。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842592256-07f72556-4025-4a08-8540-7a8e7f49a65e.png" alt="img"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/19/08 Git命令大全/" rel="next" title="Git命令大全">
+                <i class="fa fa-chevron-left"></i> Git命令大全
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/29/10 面向对象原则（SOLID）/" rel="prev" title="面向对象原则（SOLID）">
+                面向对象原则（SOLID） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="weixb" />
+          <p class="site-author-name" itemprop="name">weixb</p>
+           
+              <p class="site-description motion-element" itemprop="description">One must have a dream</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/weixinbing" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/eb8a7ddfff9b" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">weixb</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt6FCnb6';
+      var conf = '58b517cb043559523c35055d5755b0cd';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

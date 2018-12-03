@@ -17,8 +17,8 @@
   
   <entry>
     <title>官方 Swift API 设计指南（译）</title>
-    <link href="http://www.weixinbing.com/2018/10/10/%5B%E8%AF%91%5D%20%E5%AE%98%E6%96%B9%20Swift%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/"/>
-    <id>http://www.weixinbing.com/2018/10/10/[译] 官方 Swift API 设计指南/</id>
+    <link href="http://www.weixinbing.com/2018/10/10/22%20%5B%E8%AF%91%5D%20%E5%AE%98%E6%96%B9%20Swift%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/"/>
+    <id>http://www.weixinbing.com/2018/10/10/22 [译] 官方 Swift API 设计指南/</id>
     <published>2018-10-09T16:00:00.000Z</published>
     <updated>2018-12-03T13:02:51.356Z</updated>
     
@@ -293,53 +293,9 @@
   </entry>
   
   <entry>
-    <title>iOS项目的目录结构</title>
-    <link href="http://www.weixinbing.com/2018/07/10/iOS%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
-    <id>http://www.weixinbing.com/2018/07/10/iOS项目的目录结构/</id>
-    <published>2018-07-09T16:00:00.000Z</published>
-    <updated>2018-12-03T13:19:19.641Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。</p>
-<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543329783206-02a6fd7c-879c-4b42-8a71-318337591c59.png" alt="img"></p>
-<h3 id="AppDelegate"><a href="#AppDelegate" class="headerlink" title="AppDelegate"></a>AppDelegate</h3><p>目录下放AppDelegate.h(.m)文件，是整个应用的入口文件，所以单独拿出来</p>
-<h3 id="Sections"><a href="#Sections" class="headerlink" title="Sections"></a>Sections</h3><p>目录下放app的具体模块，如登录、设置等</p>
-<h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>目录下放会被重用的Views、Macro和Categories等</p>
-<p>Macro目录下放了整个应用会用到的宏定义</p>
-<ul>
-<li>AppMacro.h  </li>
-<li>UtilsMacro.h </li>
-<li>VendorMacro.h </li>
-<li>NotificationMacro.h</li>
-</ul>
-<blockquote>
-<p>AppMacro.h 里放app相关的宏定义</p>
-<p>UtilsMacro.h 里放一些方便使用的宏定义</p>
-<p>VendorMacro.h 里放一些第三方常量</p>
-<p>NotificationMacro.h 里放通知相关的宏定义</p>
-</blockquote>
-<p>Helpers目录放一些助手类，文件名与功能挂钩</p>
-<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>目录放app会用到的一些资源，主要是图片</p>
-<h3 id="Vendors"><a href="#Vendors" class="headerlink" title="Vendors"></a>Vendors</h3><p>目录放第三方的类库/SDK</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;p&gt;一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。&lt;/p&gt;
-&lt;p&gt;&lt;img sr
-    
-    </summary>
-    
-      <category term="架构" scheme="http://www.weixinbing.com/categories/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="架构" scheme="http://www.weixinbing.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>iOS端mPaaS框架</title>
-    <link href="http://www.weixinbing.com/2018/06/18/iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/"/>
-    <id>http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/</id>
+    <link href="http://www.weixinbing.com/2018/06/18/21%20iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/"/>
+    <id>http://www.weixinbing.com/2018/06/18/21 iOS端mPaaS调研文档/</id>
     <published>2018-06-17T16:00:00.000Z</published>
     <updated>2018-12-03T10:45:54.241Z</updated>
     
@@ -396,8 +352,8 @@
   
   <entry>
     <title>Mail邮箱管理</title>
-    <link href="http://www.weixinbing.com/2018/03/21/Mail%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/"/>
-    <id>http://www.weixinbing.com/2018/03/21/Mail邮箱管理/</id>
+    <link href="http://www.weixinbing.com/2018/03/21/20%20Mail%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/"/>
+    <id>http://www.weixinbing.com/2018/03/21/20 Mail邮箱管理/</id>
     <published>2018-03-21T14:36:36.000Z</published>
     <updated>2018-12-03T13:01:40.379Z</updated>
     
@@ -519,8 +475,8 @@
   
   <entry>
     <title>Mac代理设置-Proxifier</title>
-    <link href="http://www.weixinbing.com/2018/03/21/Mac%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-Proxifier/"/>
-    <id>http://www.weixinbing.com/2018/03/21/Mac代理设置-Proxifier/</id>
+    <link href="http://www.weixinbing.com/2018/03/21/19%20Mac%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-Proxifier/"/>
+    <id>http://www.weixinbing.com/2018/03/21/19 Mac代理设置-Proxifier/</id>
     <published>2018-03-21T13:36:36.000Z</published>
     <updated>2018-12-03T13:01:34.159Z</updated>
     
@@ -553,8 +509,8 @@
   
   <entry>
     <title>科学上网</title>
-    <link href="http://www.weixinbing.com/2018/03/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    <id>http://www.weixinbing.com/2018/03/20/科学上网/</id>
+    <link href="http://www.weixinbing.com/2018/03/20/18%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>http://www.weixinbing.com/2018/03/20/18 科学上网/</id>
     <published>2018-03-19T16:00:00.000Z</published>
     <updated>2018-12-03T13:01:27.232Z</updated>
     
@@ -591,8 +547,8 @@
   
   <entry>
     <title>ipa重签名的三种方法</title>
-    <link href="http://www.weixinbing.com/2017/09/09/ipa%E9%87%8D%E7%AD%BE%E5%90%8D%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>http://www.weixinbing.com/2017/09/09/ipa重签名的三种方法/</id>
+    <link href="http://www.weixinbing.com/2017/09/09/17%20ipa%E9%87%8D%E7%AD%BE%E5%90%8D%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.weixinbing.com/2017/09/09/17 ipa重签名的三种方法/</id>
     <published>2017-09-08T16:00:00.000Z</published>
     <updated>2018-12-03T10:21:45.714Z</updated>
     
@@ -627,8 +583,8 @@
   
   <entry>
     <title>zsh安装和配置</title>
-    <link href="http://www.weixinbing.com/2017/09/02/zsh%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
-    <id>http://www.weixinbing.com/2017/09/02/zsh安装和配置/</id>
+    <link href="http://www.weixinbing.com/2017/09/02/16%20zsh%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://www.weixinbing.com/2017/09/02/16 zsh安装和配置/</id>
     <published>2017-09-01T16:00:00.000Z</published>
     <updated>2018-12-03T10:06:31.625Z</updated>
     
@@ -679,8 +635,8 @@
   
   <entry>
     <title>iOS自动化部署和发布之Fastlane</title>
-    <link href="http://www.weixinbing.com/2017/07/20/iOS%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B9%8BFastlane/"/>
-    <id>http://www.weixinbing.com/2017/07/20/iOS自动化部署和发布之Fastlane/</id>
+    <link href="http://www.weixinbing.com/2017/07/20/15%20iOS%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B9%8BFastlane/"/>
+    <id>http://www.weixinbing.com/2017/07/20/15 iOS自动化部署和发布之Fastlane/</id>
     <published>2017-07-19T16:00:00.000Z</published>
     <updated>2018-12-03T10:06:36.732Z</updated>
     
@@ -730,8 +686,8 @@
   
   <entry>
     <title>iOS中的关键字const／static／extern</title>
-    <link href="http://www.weixinbing.com/2017/07/16/iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/"/>
-    <id>http://www.weixinbing.com/2017/07/16/iOS中的关键字const／static／extern/</id>
+    <link href="http://www.weixinbing.com/2017/07/16/14%20iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/"/>
+    <id>http://www.weixinbing.com/2017/07/16/14 iOS中的关键字const／static／extern/</id>
     <published>2017-07-16T14:36:36.000Z</published>
     <updated>2017-07-16T14:53:04.000Z</updated>
     
@@ -769,8 +725,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>设计模式-单例</title>
-    <link href="http://www.weixinbing.com/2017/07/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B/"/>
-    <id>http://www.weixinbing.com/2017/07/15/设计模式-单例/</id>
+    <link href="http://www.weixinbing.com/2017/07/15/13%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B/"/>
+    <id>http://www.weixinbing.com/2017/07/15/13 设计模式-单例/</id>
     <published>2017-07-14T16:00:00.000Z</published>
     <updated>2018-12-03T10:26:23.362Z</updated>
     
@@ -790,8 +746,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>View层代码结构规范</title>
-    <link href="http://www.weixinbing.com/2017/07/10/View%E5%B1%82%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83/"/>
-    <id>http://www.weixinbing.com/2017/07/10/View层代码结构规范/</id>
+    <link href="http://www.weixinbing.com/2017/07/10/12%20View%E5%B1%82%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.weixinbing.com/2017/07/10/12 View层代码结构规范/</id>
     <published>2017-07-10T00:05:39.000Z</published>
     <updated>2017-07-10T00:05:40.000Z</updated>
     
@@ -840,9 +796,53 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   </entry>
   
   <entry>
+    <title>iOS项目的目录结构</title>
+    <link href="http://www.weixinbing.com/2017/07/10/11.0%20iOS%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://www.weixinbing.com/2017/07/10/11.0 iOS项目的目录结构/</id>
+    <published>2017-07-09T16:00:00.000Z</published>
+    <updated>2018-12-03T14:06:55.998Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。</p>
+<a id="more"></a>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543329783206-02a6fd7c-879c-4b42-8a71-318337591c59.png" alt="img"></p>
+<h3 id="AppDelegate"><a href="#AppDelegate" class="headerlink" title="AppDelegate"></a>AppDelegate</h3><p>目录下放AppDelegate.h(.m)文件，是整个应用的入口文件，所以单独拿出来</p>
+<h3 id="Sections"><a href="#Sections" class="headerlink" title="Sections"></a>Sections</h3><p>目录下放app的具体模块，如登录、设置等</p>
+<h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>目录下放会被重用的Views、Macro和Categories等</p>
+<p>Macro目录下放了整个应用会用到的宏定义</p>
+<ul>
+<li>AppMacro.h  </li>
+<li>UtilsMacro.h </li>
+<li>VendorMacro.h </li>
+<li>NotificationMacro.h</li>
+</ul>
+<blockquote>
+<p>AppMacro.h 里放app相关的宏定义</p>
+<p>UtilsMacro.h 里放一些方便使用的宏定义</p>
+<p>VendorMacro.h 里放一些第三方常量</p>
+<p>NotificationMacro.h 里放通知相关的宏定义</p>
+</blockquote>
+<p>Helpers目录放一些助手类，文件名与功能挂钩</p>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>目录放app会用到的一些资源，主要是图片</p>
+<h3 id="Vendors"><a href="#Vendors" class="headerlink" title="Vendors"></a>Vendors</h3><p>目录放第三方的类库/SDK</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;p&gt;一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.weixinbing.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.weixinbing.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>写一个iOS应用之前必须做的事</title>
-    <link href="http://www.weixinbing.com/2017/06/30/%E5%86%99%E4%B8%80%E4%B8%AAiOS%E5%BA%94%E7%94%A8%E4%B9%8B%E5%89%8D%E5%BF%85%E9%A1%BB%E5%81%9A%E7%9A%84%E4%BA%8B/"/>
-    <id>http://www.weixinbing.com/2017/06/30/写一个iOS应用之前必须做的事/</id>
+    <link href="http://www.weixinbing.com/2017/06/30/11%20%E5%86%99%E4%B8%80%E4%B8%AAiOS%E5%BA%94%E7%94%A8%E4%B9%8B%E5%89%8D%E5%BF%85%E9%A1%BB%E5%81%9A%E7%9A%84%E4%BA%8B/"/>
+    <id>http://www.weixinbing.com/2017/06/30/11 写一个iOS应用之前必须做的事/</id>
     <published>2017-06-29T16:00:00.000Z</published>
     <updated>2018-12-03T10:47:37.568Z</updated>
     
@@ -906,8 +906,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>面向对象原则（SOLID）</title>
-    <link href="http://www.weixinbing.com/2017/06/29/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%8E%9F%E5%88%99%EF%BC%88SOLID%EF%BC%89/"/>
-    <id>http://www.weixinbing.com/2017/06/29/面向对象原则（SOLID）/</id>
+    <link href="http://www.weixinbing.com/2017/06/29/10%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%8E%9F%E5%88%99%EF%BC%88SOLID%EF%BC%89/"/>
+    <id>http://www.weixinbing.com/2017/06/29/10 面向对象原则（SOLID）/</id>
     <published>2017-06-28T16:00:00.000Z</published>
     <updated>2018-12-03T10:49:36.332Z</updated>
     
@@ -955,8 +955,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>Mac工具箱</title>
-    <link href="http://www.weixinbing.com/2017/05/13/Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
-    <id>http://www.weixinbing.com/2017/05/13/Mac工具箱/</id>
+    <link href="http://www.weixinbing.com/2017/05/13/09%20Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
+    <id>http://www.weixinbing.com/2017/05/13/09 Mac工具箱/</id>
     <published>2017-05-13T14:53:43.000Z</published>
     <updated>2018-12-03T13:14:44.873Z</updated>
     
@@ -1005,8 +1005,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>Git命令大全</title>
-    <link href="http://www.weixinbing.com/2017/01/19/Git%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
-    <id>http://www.weixinbing.com/2017/01/19/Git命令大全/</id>
+    <link href="http://www.weixinbing.com/2017/01/19/08%20Git%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    <id>http://www.weixinbing.com/2017/01/19/08 Git命令大全/</id>
     <published>2017-01-19T14:56:20.000Z</published>
     <updated>2018-12-03T09:57:21.843Z</updated>
     
@@ -1104,8 +1104,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>Xcode8新特性之Thread Sanitizer</title>
-    <link href="http://www.weixinbing.com/2016/12/31/Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
-    <id>http://www.weixinbing.com/2016/12/31/Xcode8新特性之Thread Sanitizer/</id>
+    <link href="http://www.weixinbing.com/2016/12/31/07%20Xcode8%E6%96%B0%E7%89%B9%E6%80%A7%E4%B9%8BThread%20Sanitizer/"/>
+    <id>http://www.weixinbing.com/2016/12/31/07 Xcode8新特性之Thread Sanitizer/</id>
     <published>2016-12-30T16:00:00.000Z</published>
     <updated>2017-01-19T14:35:38.000Z</updated>
     
@@ -1139,8 +1139,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>iOS并发编程(Concurrent Programming)上</title>
-    <link href="http://www.weixinbing.com/2016/12/22/iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/"/>
-    <id>http://www.weixinbing.com/2016/12/22/iOS并发编程(Concurrent Programming)上/</id>
+    <link href="http://www.weixinbing.com/2016/12/22/06%20iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/"/>
+    <id>http://www.weixinbing.com/2016/12/22/06 iOS并发编程(Concurrent Programming)上/</id>
     <published>2016-12-22T12:43:06.000Z</published>
     <updated>2016-12-24T12:10:22.000Z</updated>
     
@@ -1312,8 +1312,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>Xcode8如何使用插件</title>
-    <link href="http://www.weixinbing.com/2016/12/21/Xcode8.1%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
-    <id>http://www.weixinbing.com/2016/12/21/Xcode8.1如何使用插件/</id>
+    <link href="http://www.weixinbing.com/2016/12/21/05%20Xcode8.1%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
+    <id>http://www.weixinbing.com/2016/12/21/05 Xcode8.1如何使用插件/</id>
     <published>2016-12-21T14:29:49.000Z</published>
     <updated>2017-01-19T14:34:06.000Z</updated>
     
@@ -1352,8 +1352,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
   
   <entry>
     <title>发布框架到cocoapods</title>
-    <link href="http://www.weixinbing.com/2016/12/20/%E5%8F%91%E5%B8%83%E5%B7%A5%E7%A8%8B%E5%88%B0cocoapods/"/>
-    <id>http://www.weixinbing.com/2016/12/20/发布工程到cocoapods/</id>
+    <link href="http://www.weixinbing.com/2016/12/20/04%20%E5%8F%91%E5%B8%83%E5%B7%A5%E7%A8%8B%E5%88%B0cocoapods/"/>
+    <id>http://www.weixinbing.com/2016/12/20/04 发布工程到cocoapods/</id>
     <published>2016-12-20T02:02:34.000Z</published>
     <updated>2018-12-03T08:29:20.126Z</updated>
     
