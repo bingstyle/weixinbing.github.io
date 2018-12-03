@@ -10,6 +10,27 @@
 
     
     <entry>
+      <title><![CDATA[Mail邮箱管理]]></title>
+      <url>%2F2018%2F09%2F21%2FMail%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86%2F</url>
+      <content type="text"><![CDATA[添加账号QQ邮箱登录QQ邮箱网页版，点击设置-&gt;账号-&gt;POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务 开启IMAP/SMTP服务 协议 服务器地址 POP3 pop.qq.com IMAP imap.qq.com SMTP smtp.qq.com QQ企业邮箱 协议 服务器地址 POP3 pop.exmail.qq.com IMAP imap.exmail.qq.com SMTP smtp.exmail.qq.com 阿里云邮箱 协议 服务器地址 服务器端口号（常规） 服务器端口号（加密） POP3 pop.qiye.aliyun.com 110 995 IMAP imap.qiye.aliyun.com 143 993 SMTP smtp.qiye.aliyun.com 25 465 参考：关于邮箱的POP协议、imap协议、imap协议简单讲解]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Mac代理设置-Proxifier]]></title>
+      <url>%2F2018%2F09%2F21%2FMac%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-Proxifier%2F</url>
+      <content type="text"><![CDATA[Proxifier下载 设置代理服务器 步骤如下： shdowsocks的端口默认1080（自定义shdowsocks端口的需要修改） 设置代理规则方案1：设置全局代理 方案2：设置部分代理 参考来源：一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦， 也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[科学上网]]></title>
+      <url>%2F2018%2F09%2F20%2F%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
+      <content type="text"><![CDATA[1. 安装shadowsocksshadowsocks下载链接 Shadowsocks Windows 使用说明 2. 购买VPS推荐搬瓦工，稳定、性价比高（20美元/年） 搬瓦工VPS 3. VPS搭建Shadowsocks从搬瓦工管理页面进入控制面板，步骤如下： 方法1：找到左侧的Shadowsocks server，点击安装（该功能若未显示，可使用方法2） 方法2：在浏览器输入链接打开界面后点击安装 安装成功后如下： 代理设置1、2、3步骤完成后浏览器就可以科学上网了 终端翻墙：使用shadowsocks翻墙]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[iOS端mPaaS框架]]></title>
       <url>%2F2018%2F06%2F18%2FiOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3%2F</url>
       <content type="text"><![CDATA[配置开发环境流程：按照官方文档配置流程，本人最开始使用的.org的ruby源，导致后面安装开发者工具报错，更新为.com后环境配置一路顺畅。流程如下： 检查 RubyGems 源 公告！因域名备案问题，.org域名无法继续提供RubyGems镜像服务，我们提供.com代替.org的域名，其它一切不变 $ gem sources –add https://gems.ruby-china.com/ –remove https://rubygems.org/ $ gem sources -l #确保只有 gems.ruby-china.com 升级 RubyGems $ sudo gem update –system 安装 Ruby2.2.4使用rvm工具管理ruby版本，如果安装了多个版本，设置Ruby 2.2.4 为默认版本 $ rvm use 2.2.4 –default 安装开发者工具 完全退出 Xcode，在终端运行下列安装命令： $ sh &lt;(curl -s http://mpaas-ios.oss-cn-hangzhou.aliyuncs.com/mPaaS-Install-Tool/installmPaaS.sh ) 对于 Xcode 8 之后的版本，安装 mPaaS 插件时需要 unsign Xcode。按照提示输入 U。脚本会自动完成安装。 去除Xcode签名 $ mpaas unsign 恢复Xcode签名 $ mpaas restore 更新所有 Xcode 插件的 UUID $ mpaas update_plugins 安装命令行工具（可选） 更新到最新版的开发者工具 $ mpkitupdate 打印出本地的 SDK 里模块的信息 $ mpaas sdk 更新本地SDK $ mpaas sdk update 创建工程基于 mPaaS 框架开发按照官方文档流程接入正常 基于系统框架开发]]></content>

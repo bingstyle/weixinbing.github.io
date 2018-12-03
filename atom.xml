@@ -293,6 +293,201 @@
   </entry>
   
   <entry>
+    <title>Mail邮箱管理</title>
+    <link href="http://www.weixinbing.com/2018/09/21/Mail%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/"/>
+    <id>http://www.weixinbing.com/2018/09/21/Mail邮箱管理/</id>
+    <published>2018-09-21T14:36:36.000Z</published>
+    <updated>2018-12-03T11:12:45.950Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="添加账号"><a href="#添加账号" class="headerlink" title="添加账号"></a>添加账号</h2><h4 id="QQ邮箱"><a href="#QQ邮箱" class="headerlink" title="QQ邮箱"></a>QQ邮箱</h4><p>登录QQ邮箱网页版，点击设置-&gt;账号-&gt;POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
+<p>开启IMAP/SMTP服务</p>
+<table>
+<thead>
+<tr>
+<th>协议</th>
+<th>服务器地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POP3</td>
+<td>pop.qq.com</td>
+</tr>
+<tr>
+<td>IMAP</td>
+<td>imap.qq.com</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>smtp.qq.com</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h4 id="QQ企业邮箱"><a href="#QQ企业邮箱" class="headerlink" title="QQ企业邮箱"></a>QQ企业邮箱</h4><table>
+<thead>
+<tr>
+<th>协议</th>
+<th>服务器地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POP3</td>
+<td>pop.exmail.qq.com</td>
+</tr>
+<tr>
+<td>IMAP</td>
+<td>imap.exmail.qq.com</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>smtp.exmail.qq.com</td>
+</tr>
+</tbody>
+</table>
+<h4 id="阿里云邮箱"><a href="#阿里云邮箱" class="headerlink" title="阿里云邮箱"></a>阿里云邮箱</h4><table>
+<thead>
+<tr>
+<th>协议</th>
+<th>服务器地址</th>
+<th>服务器端口号（常规）</th>
+<th>服务器端口号（加密）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POP3</td>
+<td>pop.qiye.aliyun.com</td>
+<td>110</td>
+<td>995</td>
+</tr>
+<tr>
+<td>IMAP</td>
+<td>imap.qiye.aliyun.com</td>
+<td>143</td>
+<td>993</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>smtp.qiye.aliyun.com</td>
+<td>25</td>
+<td>465</td>
+</tr>
+</tbody>
+</table>
+<p>参考：<a href="http://blog.51cto.com/7650911/2047585" target="_blank" rel="external">关于邮箱的POP协议、imap协议、imap协议简单讲解</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;添加账号&quot;&gt;&lt;a href=&quot;#添加账号&quot; class=&quot;headerlink&quot; title=&quot;添加账号&quot;&gt;&lt;/a&gt;添加账号&lt;/h2&gt;&lt;h4 id=&quot;QQ邮箱&quot;&gt;&lt;a href=&quot;#QQ邮箱&quot; class=&quot;headerlink&quot; title=&quot;QQ邮箱&quot;&gt;&lt;/a&gt;QQ邮箱&lt;/h4&gt;&lt;p&gt;登录QQ邮箱网页版，点击设置-&amp;gt;账号-&amp;gt;POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务&lt;/p&gt;
+&lt;p&gt;开启IMAP/SMTP服务&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;协议&lt;/th&gt;
+&lt;th&gt;服务器地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;POP3&lt;/td&gt;
+&lt;td&gt;pop.qq.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;IMAP&lt;/td&gt;
+&lt;td&gt;imap.qq.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SMTP&lt;/td&gt;
+&lt;td&gt;smtp.qq.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.weixinbing.com/categories/Mac/"/>
+    
+    
+      <category term="翻墙" scheme="http://www.weixinbing.com/tags/%E7%BF%BB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac代理设置-Proxifier</title>
+    <link href="http://www.weixinbing.com/2018/09/21/Mac%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-Proxifier/"/>
+    <id>http://www.weixinbing.com/2018/09/21/Mac代理设置-Proxifier/</id>
+    <published>2018-09-21T13:36:36.000Z</published>
+    <updated>2018-12-03T11:12:50.557Z</updated>
+    
+    <content type="html"><![CDATA[<p>Proxifier<a href="https://www.proxifier.com/" target="_blank" rel="external">下载</a></p>
+<h4 id="设置代理服务器"><a href="#设置代理服务器" class="headerlink" title="设置代理服务器"></a>设置代理服务器</h4><a id="more"></a>
+<p>步骤如下：</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538211563117-b5bdac91-f2d0-4025-b052-7782e165e5e0.png" alt="img"></p>
+<p>shdowsocks的端口默认1080（自定义shdowsocks端口的需要修改）</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538211643295-1902f5a5-965e-4244-b65f-dcb1e11688b5.png" alt="img"></p>
+<h4 id="设置代理规则"><a href="#设置代理规则" class="headerlink" title="设置代理规则"></a>设置代理规则</h4><p>方案1：设置全局代理</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538211966122-c599d006-56ac-4da8-be6f-079a102ce54e.png" alt="img"></p>
+<p>方案2：设置部分代理</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538211757396-227e9712-0b74-4696-b3d1-fda9f113bf6a.png" alt="img"></p>
+<p><a href="https://www.zybuluo.com/yiranphp/note/611721" target="_blank" rel="external">参考来源</a>：一言以蔽之，如果你在终端中发起了网络请求速度很慢的话，可以先把 default 规则，设置为socks5代理（只有设置为代理，日志才会记录），然后分析一下请求的 host：port，然后就可以添加规则了，这样的话，就做到只给部分请求走代理，如果你觉得这样很麻烦，  也可以简单粗暴的，将 default 规则设置为 socks5代理，其余的规则全部禁用，那就是全部的请求走代理</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Proxifier&lt;a href=&quot;https://www.proxifier.com/&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;设置代理服务器&quot;&gt;&lt;a href=&quot;#设置代理服务器&quot; class=&quot;headerlink&quot; title=&quot;设置代理服务器&quot;&gt;&lt;/a&gt;设置代理服务器&lt;/h4&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.weixinbing.com/categories/Mac/"/>
+    
+    
+      <category term="翻墙" scheme="http://www.weixinbing.com/tags/%E7%BF%BB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科学上网</title>
+    <link href="http://www.weixinbing.com/2018/09/20/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>http://www.weixinbing.com/2018/09/20/科学上网/</id>
+    <published>2018-09-19T16:00:00.000Z</published>
+    <updated>2018-12-03T11:13:38.978Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-安装shadowsocks"><a href="#1-安装shadowsocks" class="headerlink" title="1. 安装shadowsocks"></a>1. 安装shadowsocks</h4><p>shadowsocks<a href="https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients" target="_blank" rel="external">下载链接</a></p>
+<p>Shadowsocks Windows <a href="https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">使用说明</a></p>
+<a id="more"></a>
+<h4 id="2-购买VPS"><a href="#2-购买VPS" class="headerlink" title="2. 购买VPS"></a>2. 购买VPS</h4><p>推荐搬瓦工，稳定、性价比高（20美元/年）</p>
+<p><a href="https://bandwagonhost.com/index.php" target="_blank" rel="external">搬瓦工VPS</a></p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543325724143-71568aa0-5a24-4398-a9cc-870fb5c11db3.png" alt="img"></p>
+<h4 id="3-VPS搭建Shadowsocks"><a href="#3-VPS搭建Shadowsocks" class="headerlink" title="3. VPS搭建Shadowsocks"></a>3. VPS搭建Shadowsocks</h4><p>从搬瓦工管理页面进入控制面板，步骤如下：</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538214179235-38d17221-0f61-43c2-9c9e-29b57c29f3d1.png" alt="img"></p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538214080502-973f31e4-59b5-43f6-8234-89390917f33b.png" alt="img"></p>
+<p>方法1：找到左侧的Shadowsocks server，点击安装（该功能若未显示，可使用方法2）</p>
+<p>方法2：在浏览器输入<a href="https://kiwivm.64clouds.com/preloader.php?load=/main-exec.php?mode=extras_shadowsocks" target="_blank" rel="external">链接</a>打开界面后点击安装</p>
+<p>安装成功后如下：</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1538214375563-08f29259-168d-4686-9e07-f43257b22d74.png" alt="img"></p>
+<h4 id="代理设置"><a href="#代理设置" class="headerlink" title="代理设置"></a>代理设置</h4><p>1、2、3步骤完成后浏览器就可以科学上网了</p>
+<p>终端翻墙：<a href="http://www.cashqian.net/blog/001486989831982332565298e4942a2bb8f56b08f9d2475000" target="_blank" rel="external">使用shadowsocks翻墙</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;1-安装shadowsocks&quot;&gt;&lt;a href=&quot;#1-安装shadowsocks&quot; class=&quot;headerlink&quot; title=&quot;1. 安装shadowsocks&quot;&gt;&lt;/a&gt;1. 安装shadowsocks&lt;/h4&gt;&lt;p&gt;shadowsocks&lt;a href=&quot;https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients&quot;&gt;下载链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Shadowsocks Windows &lt;a href=&quot;https://github.com/shadowsocks/shadowsocks-windows/wiki/Shadowsocks-Windows-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E&quot;&gt;使用说明&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="http://www.weixinbing.com/categories/Mac/"/>
+    
+    
+      <category term="翻墙" scheme="http://www.weixinbing.com/tags/%E7%BF%BB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
     <title>iOS端mPaaS框架</title>
     <link href="http://www.weixinbing.com/2018/06/18/iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/"/>
     <id>http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/</id>
@@ -1209,139 +1404,6 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
       <category term="MODEL" scheme="http://www.weixinbing.com/tags/MODEL/"/>
     
       <category term="模型框架" scheme="http://www.weixinbing.com/tags/%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OC预处理指令</title>
-    <link href="http://www.weixinbing.com/2016/12/19/OC%E9%A2%84%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.weixinbing.com/2016/12/19/OC预处理命令/</id>
-    <published>2016-12-18T16:42:26.000Z</published>
-    <updated>2016-12-24T11:34:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>深入了解预处理指令</p>
-<a id="more"></a>
-<p>预处理指令是以#号开头的代码行。#号必须是该行除了任何空白字符外的第一个字符。#后是指令关键字，在关键字和#号之间允许存在任意个数的空白字符。整行语句构成了一条预处理指令，该指令将在编译器进行编译之前对源代码做某些转换。<br>指令用途：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#空指令，无任何效果</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span>包含一个源代码文件</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>定义宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">undef</span>取消已定义的宏</span></div><div class="line"><span class="meta">#<span class="meta-keyword">if</span> 如果给定条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span>如果宏已经定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span>如果宏没有定义，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">elif</span>如果前面的#<span class="meta-keyword">if</span>给定条件不为真，当前条件为真，则编译下面代码</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span>结束一个#<span class="meta-keyword">if</span>……#<span class="meta-keyword">else</span>条件编译块</span></div><div class="line"><span class="meta">#<span class="meta-keyword">error</span>停止编译并显示错误信息</span></div></pre></td></tr></table></figure></p>
-<h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><p><code>#include</code>预处理指令的作用是在指令处展开被包含的文件。包含可以是多重的，也就是说一个被包含的文件中还可以包含其他文件。标准C编译器至少支持八重嵌套包含。</p>
-<h2 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h2><p>宏定义了一个代表特定内容的标识符。预处理过程会把源代码中出现的宏标识符替换成宏定义时的值。宏最常见的用法是定义代表某个值的全局符号。宏的第二种用法是定义带参数的宏，这样的宏可以象函数一样被调用，但它是在调用语句处展开宏，并用调用时的实际参数来代替定义中的形式参数。</p>
-<p><code>#运算符</code><br>出现在宏定义中的#运算符把跟在其后的参数转换成一个字符串。有时把这种用法的#称为字符串化运算符。例如：<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#definePASTE(n)<span class="meta-string">"adhfkj"</span>#n</span></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">printf(<span class="string">"%s "</span>,PASTE(<span class="number">15</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>宏定义中的#运算符告诉预处理程序，把源代码中任何传递给该宏的参数转换成一个字符串。所以输出应该是adhfkj15。</p>
-<p><code>##运算符</code><br>用于把参数连接到一起。预处理程序把出现在##两侧的参数合并成一个符号。看下面的例子：<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#defineNUM(a,b,c)a##b##c</span></div><div class="line"><span class="meta">#defineSTR(a,b,c)a##b##c</span></div><div class="line">main()</div><div class="line">&#123;</div><div class="line">printf(<span class="string">"%d "</span>,NUM(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>));</div><div class="line">printf(<span class="string">"%s "</span>,STR(<span class="string">"aa"</span>,<span class="string">"bb"</span>,<span class="string">"cc"</span>));</div><div class="line">&#125;</div><div class="line">最后程序的输出为:</div><div class="line"><span class="number">123</span></div><div class="line">aabbcc1</div></pre></td></tr></table></figure></p>
-<h2 id="条件编译指令"><a href="#条件编译指令" class="headerlink" title="条件编译指令"></a>条件编译指令</h2><p>条件编译指令将决定那些代码被编译，而哪些是不被编译的。可以根据表达式的值或者某个特定的宏是否被定义来确定编译条件。</p>
-<h3 id="if指令"><a href="#if指令" class="headerlink" title="#if指令"></a><code>#if指令</code></h3><p>检测跟在制造另关键字后的常量表达式。如果表达式为真，则编译后面的代码，知道出现#else、#elif或#endif为止；否则就不编译。</p>
-<h3 id="endif指令"><a href="#endif指令" class="headerlink" title="#endif指令"></a><code>#endif指令</code></h3><p>用于终止#if预处理指令。</p>
-<h3 id="ifdef和-ifndef"><a href="#ifdef和-ifndef" class="headerlink" title="#ifdef和#ifndef"></a><code>#ifdef和#ifndef</code></h3><p>用于#define命令定义过则进行编译</p>
-<h3 id="else指令"><a href="#else指令" class="headerlink" title="#else指令"></a><code>#else指令</code></h3><p>用于某个#if指令之后，当前面的#if指令的条件不为真时，就编译#else后面的代码。#endif指令将中指上面的条件块。</p>
-<h3 id="elif指令"><a href="#elif指令" class="headerlink" title="#elif指令"></a><code>#elif指令</code></h3><p>综合了#else和#if指令的作用。</p>
-<h3 id="其他一些标准指令"><a href="#其他一些标准指令" class="headerlink" title="其他一些标准指令"></a><code>其他一些标准指令</code></h3><blockquote>
-<p><code>#error</code>指令将使编译器显示一条错误信息，然后停止编译。<br><code>#line</code>指令可以改变编译器用来指出警告和错误信息的文件号和行号。<br><code>#pragma</code>指令没有正式的定义。编译器可以自定义其用途。典型的用法是禁止或允许某些烦人的警告信息。</p>
-</blockquote>
-<h2 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h2><p>预处理就是在进行编译的第一遍词法扫描和语法分析之前所作的工作。说白了，就是对源文件进行编译前，先对预处理部分进行处理，然后对处理后的代码进行编译。这样做的好处是，经过处理后的代码，将会变的很精短。</p>
-<h3 id="情况1"><a href="#情况1" class="headerlink" title="情况1"></a>情况1</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#ifdef _XXXX</span></div><div class="line">...程序段<span class="number">1.</span>..</div><div class="line"><span class="meta">#else</span></div><div class="line">...程序段<span class="number">2.</span>..</div><div class="line"><span class="meta">#endif</span></div></pre></td></tr></table></figure>
-<p>这表明如果标识符_XXXX已被#define命令定义过则对程序段1进行编译；否则对程序段2进行编译。</p>
-<h3 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#ifndef _XXXX </span></div><div class="line">...程序段<span class="number">1.</span>.. </div><div class="line"><span class="meta">#else </span></div><div class="line">...程序段<span class="number">2.</span>.. </div><div class="line"><span class="meta">#endif</span></div></pre></td></tr></table></figure>
-<p>这里使用了#ifndef，表示的是if not def。当然是和#ifdef相反的状况（如果没有定义了标识符_XXXX，那么执行程序段1，否则执行程序段2）。例子就不举了。</p>
-<h3 id="情况3"><a href="#情况3" class="headerlink" title="情况3"></a>情况3</h3><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#if 常量 </span></div><div class="line">...程序段<span class="number">1.</span>..</div><div class="line"><span class="meta">#else</span></div><div class="line">...程序段<span class="number">2.</span>..</div><div class="line"><span class="meta">#endif</span></div></pre></td></tr></table></figure>
-<p>这里表示，如果常量为真（非0，随便什么数字，只要不是0），就执行程序段1，否则执行程序段2。<br>我认为，这种方法可以将测试代码加进来。当需要开启测试的时候，只要将常量变1就好了。而不要测试的时候，只要将常量变0。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;深入了解预处理指令&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Objective-C" scheme="http://www.weixinbing.com/categories/Objective-C/"/>
-    
-    
-      <category term="预处理" scheme="http://www.weixinbing.com/tags/%E9%A2%84%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速搭建个人博客</title>
-    <link href="http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://www.weixinbing.com/2016/12/18/Hexo 结合 Github 搭建的博客/</id>
-    <published>2016-12-18T11:00:27.000Z</published>
-    <updated>2018-12-03T04:14:10.261Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hexo 结合 Github 搭建博客<br><a id="more"></a></p>
-<h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
-<li>安装Node.js <a href="https://nodejs.org/en/" target="_blank" rel="external">官网https://nodejs.org/en/</a></li>
-<li>安装Git（Xcode自带有Git）</li>
-<li>注册GitHub账号（用于博客的远程仓库）</li>
-</ul>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>打开终端，执行命令：</p>
-<pre><code>npm install hexo-cli -g
-</code></pre><p>如果报错，加上sudo。<br>hexo常用命令：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo g   <span class="comment">#完整命令为hexo generate,用于生成静态文件</span></div><div class="line">hexo s   <span class="comment">#完整命令为hexo server,用于启动服务器，主要用来本地预览</span></div><div class="line">hexo d   <span class="comment">#完整命令为hexo deploy,用于将本地文件发布到github上</span></div><div class="line">hexo n   <span class="comment">#完整命令为hexo new,用于新建一篇文章</span></div><div class="line">hexo clean   <span class="comment">#清除生成的文件</span></div></pre></td></tr></table></figure></p>
-<h2 id="初始化博客文件夹"><a href="#初始化博客文件夹" class="headerlink" title="初始化博客文件夹"></a>初始化博客文件夹</h2><pre><code>hexo init [文件夹名字] 
-cd [文件夹名字] 
-npm install
-</code></pre><p>成功后执行下面命令，运行服务，就可以在浏览器中访问了，地址为： <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ：</p>
-<pre><code>hexo s
-</code></pre><p>如果遇到 hexo s 无效或者错误，可能是因为没有安装hexo server，执行下面命令，然后再试：</p>
-<pre><code>npm install hexo-server --save
-</code></pre><h2 id="编辑hexo的配置文件"><a href="#编辑hexo的配置文件" class="headerlink" title="编辑hexo的配置文件"></a>编辑hexo的配置文件</h2><p>不要被文件内容吓到了，只需要修改以下地方：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Site</span></div><div class="line"><span class="symbol">title:</span> xxx</div><div class="line"><span class="symbol">subtitle:</span> xxx</div><div class="line"><span class="symbol">description:</span> xxx</div><div class="line"><span class="symbol">author:</span> xxx</div><div class="line"><span class="symbol">language:</span> zh-Hans</div><div class="line"><span class="symbol">timezone:</span> Asia/Shanghai</div></pre></td></tr></table></figure></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line"><span class="symbol">deploy:</span></div><div class="line">  <span class="symbol">type:</span> git</div><div class="line">  <span class="symbol">repo:</span> github仓库的克隆地址</div><div class="line">  <span class="symbol">branch:</span> master</div></pre></td></tr></table></figure>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>通常情况下是先生成网站，然后部署。可以将两个步骤放到一起：</p>
-<pre><code>hexo d -g
-</code></pre><p>现在你就可以打开网站看到效果了。<br>如果提示：</p>
-<pre><code>ERROR Deployer not found:git
-</code></pre><p>需要要安装hexo-deployer-git：</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>完成后执行部署命令hexo d -g。</p>
-<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p>通过以下命令新建文章：</p>
-<pre><code>hexo new “文章名字&quot;
-</code></pre><p>然后用编辑器打开 source_posts 里的md文件编辑。<br>更新文章：</p>
-<pre><code>hexo d -g
-</code></pre><p>这样就可以把你的新文章传上去啦。</p>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p><a href="https://github.com/iissnan/hexo-theme-next/wiki" target="_blank" rel="external">NexT 官方WiKi</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT 官方网站</a></p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>现在默认的域名还是xxx.github.io，是不是很没有牌面？想不想也像我一样弄一个专属域名呢，首先你得购买一个域名，xx云都能买，看你个人喜好了。</p>
-<p>以我的阿里云为例，如下图所示，添加两条解析记录：</p>
-<table>
-<thead>
-<tr>
-<th>记录类型</th>
-<th>主机记录</th>
-<th>解析线路(isp)</th>
-<th>记录值</th>
-<th>MX优先级</th>
-<th>TTL</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CNAME</td>
-<td>@</td>
-<td>默认</td>
-<td>weixinbing.github.io</td>
-<td>–</td>
-<td>10分钟</td>
-<td>正常</td>
-</tr>
-<tr>
-<td>CNAME</td>
-<td>www</td>
-<td>默认</td>
-<td>weixinbing.github.io</td>
-<td>–</td>
-<td>10分钟</td>
-<td>正常</td>
-</tr>
-</tbody>
-</table>
-<p>然后打开你的github博客项目，点击settings，拉到下面Custom domain处，填上你自己的域名，保存</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hexo 结合 Github 搭建博客&lt;br&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="http://www.weixinbing.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
     
   </entry>
   
