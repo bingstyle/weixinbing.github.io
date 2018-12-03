@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[zsh安装和配置]]></title>
+      <url>%2F2017%2F09%2F02%2Fzsh%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[zsh官网 zsh安装安装命令终端运行（需翻墙）： sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot; 配置文件编辑配置文件vim ~/.zshrc 修改主题：ZSH_THEME=”ys” 重新载入源文件source ~/.zshrc 插件安装brew install zsh-autosuggestions brew install zsh-syntax-highlighting vim ~/.zshrc 然后G 切换到末行 添加 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zshsource /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 快捷键⌃ + u：清空当前行 ⌃ + a：移动到行首 ⌃ + e：移动到行尾 ⌃ + f：向前移动 ⌃ + b：向后移动 ⌃ + p：上一条命令 ⌃ + n：下一条命令 ⌃ + r：搜索历史命令 ⌃ + y：召回最近用命令删除的文字 ⌃ + h：删除光标之前的字符 ⌃ + d：删除光标所指的字符 ⌃ + w：删除光标之前的单词 ⌃ + k：删除从光标到行尾的内容 ⌃ + t：交换光标和之前的字符 ⌘ + d：上下分屏 ⇧⌘ + d：关闭上下分屏 为什么说 zsh 是 shell 中的极品？]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[iOS中的关键字const／static／extern]]></title>
       <url>%2F2017%2F07%2F16%2FiOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern%2F</url>
       <content type="text"><![CDATA[const:const只修饰其右边的变量，被修饰的变量是只读的；const常量不能被修改，不能用来定义数组的长度，也不能放在case关键字后面。123456789101112const int *pint const *p // *p只读, p变量(这2种没有区别)int * const p // *p变量, p只读const int * const p // *p只读, p只读int const * const p // *p只读, p只读 const常量误区： const int n = 5; int a[n]; 上述代码中变量n被修饰为只读变量，可惜再怎么修饰也不是“常量”，而数组定义时长度必须是“常量”，因此报错。 const int MAX_LENGTH = 100; //这不是“常量”，而是一个只读变量。 static1. 修饰局部变量保证局部变量永远只初始化一次，在程序的运行过程中永远只有一份内存， 生命周期类似全局变量了，但是作用域不变。 2. 修饰全局变量使全局变量的作用域仅限于当前文件内部，不能通过extern来引用 3. 修饰函数被修饰的函数被称为静态函数，使得外部文件无法访问这个函数，OC语言中很少使用。 extern它的作用是声明外部全局变量 苹果推荐extern声明全局变量（不建议使用define），优势是保持常量绝对不会被修改，并且还带有初始化的类型信息。通常在.h中声明，在.m中实现12345// .h声明extern NSString * const NAME;// .m实现NSString * const NAME = @"XXX"; const是用来定义一个常量。而static在C语言中（OC中延用）表明此变量只在该变量的输出文件中可用(.m文件)，如果你不加“static”符号，那么编译器就会对该变量创建一个“外部符号”，后果是什么呢？ 你可以尝试在不同文件中加入以下代码：NSString * const kUserName = @&quot;StrongX&quot;;可能尽管文件之间并没有相互引用，不存在属性名重复的问题（因为这并不是一个属性，这是一个外部符号）,但是编译器还是报错了:duplicate symbol XXX in: .... clang: error: linker command failed with exit code 1 (use -v to see invocation) 它会告诉你在两个目标文件(.o文件是.m文件编译后的输出文件)有一个重复的符号。(OC中没有类似C++中的名字空间的概念)所以当你在你自己的.m文件中需要声明一个只有你自己可见的局部变量(k开头)的变量的时候一定要同时使用“static”和“const”两个关键字。]]></content>
@@ -20,6 +27,13 @@
       <title><![CDATA[Mac工具箱]]></title>
       <url>%2F2017%2F05%2F13%2FMac%E5%B7%A5%E5%85%B7%E7%AE%B1%2F</url>
       <content type="text"><![CDATA[AlfredAlfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。Sketch 3一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫无关系的图片处理功能，从而降低了工作环境中的噪音。另外，通过强大的插件功能，我能根据需要进行安装使用，这大大提高了我的工作效率。 PaintCode你可以使用PaintCode方便地进行图形设计，你也可以将SVG或PSD文件导入到PaintCode中，然后它就能帮助你将你的设计转换成Objective-C,Swift或C#代码。 Sip for Mac and iPhoneSip是一个非常出色的iOS app，它能帮助你从照片中创建色板。并且你可以在你的Mac或手机上随时随地使用它捕捉那些美丽的色彩。 Sublime Text 3这是我开发前端代码时 使用的IDE。我非常喜欢它的那些使代码异常清晰的主题，以及功能丰富的插件。有了它开发HTML、CSS、JavaScript变成了一件非常愉悦的事情。 DashDash对开发人员非常有帮助，我能够在离线的状态下查看如Angular，Swift，CSS等的技术文档。这使得我在网络条件不好的情况下也能工作，并且极大提升我的工作效率。 CCheatSheetCheatSheet是我非常喜欢的一个小工具，任何流行的软件都会有一堆的快捷键设置，通过这个工具，你只需要长按?键，这个软件的所有快捷键就会显示在你的面前，你完全不用逐一去背，只要反复查看几次，你自然就能熟练运用那些快捷键了。 Fantastical我使用Fantastical来快速地记录我的todo事项，并设定提醒。我只记录那些比较重要的事项，而不会每天把所有很细小的行动项都记录下来，因为那样反而会让我有一种压迫感而分心。我更喜欢在自然舒缓的环境中工作。 LiceCap这使一个很小的免费软件，你可以在屏幕上设定一个区域，然后就可以用LiceCap来快速地录制GIF动画了。直接、高效是我对它的评价。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[iOS自动化部署和发布之Fastlane]]></title>
+      <url>%2F2017%2F01%2F20%2FiOS%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B9%8BFastlane%2F</url>
+      <content type="text"><![CDATA[Fastlane 官方文档：https://docs.fastlane.tools/ 安装确保安装了最新版本的Xcode命令行工具： xcode-select –install 安装fastlane： 使用gem命令安装[sudo] gem install fastlane -NV使用brew命令安装brew cask install fastlane cd到工程所在目录下执行： fastlane init 插件安装 firim插件fastlane add_plugin firim蒲公英插件fastlane add_plugin pgyer ####文件配置 Appfile Appfile用来配置一些类似于AppleID、BundleID参数(参数是fastlane已经定义好的，新增的并没有用，可以在Fastfile中使用，AppleID、BundleID等其实会被一些actions直接调用，并不需要写出来传递。 1234567891011# 默认配置app_identifier ""apple_id ""team_id ""# 如果lane是test换成Dev的配置for_lane :test do app_identifier "" apple_id "" team_id ""end Fastfile Fastfile包含分发您的应用程序所需的所有信息。可以在before_all、after_all、error中做一些操作以建立一些lane作为关键的执行逻辑，可以在其中使用fastlane内置的action，也可以调用自建action，还可以调用别的lane。123456789101112131415161718192021222324default_platform(:ios)platform :ios do desc "Description of what the lane does" lane :test_firim do # add actions here: https://docs.fastlane.tools/actions build_app( workspace: "xxx.xcworkspace", scheme: "xxx", export_method: "enterprise", configuration: "Debug",# Defaults to 'Release' output_directory: "./build", output_name: "xxx", ) firim(firim_api_token: "") #上传ipa到fir.im服务器 end desc "Push a new release build to the App Store" lane :appstore do build_app(workspace: "xxx.xcworkspace", scheme: "xxx") upload_to_app_store end end 执行 fastlane test_firim]]></content>
     </entry>
 
     

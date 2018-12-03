@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://www.weixinbing.com/2016/12/20/发布工程到cocoapods/index.html">
 <meta property="og:site_name" content="Bingol's Blog">
 <meta property="og:description" content="让自己的框架支持cocoapods">
-<meta property="og:updated_time" content="2016-12-24T11:32:48.000Z">
+<meta property="og:updated_time" content="2018-12-03T08:29:20.126Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="发布框架到cocoapods">
 <meta name="twitter:description" content="让自己的框架支持cocoapods">
@@ -418,7 +418,7 @@
 <blockquote>
 <p>pod spec create XXX</p>
 </blockquote>
-<h3 id="编辑-podspec文件"><a href="#编辑-podspec文件" class="headerlink" title="编辑.podspec文件"></a>编辑.podspec文件</h3><p>使用vim或Xcode打开.podspec文件,编辑如下:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.<span class="keyword">new</span> <span class="keyword">do</span> |s|</div><div class="line">s.name = <span class="string">"XXX"</span></div><div class="line">s.<span class="keyword">version</span> = <span class="string">"1.0.3"</span></div><div class="line">s.ios.deployment_target = <span class="string">'8.0'</span></div><div class="line">s.summary = <span class="string">"some utilities"</span></div><div class="line">s.homepage = <span class="string">"https://github.com/weixinbing/XXX"</span></div><div class="line">s.license = &#123; :<span class="built_in">type</span> =&gt; <span class="string">"MIT"</span>, :<span class="keyword">file</span> =&gt; <span class="string">"LICENSE"</span> &#125;</div><div class="line">s.author = &#123; <span class="string">"weixb"</span> =&gt; <span class="string">"183292352@qq.com"</span> &#125;</div><div class="line">s.social_media_url = <span class="string">"http://weibo.com/u/5348162268"</span></div><div class="line">s.<span class="keyword">source</span> = &#123; :git =&gt; <span class="string">"https://github.com/weixinbing/XXX.git"</span>, :<span class="keyword">tag</span> =&gt; s.<span class="keyword">version</span> &#125;</div><div class="line">s.source_files = <span class="string">"XXX"</span></div><div class="line">s.requires_arc = true</div><div class="line">s.dependency <span class="string">"YTKNetwork"</span>, <span class="string">"~&gt; 2.0.3"</span></div><div class="line">s.dependency <span class="string">'Bugly'</span>, <span class="string">'~&gt; 2.4.2'</span></div><div class="line">end</div></pre></td></tr></table></figure></p>
+<h3 id="编辑-podspec文件"><a href="#编辑-podspec文件" class="headerlink" title="编辑.podspec文件"></a>编辑.podspec文件</h3><p>使用vim或Xcode打开.podspec文件,编辑如下:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">Pod::Spec.new <span class="keyword">do</span> <span class="params">|s|</span></div><div class="line">s.name = <span class="string">"XXX"</span></div><div class="line">s.version = <span class="string">"1.0.3"</span></div><div class="line">s.ios.deployment_target = <span class="string">'8.0'</span></div><div class="line">s.summary = <span class="string">"some utilities"</span></div><div class="line">s.homepage = <span class="string">"https://github.com/weixinbing/XXX"</span></div><div class="line">s.license = &#123; <span class="symbol">:type</span> =&gt; <span class="string">"MIT"</span>, <span class="symbol">:file</span> =&gt; <span class="string">"LICENSE"</span> &#125;</div><div class="line">s.author = &#123; <span class="string">"weixb"</span> =&gt; <span class="string">"183292352@qq.com"</span> &#125;</div><div class="line">s.social_media_url = <span class="string">"http://weibo.com/u/5348162268"</span></div><div class="line">s.source = &#123; <span class="symbol">:git</span> =&gt; <span class="string">"https://github.com/weixinbing/XXX.git"</span>, <span class="symbol">:tag</span> =&gt; s.version &#125;</div><div class="line">s.source_files = <span class="string">"XXX"</span></div><div class="line">s.requires_arc = <span class="literal">true</span></div><div class="line">s.dependency <span class="string">"YTKNetwork"</span>, <span class="string">"~&gt; 2.0.3"</span></div><div class="line">s.dependency <span class="string">'Bugly'</span>, <span class="string">'~&gt; 2.4.2'</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>s.name：名称，pod search 搜索的关键词,注意这里一定要和.podspec的名称一样,否则报错<br>s.version：版本号<br>s.ios.deployment_target:支持的pod最低版本<br>s.summary: 简介<br>s.homepage:项目主页地址<br>s.license:许可证<br>s.author:作者<br>s.social_media_url:社交网址<br>s.source:项目的地址<br>s.source_files:需要包含的源文件<br>s.resources: 资源文件<br>s.requires_arc: 是否支持ARC<br>s.dependency：依赖库(可以多写)</p>
 </blockquote>
@@ -583,7 +583,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -594,7 +594,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -605,7 +605,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
