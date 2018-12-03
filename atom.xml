@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.weixinbing.com/"/>
-  <updated>2018-12-03T08:39:07.220Z</updated>
+  <updated>2018-12-03T08:46:09.128Z</updated>
   <id>http://www.weixinbing.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://www.weixinbing.com/2017/09/02/zsh%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.weixinbing.com/2017/09/02/zsh安装和配置/</id>
     <published>2017-09-01T16:00:00.000Z</published>
-    <updated>2018-12-03T08:39:07.220Z</updated>
+    <updated>2018-12-03T08:46:09.128Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://ohmyz.sh/" target="_blank" rel="external">zsh官网</a></p>
+<a id="more"></a>
 <h4 id="zsh安装"><a href="#zsh安装" class="headerlink" title="zsh安装"></a>zsh安装</h4><h5 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h5><p>终端运行（需翻墙）：</p>
 <p><code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
 <h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>编辑配置文件<br><code>vim ~/.zshrc</code></p>
@@ -55,8 +56,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;http://ohmyz.sh/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh官网&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;zsh安装&quot;&gt;&lt;a href=&quot;#zsh安装&quot; class=&quot;headerlink&quot; title=&quot;zsh安装&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://ohmyz.sh/&quot;&gt;zsh官网&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -64,6 +64,57 @@
     
     
       <category term="zsh" scheme="http://www.weixinbing.com/tags/zsh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS自动化部署和发布之Fastlane</title>
+    <link href="http://www.weixinbing.com/2017/07/20/iOS%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B9%8BFastlane/"/>
+    <id>http://www.weixinbing.com/2017/07/20/iOS自动化部署和发布之Fastlane/</id>
+    <published>2017-07-19T16:00:00.000Z</published>
+    <updated>2018-12-03T08:46:29.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>Fastlane<br><a id="more"></a></p>
+<p>官方文档：<a href="https://docs.fastlane.tools/" target="_blank" rel="external">https://docs.fastlane.tools/</a></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>确保安装了最新版本的Xcode命令行工具：</p>
+<blockquote>
+<p>xcode-select –install</p>
+</blockquote>
+<p>安装fastlane：</p>
+<blockquote>
+<p>使用gem命令安装<br>[sudo] gem install fastlane -NV<br>使用brew命令安装<br>brew cask install fastlane</p>
+</blockquote>
+<p>cd到工程所在目录下执行：</p>
+<blockquote>
+<p>fastlane init</p>
+</blockquote>
+<p>插件安装</p>
+<blockquote>
+<p>firim插件<br>fastlane add_plugin firim<br>蒲公英插件<br>fastlane add_plugin pgyer</p>
+</blockquote>
+<p>####文件配置</p>
+<h5 id="Appfile"><a href="#Appfile" class="headerlink" title="Appfile"></a>Appfile</h5><blockquote>
+<p>Appfile用来配置一些类似于AppleID、BundleID参数(参数是fastlane已经定义好的，新增的并没有用，可以在Fastfile中使用，AppleID、BundleID等其实会被一些actions直接调用，并不需要写出来传递。</p>
+</blockquote>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 默认配置</span></div><div class="line">app_identifier    <span class="string">""</span></div><div class="line">apple_id    <span class="string">""</span></div><div class="line">team_id    <span class="string">""</span></div><div class="line"></div><div class="line"><span class="comment"># 如果lane是test换成Dev的配置</span></div><div class="line">for_lane <span class="symbol">:test</span> <span class="keyword">do</span></div><div class="line">  app_identifier    <span class="string">""</span></div><div class="line">  apple_id    <span class="string">""</span></div><div class="line">  team_id    <span class="string">""</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h5 id="Fastfile"><a href="#Fastfile" class="headerlink" title="Fastfile"></a>Fastfile</h5><blockquote>
+<p>Fastfile包含分发您的应用程序所需的所有信息。可以在before_all、after_all、error中做一些操作以建立一些lane作为关键的执行逻辑，可以在其中使用fastlane内置的action，也可以调用自建action，还可以调用别的lane。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">default_platform(<span class="symbol">:ios</span>)</div><div class="line"></div><div class="line">platform <span class="symbol">:ios</span> <span class="keyword">do</span></div><div class="line">    desc <span class="string">"Description of what the lane does"</span></div><div class="line">    lane <span class="symbol">:test_firim</span> <span class="keyword">do</span></div><div class="line">    <span class="comment"># add actions here: https://docs.fastlane.tools/actions</span></div><div class="line">    build_app( </div><div class="line">    	<span class="symbol">workspace:</span> <span class="string">"xxx.xcworkspace"</span>, </div><div class="line">    	<span class="symbol">scheme:</span> <span class="string">"xxx"</span>, </div><div class="line">    	<span class="symbol">export_method:</span> <span class="string">"enterprise"</span>, </div><div class="line">	    <span class="symbol">configuration:</span> <span class="string">"Debug"</span>,<span class="comment"># Defaults to 'Release'</span></div><div class="line">        <span class="symbol">output_directory:</span> <span class="string">"./build"</span>,</div><div class="line">        <span class="symbol">output_name:</span> <span class="string">"xxx"</span>,</div><div class="line">    	)</div><div class="line">	    firim(<span class="symbol">firim_api_token:</span> <span class="string">""</span>) <span class="comment">#上传ipa到fir.im服务器</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">	desc <span class="string">"Push a new release build to the App Store"</span></div><div class="line">	lane <span class="symbol">:appstore</span> <span class="keyword">do</span></div><div class="line">		build_app(<span class="symbol">workspace:</span> <span class="string">"xxx.xcworkspace"</span>, <span class="symbol">scheme:</span> <span class="string">"xxx"</span>)</div><div class="line">        upload_to_app_store</div><div class="line">    <span class="keyword">end</span></div><div class="line">  </div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h4><blockquote>
+<p>fastlane test_firim</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fastlane&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
+    
+    
+      <category term="自动化" scheme="http://www.weixinbing.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
@@ -184,57 +235,6 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
     
     
       <category term="工具" scheme="http://www.weixinbing.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS自动化部署和发布之Fastlane</title>
-    <link href="http://www.weixinbing.com/2017/01/20/iOS%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%92%8C%E5%8F%91%E5%B8%83%E4%B9%8BFastlane/"/>
-    <id>http://www.weixinbing.com/2017/01/20/iOS自动化部署和发布之Fastlane/</id>
-    <published>2017-01-19T16:00:00.000Z</published>
-    <updated>2018-12-03T08:39:11.017Z</updated>
-    
-    <content type="html"><![CDATA[<p>Fastlane<br><a id="more"></a></p>
-<p>官方文档：<a href="https://docs.fastlane.tools/" target="_blank" rel="external">https://docs.fastlane.tools/</a></p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>确保安装了最新版本的Xcode命令行工具：</p>
-<blockquote>
-<p>xcode-select –install</p>
-</blockquote>
-<p>安装fastlane：</p>
-<blockquote>
-<p>使用gem命令安装<br>[sudo] gem install fastlane -NV<br>使用brew命令安装<br>brew cask install fastlane</p>
-</blockquote>
-<p>cd到工程所在目录下执行：</p>
-<blockquote>
-<p>fastlane init</p>
-</blockquote>
-<p>插件安装</p>
-<blockquote>
-<p>firim插件<br>fastlane add_plugin firim<br>蒲公英插件<br>fastlane add_plugin pgyer</p>
-</blockquote>
-<p>####文件配置</p>
-<h5 id="Appfile"><a href="#Appfile" class="headerlink" title="Appfile"></a>Appfile</h5><blockquote>
-<p>Appfile用来配置一些类似于AppleID、BundleID参数(参数是fastlane已经定义好的，新增的并没有用，可以在Fastfile中使用，AppleID、BundleID等其实会被一些actions直接调用，并不需要写出来传递。</p>
-</blockquote>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 默认配置</span></div><div class="line">app_identifier    <span class="string">""</span></div><div class="line">apple_id    <span class="string">""</span></div><div class="line">team_id    <span class="string">""</span></div><div class="line"></div><div class="line"><span class="comment"># 如果lane是test换成Dev的配置</span></div><div class="line">for_lane <span class="symbol">:test</span> <span class="keyword">do</span></div><div class="line">  app_identifier    <span class="string">""</span></div><div class="line">  apple_id    <span class="string">""</span></div><div class="line">  team_id    <span class="string">""</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
-<h5 id="Fastfile"><a href="#Fastfile" class="headerlink" title="Fastfile"></a>Fastfile</h5><blockquote>
-<p>Fastfile包含分发您的应用程序所需的所有信息。可以在before_all、after_all、error中做一些操作以建立一些lane作为关键的执行逻辑，可以在其中使用fastlane内置的action，也可以调用自建action，还可以调用别的lane。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">default_platform(<span class="symbol">:ios</span>)</div><div class="line"></div><div class="line">platform <span class="symbol">:ios</span> <span class="keyword">do</span></div><div class="line">    desc <span class="string">"Description of what the lane does"</span></div><div class="line">    lane <span class="symbol">:test_firim</span> <span class="keyword">do</span></div><div class="line">    <span class="comment"># add actions here: https://docs.fastlane.tools/actions</span></div><div class="line">    build_app( </div><div class="line">    	<span class="symbol">workspace:</span> <span class="string">"xxx.xcworkspace"</span>, </div><div class="line">    	<span class="symbol">scheme:</span> <span class="string">"xxx"</span>, </div><div class="line">    	<span class="symbol">export_method:</span> <span class="string">"enterprise"</span>, </div><div class="line">	    <span class="symbol">configuration:</span> <span class="string">"Debug"</span>,<span class="comment"># Defaults to 'Release'</span></div><div class="line">        <span class="symbol">output_directory:</span> <span class="string">"./build"</span>,</div><div class="line">        <span class="symbol">output_name:</span> <span class="string">"xxx"</span>,</div><div class="line">    	)</div><div class="line">	    firim(<span class="symbol">firim_api_token:</span> <span class="string">""</span>) <span class="comment">#上传ipa到fir.im服务器</span></div><div class="line">    <span class="keyword">end</span></div><div class="line"></div><div class="line">	desc <span class="string">"Push a new release build to the App Store"</span></div><div class="line">	lane <span class="symbol">:appstore</span> <span class="keyword">do</span></div><div class="line">		build_app(<span class="symbol">workspace:</span> <span class="string">"xxx.xcworkspace"</span>, <span class="symbol">scheme:</span> <span class="string">"xxx"</span>)</div><div class="line">        upload_to_app_store</div><div class="line">    <span class="keyword">end</span></div><div class="line">  </div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h4><blockquote>
-<p>fastlane test_firim</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Fastlane&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
-    
-    
-      <category term="自动化" scheme="http://www.weixinbing.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
