@@ -293,6 +293,50 @@
   </entry>
   
   <entry>
+    <title>iOS项目的目录结构</title>
+    <link href="http://www.weixinbing.com/2018/07/10/iOS%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://www.weixinbing.com/2018/07/10/iOS项目的目录结构/</id>
+    <published>2018-07-09T16:00:00.000Z</published>
+    <updated>2018-12-03T13:19:19.641Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543329783206-02a6fd7c-879c-4b42-8a71-318337591c59.png" alt="img"></p>
+<h3 id="AppDelegate"><a href="#AppDelegate" class="headerlink" title="AppDelegate"></a>AppDelegate</h3><p>目录下放AppDelegate.h(.m)文件，是整个应用的入口文件，所以单独拿出来</p>
+<h3 id="Sections"><a href="#Sections" class="headerlink" title="Sections"></a>Sections</h3><p>目录下放app的具体模块，如登录、设置等</p>
+<h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><p>目录下放会被重用的Views、Macro和Categories等</p>
+<p>Macro目录下放了整个应用会用到的宏定义</p>
+<ul>
+<li>AppMacro.h  </li>
+<li>UtilsMacro.h </li>
+<li>VendorMacro.h </li>
+<li>NotificationMacro.h</li>
+</ul>
+<blockquote>
+<p>AppMacro.h 里放app相关的宏定义</p>
+<p>UtilsMacro.h 里放一些方便使用的宏定义</p>
+<p>VendorMacro.h 里放一些第三方常量</p>
+<p>NotificationMacro.h 里放通知相关的宏定义</p>
+</blockquote>
+<p>Helpers目录放一些助手类，文件名与功能挂钩</p>
+<h3 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>目录放app会用到的一些资源，主要是图片</p>
+<h3 id="Vendors"><a href="#Vendors" class="headerlink" title="Vendors"></a>Vendors</h3><p>目录放第三方的类库/SDK</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;p&gt;一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。&lt;/p&gt;
+&lt;p&gt;&lt;img sr
+    
+    </summary>
+    
+      <category term="架构" scheme="http://www.weixinbing.com/categories/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="架构" scheme="http://www.weixinbing.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>iOS端mPaaS框架</title>
     <link href="http://www.weixinbing.com/2018/06/18/iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/"/>
     <id>http://www.weixinbing.com/2018/06/18/iOS端mPaaS调研文档/</id>
@@ -1368,62 +1412,6 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
     
     
       <category term="cocoapods" scheme="http://www.weixinbing.com/tags/cocoapods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>YYModel,MJExtension,JSONModel对比</title>
-    <link href="http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel%E5%AF%B9%E6%AF%94/"/>
-    <id>http://www.weixinbing.com/2016/12/20/YYModel,MJExtension,JSONModel对比/</id>
-    <published>2016-12-19T16:02:25.000Z</published>
-    <updated>2017-07-16T14:42:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>JSON模型<br><a id="more"></a></p>
-<h3 id="使用区别"><a href="#使用区别" class="headerlink" title="使用区别"></a>使用区别</h3><blockquote>
-<p>JSONModel要求所有模型类必须继承自JSONModel基类<br>YYModel和MJExtension不需要你的模型类继承任何特殊基类，毫无污染，毫无侵入性</p>
-</blockquote>
-<h3 id="量级上"><a href="#量级上" class="headerlink" title="量级上"></a>量级上</h3><blockquote>
-<p>YYModel和MJExtension都是超轻量级框架<br>YYModel是一个更轻量级高性能 iOS/OSX 模型转换框架,模型转换性能接近手写解析代码,比MJExtension和JSONModel性能更高.</p>
-</blockquote>
-<h3 id="字典和模型之间互相转换"><a href="#字典和模型之间互相转换" class="headerlink" title="字典和模型之间互相转换"></a>字典和模型之间互相转换</h3><blockquote>
-<p>MJExtension支持:<br>Plist –&gt; Model Array<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">模型数组 = [模型类名 objectArrayWithFilename:<span class="string">@"文件名.plist"</span>];</div></pre></td></tr></table></figure></p>
-<p>JSON Array –&gt; Model Array<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSArray</span> *modelArray = [模型类名 objectArrayWithKeyValuesArray:字段数组];</div></pre></td></tr></table></figure></p>
-<p>JSONString –&gt; Model Array<br>Model Array –&gt; JSON Array<br>YYModel没有看到对字典数组和模型数组相互转换的支持</p>
-</blockquote>
-<h3 id="容器类属性"><a href="#容器类属性" class="headerlink" title="容器类属性"></a>容器类属性</h3><blockquote>
-<p>YYModel需要在 @implementation 和 @end之间 写上<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">NSDictionary</span> *)modelContainerPropertyGenericClass &#123;</div><div class="line">    <span class="keyword">return</span> @&#123;<span class="string">@"arrayName"</span> : [模型类名 <span class="keyword">class</span>]&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>MJExtension需要在 @implementation 和 @end之间 写上<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">NSDictionary</span> *)objectClassInArray &#123;</div><div class="line">    <span class="keyword">return</span> @&#123;<span class="string">@"arrayName"</span> : [模型类名 <span class="keyword">class</span>]&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p> <code>MJExtension可以配合ESJsonFormat模型插件使用,插件自动实现容器方法.YYModel也可以配合ESJsonFormat模型插件使用,需要修改容器实现的方法名.</code></p>
-<blockquote>
-<p>JSONModel是最简单的,只需要参照以下写法即可<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>) <span class="built_in">NSArray</span> &lt;ProductModel&gt; *products;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="归档和解档"><a href="#归档和解档" class="headerlink" title="归档和解档"></a>归档和解档</h3><blockquote>
-<p>三者性能相当<br>MJExtension只需要一行代码调用写好的宏MJExtensionCodingImplementation就可以实现<br>YYModel需要遵守NSCoding协议,并重写下面方法<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)encodeWithCoder:(<span class="built_in">NSCoder</span> *)aCoder &#123; [<span class="keyword">self</span> yy_modelEncodeWithCoder:aCoder]; &#125;</div><div class="line">- (<span class="keyword">id</span>)initWithCoder:(<span class="built_in">NSCoder</span> *)aDecoder &#123; <span class="keyword">self</span> = [<span class="keyword">super</span> init]; <span class="keyword">return</span> [<span class="keyword">self</span> yy_modelInitWithCoder:aDecoder]; &#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><blockquote>
-<p>MJExtension只需要在@implementation 和 @end之间写上宏MJLogAllIvrs,就能解决调试时，打印模型，只打印出内存地址的问题<br>YYModel需要重写description方法<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (<span class="built_in">NSString</span> *)description &#123; <span class="keyword">return</span> [<span class="keyword">self</span> yy_modelDescription]; &#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="模型中的属性名和字典中的key不相同-或者需要多级映射"><a href="#模型中的属性名和字典中的key不相同-或者需要多级映射" class="headerlink" title="模型中的属性名和字典中的key不相同(或者需要多级映射)"></a>模型中的属性名和字典中的key不相同(或者需要多级映射)</h3><blockquote>
-<p>YYModel需要在 @implementation 和 @end之间 写上<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">+ (<span class="built_in">NSDictionary</span> *)modelCustomPropertyMapper &#123;</div><div class="line">    <span class="keyword">return</span> @&#123;<span class="string">@"name"</span> : <span class="string">@"n"</span>,</div><div class="line">             <span class="string">@"page"</span> : <span class="string">@"p"</span>,</div><div class="line">             <span class="string">@"desc"</span> : <span class="string">@"ext.desc"</span>,</div><div class="line">             <span class="string">@"bookID"</span> : @[<span class="string">@"id"</span>,<span class="string">@"ID"</span>,<span class="string">@"book_id"</span>]</div><div class="line">             &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>MJExtension需要在转换代码之前实现<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[Student mj_setupReplacedKeyFromPropertyName:^<span class="built_in">NSDictionary</span> *&#123;</div><div class="line">    <span class="keyword">return</span> @&#123;</div><div class="line">               <span class="string">@"ID"</span> : <span class="string">@"id"</span>,</div><div class="line">               <span class="string">@"desc"</span> : <span class="string">@"desciption"</span>,</div><div class="line">               <span class="string">@"oldName"</span> : <span class="string">@"name.oldName"</span>,</div><div class="line">               <span class="string">@"nowName"</span> : <span class="string">@"name.newName"</span>,</div><div class="line">               <span class="string">@"nameChangedTime"</span> : <span class="string">@"name.info[1].nameChangedTime"</span>,</div><div class="line">               <span class="string">@"bag"</span> : <span class="string">@"other.bag"</span></div><div class="line">           &#125;;</div><div class="line">&#125;];</div></pre></td></tr></table></figure></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;JSON模型&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://www.weixinbing.com/categories/iOS/"/>
-    
-    
-      <category term="JSON" scheme="http://www.weixinbing.com/tags/JSON/"/>
-    
-      <category term="MODEL" scheme="http://www.weixinbing.com/tags/MODEL/"/>
-    
-      <category term="模型框架" scheme="http://www.weixinbing.com/tags/%E6%A8%A1%E5%9E%8B%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   

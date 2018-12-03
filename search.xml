@@ -10,6 +10,13 @@
 
     
     <entry>
+      <title><![CDATA[iOS项目的目录结构]]></title>
+      <url>%2F2018%2F07%2F10%2FiOS%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%2F</url>
+      <content type="text"><![CDATA[目录结构一个合理的目录结构首先应该是清晰的，让人一眼看上去就能大概了解目录的职责，且容易应对新的变化。 AppDelegate目录下放AppDelegate.h(.m)文件，是整个应用的入口文件，所以单独拿出来 Sections目录下放app的具体模块，如登录、设置等 General目录下放会被重用的Views、Macro和Categories等 Macro目录下放了整个应用会用到的宏定义 AppMacro.h UtilsMacro.h VendorMacro.h NotificationMacro.h AppMacro.h 里放app相关的宏定义 UtilsMacro.h 里放一些方便使用的宏定义 VendorMacro.h 里放一些第三方常量 NotificationMacro.h 里放通知相关的宏定义 Helpers目录放一些助手类，文件名与功能挂钩 Resources目录放app会用到的一些资源，主要是图片 Vendors目录放第三方的类库/SDK]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[iOS端mPaaS框架]]></title>
       <url>%2F2018%2F06%2F18%2FiOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3%2F</url>
       <content type="text"><![CDATA[配置开发环境流程：按照官方文档配置流程，本人最开始使用的.org的ruby源，导致后面安装开发者工具报错，更新为.com后环境配置一路顺畅。流程如下： 检查 RubyGems 源 公告！因域名备案问题，.org域名无法继续提供RubyGems镜像服务，我们提供.com代替.org的域名，其它一切不变 $ gem sources –add https://gems.ruby-china.com/ –remove https://rubygems.org/ $ gem sources -l #确保只有 gems.ruby-china.com 升级 RubyGems $ sudo gem update –system 安装 Ruby2.2.4使用rvm工具管理ruby版本，如果安装了多个版本，设置Ruby 2.2.4 为默认版本 $ rvm use 2.2.4 –default 安装开发者工具 完全退出 Xcode，在终端运行下列安装命令： $ sh &lt;(curl -s http://mpaas-ios.oss-cn-hangzhou.aliyuncs.com/mPaaS-Install-Tool/installmPaaS.sh ) 对于 Xcode 8 之后的版本，安装 mPaaS 插件时需要 unsign Xcode。按照提示输入 U。脚本会自动完成安装。 去除Xcode签名 $ mpaas unsign 恢复Xcode签名 $ mpaas restore 更新所有 Xcode 插件的 UUID $ mpaas update_plugins 安装命令行工具（可选） 更新到最新版的开发者工具 $ mpkitupdate 打印出本地的 SDK 里模块的信息 $ mpaas sdk 更新本地SDK $ mpaas sdk update 创建工程基于 mPaaS 框架开发按照官方文档流程接入正常 基于系统框架开发]]></content>
