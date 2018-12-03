@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2018-12-03T04:00:42.239Z</lastmod>
+    <data>
+        <display>
+        <title>快速搭建个人博客</title>
+        <pubTime>2016-12-18T11:00:27.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="教程" url="http://www.weixinbing.com/categories/%E6%95%99%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.weixinbing.com/2017/07/16/iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/</loc>
     <lastmod>2017-07-16T14:53:04.000Z</lastmod>
     <data>
@@ -41,24 +59,6 @@
            
              
               <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-07-10T16:11:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>快速搭建个人博客</title>
-        <pubTime>2016-12-18T11:00:27.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="教程" url="http://www.weixinbing.com/categories/%E6%95%99%E7%A8%8B/"/>
           
         </display>
     </data>

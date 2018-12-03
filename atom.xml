@@ -654,7 +654,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
     <link href="http://www.weixinbing.com/2016/12/18/Hexo%20%E7%BB%93%E5%90%88%20Github%20%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.weixinbing.com/2016/12/18/Hexo 结合 Github 搭建的博客/</id>
     <published>2016-12-18T11:00:27.000Z</published>
-    <updated>2017-07-10T16:11:57.000Z</updated>
+    <updated>2018-12-03T04:00:42.239Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo 结合 Github 搭建博客<br><a id="more"></a></p>
 <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul>
@@ -687,6 +687,41 @@ npm install
 <pre><code>hexo d -g
 </code></pre><p>这样就可以把你的新文章传上去啦。</p>
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p><a href="https://github.com/iissnan/hexo-theme-next/wiki" target="_blank" rel="external">NexT 官方WiKi</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT 官方网站</a></p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>现在默认的域名还是xxx.github.io，是不是很没有牌面？想不想也像我一样弄一个专属域名呢，首先你得购买一个域名，xx云都能买，看你个人喜好了。</p>
+<p>以我的阿里云为例，如下图所示，添加两条解析记录：</p>
+<table>
+<thead>
+<tr>
+<th>记录类型</th>
+<th>主机记录</th>
+<th>解析线路(isp)</th>
+<th>记录值</th>
+<th>MX优先级</th>
+<th>TTL</th>
+<th>状态    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CNAME</td>
+<td>@</td>
+<td>默认</td>
+<td>weixinbing.github.io</td>
+<td>–</td>
+<td>10分钟</td>
+<td>正常</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>默认</td>
+<td>weixinbing.github.io</td>
+<td>–</td>
+<td>10分钟</td>
+<td>正常</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     
     <summary type="html">
