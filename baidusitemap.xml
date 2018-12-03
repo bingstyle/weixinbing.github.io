@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.weixinbing.com/2017/05/13/Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/</loc>
+    <lastmod>2018-12-03T13:14:44.873Z</lastmod>
+    <data>
+        <display>
+        <title>Mac工具箱</title>
+        <pubTime>2017-05-13T14:53:43.000Z</pubTime>
+        
+        <tag>工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="MAC" url="http://www.weixinbing.com/categories/MAC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.weixinbing.com/2018/10/10/%5B%E8%AF%91%5D%20%E5%AE%98%E6%96%B9%20Swift%20API%20%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2018-12-03T13:02:51.356Z</lastmod>
     <data>
@@ -334,26 +354,6 @@
            
              
               <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.weixinbing.com/2017/05/13/Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/</loc>
-    <lastmod>2017-05-13T15:07:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mac工具箱</title>
-        <pubTime>2017-05-13T14:53:43.000Z</pubTime>
-        
-        <tag>工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="MAC" url="http://www.weixinbing.com/categories/MAC/"/>
           
         </display>
     </data>

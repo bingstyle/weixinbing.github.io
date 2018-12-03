@@ -914,21 +914,41 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)<
     <link href="http://www.weixinbing.com/2017/05/13/Mac%E5%B7%A5%E5%85%B7%E7%AE%B1/"/>
     <id>http://www.weixinbing.com/2017/05/13/Mac工具箱/</id>
     <published>2017-05-13T14:53:43.000Z</published>
-    <updated>2017-05-13T15:07:42.000Z</updated>
+    <updated>2018-12-03T13:14:44.873Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.alfredapp.com" target="_blank" rel="external">Alfred</a><br>Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/Alfred.jpeg" alt="enter image description here"><br><a id="more"></a><br><a href="https://www.sketchapp.com" target="_blank" rel="external">Sketch 3</a><br>一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫无关系的图片处理功能，从而降低了工作环境中的噪音。另外，通过强大的插件功能，我能根据需要进行安装使用，这大大提高了我的工作效率。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/sketch3.png" alt="enter image description here"></p>
-<p><a href="https://www.paintcodeapp.com" target="_blank" rel="external">PaintCode</a><br>你可以使用PaintCode方便地进行图形设计，你也可以将SVG或PSD文件导入到PaintCode中，然后它就能帮助你将你的设计转换成Objective-C,Swift或C#代码。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/PaintCode.png" alt="enter image description here"></p>
-<p><a href="http://sipapp.io" target="_blank" rel="external">Sip for Mac and iPhone</a><br>Sip是一个非常出色的iOS app，它能帮助你从照片中创建色板。并且你可以在你的Mac或手机上随时随地使用它捕捉那些美丽的色彩。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/sip.png" alt="enter image description here"></p>
-<p><a href="http://www.sublimetext.com" target="_blank" rel="external">Sublime Text 3</a><br>这是我开发前端代码时 使用的IDE。我非常喜欢它的那些使代码异常清晰的主题，以及功能丰富的插件。有了它开发HTML、CSS、JavaScript变成了一件非常愉悦的事情。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/Sublime.png" alt="enter image description here"></p>
-<p><a href="https://kapeli.com/dash" target="_blank" rel="external">Dash</a><br>Dash对开发人员非常有帮助，我能够在离线的状态下查看如Angular，Swift，CSS等的技术文档。这使得我在网络条件不好的情况下也能工作，并且极大提升我的工作效率。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/dash.png" alt="enter image description here"></p>
-<p><a href="https://www.cheatsheetapp.com/CheatSheet/" target="_blank" rel="external">CCheatSheet</a><br>CheatSheet是我非常喜欢的一个小工具，任何流行的软件都会有一堆的快捷键设置，通过这个工具，你只需要长按?键，这个软件的所有快捷键就会显示在你的面前，你完全不用逐一去背，只要反复查看几次，你自然就能熟练运用那些快捷键了。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/CheatSheet.png" alt="enter image description here"></p>
-<p><a href="https://flexibits.com/fantastical" target="_blank" rel="external">Fantastical</a><br>我使用Fantastical来快速地记录我的todo事项，并设定提醒。我只记录那些比较重要的事项，而不会每天把所有很细小的行动项都记录下来，因为那样反而会让我有一种压迫感而分心。我更喜欢在自然舒缓的环境中工作。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/Fantastical.png" alt="enter image description here"></p>
-<p><a href="http://www.cockos.com/licecap/" target="_blank" rel="external">LiceCap</a><br>这使一个很小的免费软件，你可以在屏幕上设定一个区域，然后就可以用LiceCap来快速地录制GIF动画了。直接、高效是我对它的评价。<br><img src="http://oihqdel9t.bkt.clouddn.com/md/MacTool/LiceCap.png" alt="enter image description here"></p>
+    <content type="html"><![CDATA[<p><a href="https://www.alfredapp.com/" target="_blank" rel="external"><br>Alfred</a></p>
+<p>Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/jpeg/161106/1543842381420-6a493f4f-0830-4d37-b7d8-77a2be7167f2.jpeg" alt="img"></p>
+<p><a href="https://www.sketchapp.com/" target="_blank" rel="external">Sketch 3</a></p>
+<p>一款UI设计工具。Sketch只有几十M，相较于Photoshop,它小巧得多，更重要的是它是专为UI设计而生的，我不必关注那些与我做UI设计毫无关系的图片处理功能，从而降低了工作环境中的噪音。另外，通过强大的插件功能，我能根据需要进行安装使用，这大大提高了我的工作效率。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842398395-35fa37cf-30a3-4e91-a462-796fd5dad727.png" alt="img"></p>
+<p><a href="https://www.paintcodeapp.com/" target="_blank" rel="external">PaintCode</a></p>
+<p>你可以使用PaintCode方便地进行图形设计，你也可以将SVG或PSD文件导入到PaintCode中，然后它就能帮助你将你的设计转换成Objective-C,Swift或C#代码。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842707584-dceaad38-083b-4b46-9a5f-998f1c7cba2c.png" alt="img"></p>
+<p><a href="http://sipapp.io/" target="_blank" rel="external">Sip for Mac and iPhone</a></p>
+<p>Sip是一个非常出色的iOS app，它能帮助你从照片中创建色板。并且你可以在你的Mac或手机上随时随地使用它捕捉那些美丽的色彩。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842489312-45d8bd2d-52f2-4a77-a63d-73d11198b8af.png" alt="img"></p>
+<p><a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text 3</a></p>
+<p>这是我开发前端代码时 使用的IDE。我非常喜欢它的那些使代码异常清晰的主题，以及功能丰富的插件。有了它开发HTML、CSS、JavaScript变成了一件非常愉悦的事情。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842520433-be314df7-cc20-4ce5-8f63-61721f4383cf.png" alt="img"></p>
+<p><a href="https://kapeli.com/dash" target="_blank" rel="external">Dash</a></p>
+<p>Dash对开发人员非常有帮助，我能够在离线的状态下查看如Angular，Swift，CSS等的技术文档。这使得我在网络条件不好的情况下也能工作，并且极大提升我的工作效率。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842531930-f9af8996-2133-4c21-b1f8-3d55f0b755b5.png" alt="img"></p>
+<p><a href="https://www.cheatsheetapp.com/CheatSheet/" target="_blank" rel="external">CheatSheet</a></p>
+<p>CheatSheet是我非常喜欢的一个小工具，任何流行的软件都会有一堆的快捷键设置，通过这个工具，你只需要长按?键，这个软件的所有快捷键就会显示在你的面前，你完全不用逐一去背，只要反复查看几次，你自然就能熟练运用那些快捷键了。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842565237-89280688-e4dc-4bbf-be65-a93ab7e656c5.png" alt="img"></p>
+<p><a href="https://flexibits.com/fantastical" target="_blank" rel="external">Fantastical</a></p>
+<p>我使用Fantastical来快速地记录我的todo事项，并设定提醒。我只记录那些比较重要的事项，而不会每天把所有很细小的行动项都记录下来，因为那样反而会让我有一种压迫感而分心。我更喜欢在自然舒缓的环境中工作。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842577102-06efdc75-1e9f-4f97-a671-48707f6159fe.png" alt="img"></p>
+<p><a href="http://www.cockos.com/licecap/" target="_blank" rel="external">LiceCap</a></p>
+<p>这使一个很小的免费软件，你可以在屏幕上设定一个区域，然后就可以用LiceCap来快速地录制GIF动画了。直接、高效是我对它的评价。</p>
+<p><img src="https://cdn-pri.nlark.com/yuque/0/2018/png/161106/1543842592256-07f72556-4025-4a08-8540-7a8e7f49a65e.png" alt="img"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://www.alfredapp.com&quot;&gt;Alfred&lt;/a&gt;&lt;br&gt;Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件，大到用一个命令完成本地开发环境的部署启动，都可以通过Alfred来完成。你可以将大部分的重复劳动让Alfred来帮助你完成。&lt;br&gt;&lt;img src=&quot;http://oihqdel9t.bkt.clouddn.com/md/MacTool/Alfred.jpeg&quot; alt=&quot;enter image description here&quot;&gt;&lt;br&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.alfredapp.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;br&gt;Alfred&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Alfred是我见过的最能将Mac的效率使用到极致的工具了。小到翻译一个英文单词，搜索一个文件
     
     </summary>
     
