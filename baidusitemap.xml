@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.weixinbing.com/2016/12/22/06%20iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/</loc>
+    <lastmod>2018-12-03T14:18:28.219Z</lastmod>
+    <data>
+        <display>
+        <title>iOS并发编程(Concurrent Programming)</title>
+        <pubTime>2016-12-22T12:43:06.000Z</pubTime>
+        
+        <tag>多线程</tag>
+         
+        <tag>并发编程</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.weixinbing.com/2016/12/26/06.0%20iOS%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97const%EF%BC%8Fstatic%EF%BC%8Fextern/</loc>
     <lastmod>2018-12-03T14:11:32.534Z</lastmod>
     <data>
@@ -416,28 +438,6 @@
            
              
               <breadCrumb title="Xcode" url="http://www.weixinbing.com/categories/Xcode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.weixinbing.com/2016/12/22/06%20iOS%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B(Concurrent%20Programming)%E4%B8%8A/</loc>
-    <lastmod>2016-12-24T12:10:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>iOS并发编程(Concurrent Programming)上</title>
-        <pubTime>2016-12-22T12:43:06.000Z</pubTime>
-        
-        <tag>多线程</tag>
-         
-        <tag>并发编程</tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
           
         </display>
     </data>
