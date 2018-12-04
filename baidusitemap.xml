@@ -4,28 +4,8 @@
 
     
   <url>
-    <loc>http://www.weixinbing.com/2018/06/18/21%20iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/</loc>
-    <lastmod>2018-12-04T10:56:47.161Z</lastmod>
-    <data>
-        <display>
-        <title>iOS端mPaaS框架</title>
-        <pubTime>2018-06-17T16:00:00.000Z</pubTime>
-        
-        <tag>mPaas</tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.weixinbing.com/2018/05/16/20.0%20RXSwift+MJRefresh+MVVM%E5%88%97%E8%A1%A8%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2018-12-04T10:44:07.119Z</lastmod>
+    <lastmod>2018-12-04T11:09:42.512Z</lastmod>
     <data>
         <display>
         <title>RXSwift+MJRefresh+MVVM列表框架</title>
@@ -37,6 +17,26 @@
            
              
               <breadCrumb title="Swift" url="http://www.weixinbing.com/categories/Swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.weixinbing.com/2018/06/18/21%20iOS%E7%AB%AFmPaaS%E8%B0%83%E7%A0%94%E6%96%87%E6%A1%A3/</loc>
+    <lastmod>2018-12-04T11:09:22.127Z</lastmod>
+    <data>
+        <display>
+        <title>iOS端mPaaS框架</title>
+        <pubTime>2018-06-17T16:00:00.000Z</pubTime>
+        
+        <tag>mPaas</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://www.weixinbing.com/categories/iOS/"/>
           
         </display>
     </data>

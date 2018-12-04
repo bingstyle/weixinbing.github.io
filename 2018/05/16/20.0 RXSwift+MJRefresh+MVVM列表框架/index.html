@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="快速实现列表上下拉刷新1. 创建viewModel类该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者
-123456789101112class MGProjectViewModel: MGRefreshable &amp;#123;    public var param: [String: Any]?        override func re">
+<meta name="description" content="快速实现列表上下拉刷新1. 创建viewModel类该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RXSwift+MJRefresh+MVVM列表框架">
 <meta property="og:url" content="http://www.weixinbing.com/2018/05/16/20.0 RXSwift+MJRefresh+MVVM列表框架/index.html">
 <meta property="og:site_name" content="Bing's Blog">
-<meta property="og:description" content="快速实现列表上下拉刷新1. 创建viewModel类该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者
-123456789101112class MGProjectViewModel: MGRefreshable &amp;#123;    public var param: [String: Any]?        override func re">
-<meta property="og:updated_time" content="2018-12-04T10:44:07.119Z">
+<meta property="og:description" content="快速实现列表上下拉刷新1. 创建viewModel类该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者">
+<meta property="og:updated_time" content="2018-12-04T11:09:42.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RXSwift+MJRefresh+MVVM列表框架">
-<meta name="twitter:description" content="快速实现列表上下拉刷新1. 创建viewModel类该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者
-123456789101112class MGProjectViewModel: MGRefreshable &amp;#123;    public var param: [String: Any]?        override func re">
+<meta name="twitter:description" content="快速实现列表上下拉刷新1. 创建viewModel类该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者">
 
 
 
@@ -409,6 +406,7 @@
 
       
         <h2 id="快速实现列表上下拉刷新"><a href="#快速实现列表上下拉刷新" class="headerlink" title="快速实现列表上下拉刷新"></a>快速实现列表上下拉刷新</h2><h3 id="1-创建viewModel类"><a href="#1-创建viewModel类" class="headerlink" title="1. 创建viewModel类"></a>1. 创建viewModel类</h3><p>该类继承MGRefreshable，重载requestMethod获取列表接口数据，并传递给rx的订阅者</p>
+<a id="more"></a>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MGProjectViewModel</span>: <span class="title">MGRefreshable</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">var</span> param: [<span class="type">String</span>: <span class="type">Any</span>]?</div><div class="line">    </div><div class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">requestMethod</span><span class="params">(<span class="number">_</span> observer: <span class="params">(AnyObserver&lt;Any&gt;)</span></span></span>) &#123;</div><div class="line">        <span class="type">MGRequest</span>.listData(<span class="type">MGProjectModel</span>.<span class="keyword">self</span>, <span class="type">API</span>: <span class="type">MGProjectAPI</span>.<span class="keyword">self</span>, target: .projectList(page: currentPage, size: pageSize, param: param), success: &#123; (data) <span class="keyword">in</span></div><div class="line">            observer.onNext(data)</div><div class="line">            observer.onCompleted()</div><div class="line">        &#125;, failure: &#123; (<span class="number">_</span>, <span class="number">_</span>) <span class="keyword">in</span></div><div class="line">            observer.onCompleted()</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="2-viewController初始化viewModel并关联tableview"><a href="#2-viewController初始化viewModel并关联tableview" class="headerlink" title="2. viewController初始化viewModel并关联tableview"></a>2. viewController初始化viewModel并关联tableview</h3><p>startRequest和下拉刷新的逻辑一样，但不会触发下拉的UI效果</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> viewModel = <span class="type">MGProjectViewModel</span>()</div><div class="line"></div><div class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="keyword">super</span>.viewDidLoad()</div><div class="line">    <span class="comment">// Do any additional setup after loading the view.</span></div><div class="line">    ...</div><div class="line">    viewModel.configListRefresh(tableView: tableView)</div><div class="line">    viewModel.startRequest()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
